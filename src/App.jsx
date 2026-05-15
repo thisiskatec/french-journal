@@ -174,7 +174,7 @@ export default function App(){
     const ctx=tg?`文法主題：${tg.title}\n規則：${(tg.rules||[]).join('\n')}\n例句：${(tg.myExamples||[]).join('\n')}`:`錯誤記錄：${errors.slice(0,6).map(e=>`${e.wrong} → ${e.correct}（${e.reason}）`).join('\n')}`;
     const prompt=`根據以下內容，為 A1-A2 法語學習者出 5 道練習題（選擇題或填空題混合）：\n${ctx}\n只輸出純 JSON 陣列，不要任何其他文字：\n[{"type":"選","q":"題目","opts":["A","B","C"],"ans":0,"exp":"解釋"},{"type":"填","q":"___","blanks":["答案"],"hint":"提示"}]`;
     try{
-      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':apiKey.trim(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1200,messages:[{role:'user',content:prompt}]})});
+      const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json','x-api-key':apiKey.trim(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1200,messages:[{role:'user',content:prompt}]})});
       const data=await res.json();if(!res.ok)throw new Error(data.error?.message||`HTTP ${res.status}`);
       const raw=(data.content?.[0]?.text||'').trim();let parsed;try{parsed=JSON.parse(raw);}catch{const m=raw.match(/\[[\s\S]*\]/);if(!m)throw new Error('格式錯誤');parsed=JSON.parse(m[0]);}
       setExercises(parsed);
