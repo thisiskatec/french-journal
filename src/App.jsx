@@ -120,7 +120,7 @@ const style = `
   .quote-source { font-size: .72rem; color: #e8b4be; font-style: italic; }
 `;
 
-const QUOTES = [
+const QUOTES=[
   {fr:"Je pense, donc je suis.",zh:"我思故我在。",source:"笛卡爾 René Descartes"},
   {fr:"L'enfer, c'est les autres.",zh:"他人即地獄。",source:"沙特 Jean-Paul Sartre, Huis Clos"},
   {fr:"On ne naît pas femme : on le devient.",zh:"女人不是天生的，而是被塑造的。",source:"西蒙·波娃 Simone de Beauvoir"},
@@ -145,17 +145,19 @@ const QUOTES = [
 
 const GRAMMAR=[
   {id:"g001",date:"05/12",type:"grammar",title:"反身動詞（Verbes pronominaux）",tags:["反身動詞","複合過去式"],rules:["結構：se + 動詞，表示「自己對自己做某件事」","複合過去式永遠用 être 作助動詞","PP 需配合主詞性別：levé(m) / levée(f)","身體部位後置時 PP 不配合性別：je me suis brossé les dents ✓","否定：ne + 反身代名詞 + suis + pas + PP"],table:{headers:["主詞","反身代名詞","現在式","複合過去式（f）"],rows:[["je","me (m')","je me lève","je me suis levée"],["tu","te (t')","tu te lèves","tu t'es levée"],["il/elle","se (s')","il se lève","elle s'est levée"],["nous","nous","nous nous levons","nous nous sommes levées"],["vous","vous","vous vous levez","vous vous êtes levées"],["ils/elles","se (s')","ils se lèvent","elles se sont levées"]]},myExamples:["Je me suis levée à onze heures aujourd'hui.","Je me suis démaquillée et brossé les dents pendant la douche.","Je me suis endormie à deux heures.","Je me suis fait les ongles."],mySentences:[]},
-  {id:"g002",date:"05/12",type:"grammar",title:"複合過去式：avoir vs être",tags:["複合過去式","avoir","être"],rules:["avoir + PP：一般動詞（manger→mangé, voir→vu, prendre→pris）","avoir 的 PP 不配合主詞性別","être + PP：VANDERTRAMP 14個位移動詞 + 所有反身動詞","être 的 PP 一定配合主詞性別"],myExamples:["J'ai étudié le français avec toi hier soir. ✓（avoir，PP不加e）","Je me suis endormie à deux heures. ✓（être，反身動詞）","Je suis encore allée chez le docteur ce soir. ✓（être，aller）"],mySentences:[]},
+  {id:"g002",date:"05/12",type:"grammar",title:"複合過去式：avoir vs être",tags:["複合過去式","avoir","être"],rules:["avoir + PP：一般動詞（manger→mangé, voir→vu, prendre→pris）","avoir 的 PP 不配合主詞性別","être + PP：VANDERTRAMP 14個位移動詞 + 所有反身動詞","être 的 PP 一定配合主詞性別"],myExamples:["J'ai étudié le français avec toi hier soir. ✓（avoir，PP不加e）","Je me suis endormie à deux heures. ✓（être，反身動詞）","Je suis encore allée chez le docteur ce soir. ✓（être，aller）","J'ai lavé mes vêtements, j'ai vu beaucoup de vidéos sur YouTube.","J'ai travaillé pendant la journée, j'ai fait du Pilates à 18h.","Je suis rentrée à la maison et j'ai dîné avec mes parents."],mySentences:[]},
   {id:"g003",date:"05/13",type:"grammar",title:"現在式 vs 複合過去式",tags:["現在式","複合過去式","時態"],rules:["現在式 = 習慣、事實（tous les jours）","複合過去式 = 某一次、已完成（hier, ce matin）","avant 後通常接 imparfait（三級會學）→ 先記：j'étais","身體感覺永遠用 avoir（j'ai faim/soif/chaud/froid）"],myExamples:["Je me maquille le matin.（習慣）","Mais hier je ne me suis pas maquillée.（某一次）","J'ai toujours trop faim.（avoir，不是 être）"],mySentences:[]},
   {id:"g004",date:"05/13",type:"grammar",title:"encore / déjà / toujours / ne...plus",tags:["副詞"],rules:["déjà = 已經","encore = 還/又","toujours = 一直/還是","ne...plus = 不再"],myExamples:["J'ai déjà fini le travail aujourd'hui.","Je suis encore malade.","J'ai toujours trop faim.","Je ne suis plus anxieuse."],mySentences:[]},
   {id:"g005",date:"05/14",type:"grammar",title:"imparfait 未完成過去式（入門）",tags:["imparfait","時態"],rules:["過去持續的狀態/習慣用 imparfait，不用 PC","avant 後面通常接 imparfait","現在先記：j'étais = 我以前是"],myExamples:["Avant, j'étais fermée, mais maintenant je suis plus ouverte. ✓","⚠️ Avant, j'ai été fermée. ✗（持續狀態不用PC）"],mySentences:[]},
   {id:"g006",date:"05/14",type:"grammar",title:"比較級：plus / moins / mieux",tags:["比較級","形容詞","副詞"],rules:["形容詞「更...」→ plus + 形容詞：je suis plus patiente","形容詞「比較不...」→ moins + 形容詞：je suis moins anxieuse","名詞「更多...」→ plus de + 名詞：j'ai plus de patience","動詞「更好」→ mieux（不是 plus bien）：je vais mieux","⚠️ mieux 只修飾動詞，不修飾形容詞"],myExamples:["Avant, j'étais très fermée, mais maintenant je suis plus ouverte.","Avant, j'étais impatiente, mais maintenant je suis plus patiente.","Je vais mieux aujourd'hui !"],mySentences:[]},
+  {id:"g007",date:"05/17",type:"grammar",title:"j'allais + infinitif（本來要...）",tags:["imparfait","表達意圖"],rules:["j'allais + 原形動詞 = 本來打算要...（結果沒有）","je devais + 原形動詞 = 本來應該要...（結果沒有）","j'avais prévu de + 原形動詞 = 本來計畫要...（更正式）","parce que + 母音開頭 → parce qu'（縮寫！）"],myExamples:["J'allais aller chez mon ami, mais il est très occupé parce qu'il travaille à une agence de comptabilité.","Je devais sortir, mais j'ai mes règles donc je reste à la maison."],mySentences:[]},
 ];
 
 const VOCAB=[
-  {id:"v001",date:"05/13",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗/開放",ex:"Je suis plus ouverte aux autres."},{fr:"fermé(e)",zh:"封閉/內斂",ex:"Avant, j'étais très fermée."},{fr:"sociable",zh:"愛社交",ex:"Je suis plus sociable."},{fr:"sérieux/sérieuse",zh:"認真",ex:"Elle est très sérieuse."},{fr:"curieux/curieuse",zh:"好奇",ex:"Je suis curieuse de tout !"},{fr:"patient(e)",zh:"有耐心",ex:"Maintenant je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"Je ne suis plus anxieuse."},{fr:"confiant(e)",zh:"有自信",ex:"Elle est très confiante."},{fr:"indépendant(e)",zh:"獨立",ex:"Je suis très indépendante."},{fr:"sensible",zh:"敏感",ex:"Il est très sensible."},{fr:"optimiste",zh:"樂觀",ex:"Avant j'étais optimiste."},{fr:"pessimiste",zh:"悲觀",ex:"Maintenant un peu pessimiste."}]},
+  {id:"v001",date:"05/13",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗/開放",ex:"Je suis plus ouverte aux autres."},{fr:"fermé(e)",zh:"封閉/內斂",ex:"Avant, j'étais très fermée."},{fr:"sociable",zh:"愛社交",ex:"Je suis plus sociable."},{fr:"sérieux/sérieuse",zh:"認真",ex:"Elle est très sérieuse."},{fr:"curieux/curieuse",zh:"好奇",ex:"Je suis curieuse de tout !"},{fr:"patient(e)",zh:"有耐心",ex:"Maintenant je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"Je ne suis plus anxieuse."},{fr:"confiant(e)",zh:"有自信",ex:"Elle est très confiante."},{fr:"indépendant(e)",zh:"獨立",ex:"Je suis très indépendante."},{fr:"sensible",zh:"敏感",ex:"Il est très sensible."},{fr:"optimiste",zh:"樂觀",ex:"Avant j'étais optimiste."},{fr:"pessimiste",zh:"悲觀",ex:"Maintenant un peu pessimiste."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé cette semaine."}]},
   {id:"v002",date:"05/12",type:"vocab",title:"反身動詞：日常作息",tags:["反身動詞","日常"],items:[{fr:"se lever",zh:"起床",ex:"Je me suis levée à 9h."},{fr:"se coucher",zh:"就寢",ex:"Je me couche tard."},{fr:"s'endormir",zh:"睡著",ex:"Je me suis endormie à 2h."},{fr:"s'habiller",zh:"穿衣服",ex:"Je me suis habillée vite."},{fr:"se doucher",zh:"淋浴",ex:"Je me suis douchée."},{fr:"se maquiller",zh:"化妝",ex:"Je me maquille le matin."},{fr:"se démaquiller",zh:"卸妝",ex:"Je me suis démaquillée."},{fr:"se brosser les dents",zh:"刷牙",ex:"Je me suis brossé les dents."},{fr:"se reposer",zh:"休息",ex:"Je me suis reposée à la maison."},{fr:"se faire les ongles",zh:"做指甲",ex:"Je me suis fait les ongles."}]},
   {id:"v003",date:"05/14",type:"vocab",title:"哲學詞彙入門",tags:["哲學","抽象名詞"],items:[{fr:"la liberté",zh:"自由",ex:"La liberté est essentielle."},{fr:"la conscience",zh:"意識/良知",ex:"Il a une conscience développée."},{fr:"l'existence (f)",zh:"存在",ex:"L'existence précède l'essence."},{fr:"la vérité",zh:"真理",ex:"Quelle est la vérité ?"},{fr:"la raison",zh:"理性",ex:"La raison guide nos actions."},{fr:"la pensée",zh:"思想/思考",ex:"La pensée humaine est complexe."}]},
+  {id:"v004",date:"05/17",type:"vocab",title:"日常實用表達",tags:["日常","表達"],items:[{fr:"j'ai mes règles",zh:"我月經來了",ex:"J'ai mes règles, donc je reste à la maison."},{fr:"tout à l'heure",zh:"等一下/待會",ex:"Je vais dormir tout à l'heure."},{fr:"bientôt",zh:"很快、即將",ex:"Il arrive bientôt."},{fr:"pendant la journée",zh:"白天（期間）",ex:"J'ai travaillé pendant la journée."},{fr:"une agence de comptabilité",zh:"會計事務所",ex:"Il travaille à une agence de comptabilité."},{fr:"parce qu'il/elle",zh:"因為他/她（母音縮寫）",ex:"parce qu'il est malade / parce qu'elle est occupée"},{fr:"j'allais + infinitif",zh:"本來打算要...",ex:"J'allais sortir, mais il pleut."},{fr:"je devais + infinitif",zh:"本來應該要...",ex:"Je devais travailler, mais je suis restée."}]},
 ];
 
 const ERRORS_INIT=[
@@ -168,6 +170,10 @@ const ERRORS_INIT=[
   {id:"e007",date:"05/13",category:"複合過去式",wrong:"j'ai étudiée",correct:"j'ai étudié",reason:"avoir 的 PP 不配合主詞性別，不加 e",myNote:"avoir → PP 永遠不變！",attempts:0,mastered:false},
   {id:"e008",date:"05/13",category:"形容詞",wrong:"je ne suis plus anxieux",correct:"je ne suis plus anxieuse",reason:"女性：anxieux → anxieuse（~eux → ~euse）",myNote:"記得用陰性形容詞！",attempts:0,mastered:false},
   {id:"e009",date:"05/14",category:"比較級",wrong:"je suis ouverte mieux",correct:"je suis plus ouverte",reason:"形容詞的「更...」用 plus + adj，不用 mieux",myNote:"mieux 只修飾動詞（je vais mieux）！",attempts:0,mastered:false},
+  {id:"e010",date:"05/17",category:"縮寫",wrong:"je étudie / je écoute",correct:"j'étudie / j'écoute",reason:"je + 母音開頭的動詞 → j'（elision）",myNote:"je → j' 在母音前，跟 de/que 一樣！",attempts:0,mastered:false},
+  {id:"e011",date:"05/17",category:"縮寫",wrong:"parce que il",correct:"parce qu'il",reason:"parce que + 母音 → parce qu'（elision）",myNote:"que → qu' 在母音前：parce qu'il, parce qu'elle",attempts:0,mastered:false},
+  {id:"e012",date:"05/17",category:"詞彙",wrong:"dans le jour",correct:"pendant la journée",reason:"「白天期間」用 pendant la journée，不是 dans le jour",myNote:"pendant la journée = 白天 / le soir = 傍晚",attempts:0,mastered:false},
+  {id:"e013",date:"05/17",category:"詞彙",wrong:"une agence de comptable",correct:"une agence de comptabilité",reason:"comptable = 會計師（人），comptabilité = 會計（領域）",myNote:"職業/人 vs 領域/學科 要分清楚",attempts:0,mastered:false},
 ];
 
 const DEFAULT_TASKS=[{id:"t1",label:"法語助手單字",fixed:true},{id:"t2",label:"與 Claude 對話練習法文",fixed:true},{id:"t3",label:"Le français facile",fixed:true},{id:"t4",label:"",fixed:false}];
@@ -209,56 +215,28 @@ function Checklist({onAllDone}){
 
 function VocabCard({item}){
   const[flipped,setFlipped]=useState(false);
-  return(
-    <div className={`vocab-flip-wrap ${flipped?'flipped':''}`} onClick={()=>setFlipped(f=>!f)}>
-      <div className="vocab-flip-inner">
-        <div className="vocab-front"><div className="vocab-fr">{item.fr}</div>{item.ex&&<div className="vocab-ex">{item.ex}</div>}<div className="vocab-hint">點擊看中文 →</div></div>
-        <div className="vocab-back"><div className="vocab-zh">{item.zh}</div><div className="vocab-ex" style={{color:'#5a8a5a'}}>{item.fr}</div></div>
-      </div>
-    </div>
-  );
+  return(<div className={`vocab-flip-wrap ${flipped?'flipped':''}`} onClick={()=>setFlipped(f=>!f)}><div className="vocab-flip-inner"><div className="vocab-front"><div className="vocab-fr">{item.fr}</div>{item.ex&&<div className="vocab-ex">{item.ex}</div>}<div className="vocab-hint">點擊看中文 →</div></div><div className="vocab-back"><div className="vocab-zh">{item.zh}</div><div className="vocab-ex" style={{color:'#5a8a5a'}}>{item.fr}</div></div></div></div>);
 }
 
 function ErrorPracticeCard({err,onUpdate}){
   const[input,setInput]=useState('');
   const[result,setResult]=useState(null);
   const[revealed,setRevealed]=useState(false);
-  const check=()=>{
-    const correct=input.trim()===err.correct.trim();
-    setResult(correct?'correct':'wrong');
-    if(correct){setRevealed(true);const na=err.attempts+1;onUpdate(err.id,{attempts:na,mastered:na>=3});}
-  };
+  const check=()=>{const correct=input.trim()===err.correct.trim();setResult(correct?'correct':'wrong');if(correct){setRevealed(true);const na=err.attempts+1;onUpdate(err.id,{attempts:na,mastered:na>=3});}};
   const retry=()=>{setInput('');setResult(null);};
   return(
     <div className="error-practice">
       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:8}}>
-        <div style={{display:'flex',alignItems:'center',gap:6}}>
-          <div className="note-date">{err.date}</div>
-          <span className="tag tag-error">{err.category}</span>
-          {err.mastered&&<span className="mastered-badge">✓ 已掌握</span>}
-        </div>
+        <div style={{display:'flex',alignItems:'center',gap:6}}><div className="note-date">{err.date}</div><span className="tag tag-error">{err.category}</span>{err.mastered&&<span className="mastered-badge">✓ 已掌握</span>}</div>
         {err.attempts>0&&<div className="attempts-dots">{Array.from({length:Math.min(err.attempts,5)}).map((_,i)=><div key={i} className="attempt-dot"/>)}</div>}
       </div>
       <div className="error-wrong-display"><div className="error-wrong-label">❌ 我寫的</div><div className="error-wrong-text">{err.wrong}</div></div>
-      {!revealed?(
-        <>
-          <div style={{fontSize:'.78rem',color:'var(--navy)',fontWeight:600,marginBottom:6}}>✏️ 正確版本是？</div>
-          <div className="error-input-row">
-            <input className={`error-input ${result==='correct'?'correct':result==='wrong'?'wrong':''}`} value={input} onChange={e=>{setInput(e.target.value);setResult(null);}} placeholder="輸入正確的句子..." onKeyDown={e=>e.key==='Enter'&&check()} disabled={result==='correct'}/>
-            {result!=='correct'&&<button className="error-submit-btn" onClick={check}>確認</button>}
-          </div>
-          {result==='wrong'&&<div style={{display:'flex',gap:8,marginTop:4}}>
-            <button onClick={retry} style={{background:'none',border:'1px solid var(--rose)',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--rose)',fontFamily:"'DM Sans',sans-serif"}}>再試一次</button>
-            <button onClick={()=>setRevealed(true)} style={{background:'none',border:'1px solid #ddd',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--muted)',fontFamily:"'DM Sans',sans-serif"}}>看答案</button>
-          </div>}
-        </>
-      ):(
-        <div className="error-reveal">
-          <div className="error-correct-label">✓ 正確</div>
-          <div className="error-correct-text">{err.correct}</div>
-          <div className="error-reason-text">💡 {err.reason}</div>
-          {err.myNote&&<div className="error-note-text">📝 {err.myNote}</div>}
-        </div>
+      {!revealed?(<>
+        <div style={{fontSize:'.78rem',color:'var(--navy)',fontWeight:600,marginBottom:6}}>✏️ 正確版本是？</div>
+        <div className="error-input-row"><input className={`error-input ${result==='correct'?'correct':result==='wrong'?'wrong':''}`} value={input} onChange={e=>{setInput(e.target.value);setResult(null);}} placeholder="輸入正確的句子..." onKeyDown={e=>e.key==='Enter'&&check()} disabled={result==='correct'}/>{result!=='correct'&&<button className="error-submit-btn" onClick={check}>確認</button>}</div>
+        {result==='wrong'&&<div style={{display:'flex',gap:8,marginTop:4}}><button onClick={retry} style={{background:'none',border:'1px solid var(--rose)',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--rose)',fontFamily:"'DM Sans',sans-serif"}}>再試一次</button><button onClick={()=>setRevealed(true)} style={{background:'none',border:'1px solid #ddd',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--muted)',fontFamily:"'DM Sans',sans-serif"}}>看答案</button></div>}
+      </>):(
+        <div className="error-reveal"><div className="error-correct-label">✓ 正確</div><div className="error-correct-text">{err.correct}</div><div className="error-reason-text">💡 {err.reason}</div>{err.myNote&&<div className="error-note-text">📝 {err.myNote}</div>}</div>
       )}
     </div>
   );
