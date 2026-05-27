@@ -1250,12 +1250,49 @@ const CHAPTERS = [
       {s:"A",t:"Vous avez réservé un hôtel ?"},{s:"B",t:"Non, je préfère les chambres d'hôtes."},
     ],
     tip:"apporter = bring (to)\nemporter = take away"
+  },
+  {
+    id:"0526", level:"3", noteLinks:[], date:"05/26", weekday:"二", topic:"交通詞彙・機場・ne...jamais/pas encore",
+    tags:["交通","機場","ne...jamais","比較級"],
+    summary:[
+      {text:"composter = 打票（紙本）/ valider = 感應（電子票）"},
+      {text:"embarquer = 登機/登船 / enregistrer les bagages = 托運行李"},
+      {text:"機場流程：acheter un billet → enregistrer → carte d'embarquement → douane → embarquer"},
+      {text:"ne...pas encore = 還沒 / ne...jamais = 從不"},
+      {text:"plus 發音：[plyz] + 母音 / [ply] + 子音"},
+    ],
+    flashcards:[
+      {word:"composter",meaning:"打票（紙本車票）",example:"N'oubliez pas de composter votre billet !"},
+      {word:"valider",meaning:"感應/驗票（電子）",example:"Validez votre carte !"},
+      {word:"embarquer",meaning:"登機/登船",example:"Nous allons embarquer dans 10 minutes."},
+      {word:"enregistrer les bagages",meaning:"托運行李",example:"J'ai enregistré mes bagages à l'aéroport."},
+      {word:"la carte d'embarquement",meaning:"登機證",example:"Votre carte d'embarquement, s'il vous plaît."},
+      {word:"passer à la douane",meaning:"過海關",example:"Un douanier examine vos documents."},
+      {word:"un voyage d'affaires",meaning:"商務旅行",example:"Mon patron fait souvent des voyages d'affaires."},
+      {word:"le décalage horaire",meaning:"時差",example:"Il y a 7h de décalage horaire entre Taiwan et la France."},
+      {word:"ne...jamais",meaning:"從不/從來沒有",example:"Je ne fais jamais de camping."},
+      {word:"ne...pas encore",meaning:"還沒",example:"Je n'ai pas encore visité Paris."},
+    ],
+    grammar:[
+      {title:"ne...jamais vs ne...pas encore",content:"ne...jamais = 從不（never）\nJe ne fais jamais de camping.\n\nne...pas encore = 還沒（not yet）\nJe n'ai pas encore fait de camping.\n\nPC：ne + avoir/être + jamais/pas encore + PP\nJe n'ai jamais voyagé seule.\nElle n'est pas encore arrivée."},
+      {title:"plus 的發音規則",content:"plus [plyz] + 母音開頭：\nplus agréable / plus actif / plus intéressant\n\nplus [ply] + 子音開頭：\nplus cher / plus content / plus joli\n\n⚠️ ne...plus（不再）永遠發 [ply]"},
+    ],
+    exercises:[
+      {type:"選",q:"「我還沒去過巴黎。」",opts:["Je ne suis jamais allée à Paris.","Je ne suis pas encore allée à Paris.","Je n'ai pas encore allé à Paris."],ans:1,exp:"還沒 = pas encore；aller用être，女性加e"},
+      {type:"填",q:"Je ne fais ___ de camping. / Elle n'est ___ arrivée.",blanks:["jamais","pas encore"],hint:"jamais = 從不 / pas encore = 還沒"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu as déjà fait du camping ?"},{s:"B",t:"Non, je n'ai jamais fait de camping."},
+      {s:"A",t:"Tu n'aimes pas ça ?"},{s:"B",t:"Je ne sais pas, je n'ai pas encore essayé !"},
+      {s:"A",t:"N'oublie pas de composter ton billet !"},{s:"B",t:"Merci ! Et ma carte d'embarquement ?"},
+    ],
+    tip:"機場流程：acheter un billet → enregistrer les bagages → carte d'embarquement → douane → embarquer\nTrain：composter（papier）/ valider（électronique）"
   }
 ];
 
-
 const GRAMMAR=[
-  {id:"g011",date:"05/22",type:"grammar",title:"si + 現在式（條件句）",tags:["條件句","si","時態"],rules:["si 子句永遠用現在式，不用未來式！","Si + présent → 主句用近未來式或未來式","⚠️ Si je vais voyager ✗ → Si je voyage ✓"],myExamples:["Si je voyage, je vais prendre une chambre d'hôtel.","Si il fait beau, on va sortir."],mySentences:[]},
+  {id:"g012",date:"05/26",type:"grammar",title:"ne...jamais / ne...pas encore",tags:["否定","副詞","時態"],rules:["ne...jamais = 從不（never）","ne...pas encore = 還沒（not yet）","PC：ne + avoir/être + jamais/pas encore + PP","⚠️ jamais 不需要 pas：Je n'ai JAMAIS（不說 pas jamais）"],myExamples:["Je ne fais jamais de camping.","Je n'ai pas encore visité Paris.","Elle n'est pas encore arrivée."],mySentences:[]},
+    {id:"g011",date:"05/22",type:"grammar",title:"si + 現在式（條件句）",tags:["條件句","si","時態"],rules:["si 子句永遠用現在式，不用未來式！","Si + présent → 主句用近未來式或未來式","⚠️ Si je vais voyager ✗ → Si je voyage ✓"],myExamples:["Si je voyage, je vais prendre une chambre d'hôtel.","Si il fait beau, on va sortir."],mySentences:[]},
   {id:"g010",date:"05/22",type:"grammar",title:"動詞 + 介係詞（participer à / discuter de）",tags:["介係詞","動詞搭配"],rules:["participer à + 名詞","discuter de + 名詞","parler de + 名詞","penser à + 名詞","⚠️ 這些動詞後面不能直接接名詞！"],myExamples:["J'ai participé à un club de lecture.","On a discuté de nos opinions sur le livre."],mySentences:[]},
   {id:"g009",date:"05/19",type:"grammar",title:"指示形容詞 ce/cet/cette/ces",tags:["指示形容詞","冠詞"],rules:["ce + 陽性：ce livre","cet + 陽性（母音前）：cet opéra","cette + 陰性：cette bouteille","ces + 複數：ces amis"],table:{headers:["","陽性","陽性（母音前）","陰性","複數"],rows:[["","ce","cet","cette","ces"]]},myExamples:["Ce portable est à moi.","Cette bouteille est chère.","Cet opéra est très célèbre."],mySentences:[]},
   {id:"g008",date:"05/18",type:"grammar",title:"aimer 等喜好動詞 + 定冠詞",tags:["冠詞","喜好動詞"],rules:["aimer / adorer / détester / préférer 後面永遠接 le/la/les","⚠️ J'aime les films. ✓（不是 des films）"],myExamples:["J'aime les films d'action.","Je déteste la chaleur !"],mySentences:[]},
@@ -1269,7 +1306,9 @@ const GRAMMAR=[
 ];
 
 const VOCAB=[
-  {id:"v008",date:"05/22",type:"vocab",title:"讀書與文學",tags:["文學","文化"],items:[{fr:"un club de lecture",zh:"讀書會",ex:"Je participe à un club de lecture."},{fr:"un roman",zh:"小說",ex:"C'est facile à lire parce que c'est un roman."},{fr:"la littérature",zh:"文學",ex:"J'adore la littérature française."},{fr:"discuter de",zh:"討論",ex:"On a discuté de nos opinions."},{fr:"à l'époque",zh:"當時/那個年代",ex:"Ce n'était pas possible à l'époque."},{fr:"avoir de la chance",zh:"很幸運",ex:"Il a beaucoup de chance."}]},
+  {id:"v010",date:"05/27",type:"vocab",title:"運動與身體",tags:["運動","身體","日常"],items:[{fr:"avoir des courbatures",zh:"肌肉痠痛",ex:"J'ai des courbatures partout après le gym !"},{fr:"les cuisses",zh:"大腿",ex:"J'ai des courbatures dans les cuisses."},{fr:"les fessiers",zh:"臀部/屁股",ex:"Mes fessiers sont douloureux."},{fr:"se concentrer",zh:"專注",ex:"J'ai besoin de me concentrer."},{fr:"être distraite",zh:"分心（女）",ex:"Quand je suis avec des amis, je suis distraite."},{fr:"se détendre",zh:"放鬆",ex:"Mon corps s'est détendu après le Pilates."},{fr:"être en forme",zh:"精神好/狀態好",ex:"Je voudrais être en forme."},{fr:"avoir de l'énergie",zh:"有精神/有活力",ex:"J'ai besoin d'avoir de l'énergie."},{fr:"avoir la pêche",zh:"精力充沛（口語）",ex:"Aujourd'hui j'ai la pêche !"},{fr:"la silhouette",zh:"身材線條",ex:"Je voudrais avoir une meilleure silhouette."},{fr:"c'est pour ça que",zh:"這就是為什麼",ex:"C'est pour ça que je vais au gym !"},{fr:"trois fois par mois",zh:"每個月三次",ex:"Je fais du Pilates trois fois par mois."}]},
+  {id:"v009",date:"05/26",type:"vocab",title:"交通・機場詞彙",tags:["旅遊","交通","實用"],items:[{fr:"composter",zh:"打票（紙本）",ex:"N'oubliez pas de composter votre billet !"},{fr:"valider",meaning:"感應/驗票",zh:"感應驗票（電子）",ex:"Validez votre carte !"},{fr:"embarquer",zh:"登機/登船",ex:"Nous allons embarquer dans 10 minutes."},{fr:"enregistrer les bagages",zh:"托運行李",ex:"J'ai enregistré mes bagages."},{fr:"la carte d'embarquement",zh:"登機證",ex:"Votre carte d'embarquement !"},{fr:"passer à la douane",zh:"過海關",ex:"Un douanier examine vos documents."},{fr:"le décalage horaire",zh:"時差",ex:"Il y a 7h de décalage horaire."},{fr:"un voyage d'affaires",zh:"商務旅行",ex:"Il fait souvent des voyages d'affaires."},{fr:"ne...jamais",zh:"從不",ex:"Je ne fais jamais de camping."},{fr:"ne...pas encore",zh:"還沒",ex:"Je n'ai pas encore visité Paris."}]},
+    {id:"v008",date:"05/22",type:"vocab",title:"讀書與文學",tags:["文學","文化"],items:[{fr:"un club de lecture",zh:"讀書會",ex:"Je participe à un club de lecture."},{fr:"un roman",zh:"小說",ex:"C'est facile à lire parce que c'est un roman."},{fr:"la littérature",zh:"文學",ex:"J'adore la littérature française."},{fr:"discuter de",zh:"討論",ex:"On a discuté de nos opinions."},{fr:"à l'époque",zh:"當時/那個年代",ex:"Ce n'était pas possible à l'époque."},{fr:"avoir de la chance",zh:"很幸運",ex:"Il a beaucoup de chance."}]},
   {id:"v007",date:"05/20",type:"vocab",title:"旅遊詞彙",tags:["旅遊","實用"],items:[{fr:"une valise",zh:"行李箱",ex:"Je fais ma valise pour le voyage."},{fr:"un passeport",zh:"護照",ex:"N'oublie pas ton passeport !"},{fr:"un billet",zh:"票（火車/飛機）",ex:"J'ai réservé un billet d'avion."},{fr:"réserver",zh:"預訂",ex:"J'ai réservé une chambre d'hôtel."},{fr:"une chambre d'hôtes",zh:"民宿",ex:"C'est plus authentique."},{fr:"faire sa valise",zh:"打包行李",ex:"Je dois faire ma valise ce soir."},{fr:"découvrir",zh:"探索/發現",ex:"Je voudrais découvrir d'autres villes."}]},
   {id:"v006",date:"05/19",type:"vocab",title:"天氣與感覺",tags:["天氣","日常"],items:[{fr:"il fait chaud",zh:"天氣熱",ex:"Il fait trop chaud aujourd'hui !"},{fr:"transpirer",zh:"流汗",ex:"J'ai beaucoup transpiré."},{fr:"dehors",zh:"外面",ex:"Il fait trop chaud dehors."},{fr:"la chaleur",zh:"熱度/酷熱",ex:"La chaleur est insupportable !"}]},
   {id:"v005",date:"05/18",type:"vocab",title:"電影相關",tags:["電影","文化"],items:[{fr:"un film hongkongais",zh:"香港電影",ex:"J'ai vu un film hongkongais."},{fr:"un film policier",zh:"犯罪片",ex:"C'est un film policier."},{fr:"un film d'action",zh:"動作片",ex:"J'aime les films d'action."},{fr:"un agent infiltré",zh:"臥底",ex:"Le film parle d'un agent infiltré."},{fr:"ce genre de films",zh:"這種類型的電影",ex:"J'aime bien ce genre de films."}]},
@@ -1280,7 +1319,11 @@ const VOCAB=[
 ];
 
 const ERRORS_INIT=[
-  {id:"e022",date:"05/22",category:"介係詞",wrong:"discuté ses opinions",correct:"discuté de nos opinions",reason:"discuter + de（固定搭配），而且是「我們的」→ nos",myNote:"discuter DE / parler DE / penser À",attempts:0,mastered:false},
+  {id:"e027",date:"05/27",category:"陰陽性",wrong:"un app",correct:"une app",reason:"app 是陰性（application → une application）",myNote:"une app / une application",attempts:0,mastered:false},
+  {id:"e026",date:"05/27",category:"時態",wrong:"c'est très chaud（描述過去）",correct:"c'était très chaud",reason:"描述過去的狀態用 imparfait：c'était",myNote:"c'est = 現在 / c'était = 過去狀態",attempts:0,mastered:false},
+  {id:"e025",date:"05/27",category:"反身動詞",wrong:"je suis rentré",correct:"je suis rentrée",reason:"rentrer 用 être，女性 PP 要加 e",myNote:"être + PP 配合性別！",attempts:0,mastered:false},
+  {id:"e024",date:"05/27",category:"介係詞",wrong:"à 3 fois un mois",correct:"trois fois par mois",reason:"「每個月幾次」用 par，不用 à",myNote:"par semaine / par mois / par an",attempts:0,mastered:false},
+    {id:"e022",date:"05/22",category:"介係詞",wrong:"discuté ses opinions",correct:"discuté de nos opinions",reason:"discuter + de（固定搭配），而且是「我們的」→ nos",myNote:"discuter DE / parler DE / penser À",attempts:0,mastered:false},
   {id:"e021",date:"05/22",category:"介係詞",wrong:"j'ai participé un club",correct:"j'ai participé à un club",reason:"participer + à（固定搭配）",myNote:"participer À un club",attempts:0,mastered:false},
   {id:"e020",date:"05/22",category:"時態",wrong:"Si je vais voyager...",correct:"Si je voyage...",reason:"si 子句永遠用現在式，不用未來式",myNote:"Si + présent → 主句用未來式",attempts:0,mastered:false},
   {id:"e019",date:"05/22",category:"冠詞",wrong:"habiter avec l'étrangers",correct:"habiter avec les étrangers",reason:"複數用 les，不是 l'",myNote:"複數 → les",attempts:0,mastered:false},
