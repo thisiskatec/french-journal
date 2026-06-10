@@ -1287,6 +1287,144 @@ const CHAPTERS = [
       {s:"A",t:"N'oublie pas de composter ton billet !"},{s:"B",t:"Merci ! Et ma carte d'embarquement ?"},
     ],
     tip:"機場流程：acheter un billet → enregistrer les bagages → carte d'embarquement → douane → embarquer\nTrain：composter（papier）/ valider（électronique）"
+  },
+  {
+    id:"0528", level:"3", noteLinks:["g013"], date:"05/28", weekday:"四", topic:"所有格形容詞・oublier・penser",
+    tags:["所有格","adjectif possessif","oublier"],
+    summary:[
+      {text:"所有格形容詞：mon/ma/mes, ton/ta/tes, son/sa/ses, notre/nos, votre/vos, leur/leurs"},
+      {text:"⚠️ 陰性名詞但母音開頭 → 用 mon/ton/son：mon amie ✓（不說 ma amie）"},
+      {text:"oublier + nom：J'ai oublié mon portable."},
+      {text:"oublier de + infinitif：J'ai oublié de prendre mon portable."},
+      {text:"penser à = 想著某人/事 / penser de = 對...的看法"},
+    ],
+    flashcards:[
+      {word:"mon / ma / mes",meaning:"我的",example:"mon ami / ma sœur / mes parents"},
+      {word:"son / sa / ses",meaning:"他的/她的",example:"son papa / sa maman / ses amis"},
+      {word:"notre / nos",meaning:"我們的",example:"notre maison / nos enfants"},
+      {word:"leur / leurs",meaning:"他們的",example:"leur voiture / leurs amis"},
+      {word:"oublier de + inf.",meaning:"忘記做某事",example:"J'ai oublié de prendre mon portable."},
+      {word:"penser à",meaning:"想著...",example:"Je pense à toi. Tu me manques."},
+      {word:"ranger",meaning:"整理/收拾",example:"J'ai rangé ma chambre ce matin."},
+      {word:"la canicule",meaning:"熱浪/酷暑",example:"Il fait très chaud, c'est la canicule."},
+    ],
+    grammar:[
+      {title:"所有格形容詞完整表",table:{headers:["","陽性單數","陰性單數（母音前用陽性）","複數"],rows:[["我的","mon","ma（mon+母音）","mes"],["你的","ton","ta（ton+母音）","tes"],["他/她的","son","sa（son+母音）","ses"],["我們的","notre","notre","nos"],["你們的","votre","votre","vos"],["他們的","leur","leur","leurs"]]}},
+      {title:"oublier + nom vs oublier de + inf.",content:"oublier + nom = 忘記帶某東西\nJ'ai oublié mon portable dans ma voiture.\n\noublier de + infinitif = 忘記做某事\nJ'ai oublié de prendre mon portable.\n\n類似規則：décider de / essayer de / arrêter de + infinitif"},
+    ],
+    exercises:[
+      {type:"選",q:"「我忘記帶護照了。」",opts:["J'ai oublié de mon passeport.","J'ai oublié mon passeport.","J'oublie mon passeport."],ans:1,exp:"oublier + nom（東西）→ 直接接名詞，不加 de"},
+      {type:"填",q:"C'est l'amie de Lucas. C'est ___ amie. / J'ai oublié ___ prendre mes clés.",blanks:["son","de"],hint:"母音前用 son / oublier de + infinitif"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu as ton portable ?"},{s:"B",t:"Oh non, j'ai oublié mon portable à la maison !"},
+      {s:"A",t:"Tu as oublié de le prendre ?"},{s:"B",t:"Oui... je pense à autre chose ce matin."},
+    ],
+    tip:"son ami（男友的朋友）vs son amie（女友的朋友）\n— son/sa 看名詞性別，不看主詞性別！"
+  },
+  {
+    id:"0602", level:"3", noteLinks:[], date:"06/02", weekday:"二", topic:"nouveau/neuf・laisser・s'installer",
+    tags:["形容詞","nouveau","laisser","s'installer"],
+    summary:[
+      {text:"nouveau/nouvelle = 新的（剛有的、最近的）：un nouveau film"},
+      {text:"neuf/neuve = 全新的（從未用過）：une voiture neuve ≠ d'occasion"},
+      {text:"laisser = 讓/留下：laisser le chien aux parents"},
+      {text:"s'installer = 定居/搬進去 / emménager = 搬進去 / déménager = 搬出去"},
+      {text:"Ça y est ? = 好了嗎？/準備好了嗎？/ C'est noté. = 記下來了。"},
+    ],
+    flashcards:[
+      {word:"nouveau / nouvelle",meaning:"新的（剛有的）",example:"un nouveau film / une nouvelle amie"},
+      {word:"neuf / neuve",meaning:"全新的（未用過）",example:"une voiture neuve ≠ d'occasion"},
+      {word:"laisser",meaning:"讓/留下",example:"Elle a décidé de laisser le chien à ses parents."},
+      {word:"s'installer",meaning:"定居/安頓",example:"On s'est bien installé à Montcaillou."},
+      {word:"emménager",meaning:"搬進去",example:"Nous allons emménager dans un mois."},
+      {word:"déménager",meaning:"搬出去/搬家",example:"Il a déménagé à Lyon."},
+      {word:"Ça y est ?",meaning:"好了嗎？準備好了嗎？",example:"Ça y est ? Tu es prête ?"},
+      {word:"C'est noté.",meaning:"記下來了",example:"C'est noté, merci !"},
+      {word:"quitter",meaning:"離開（某地）",example:"Elle veut quitter Taipei."},
+    ],
+    grammar:[
+      {title:"nouveau vs neuf",content:"nouveau/nouvelle = 新的（newly acquired, recently）\nun nouveau téléphone（新換的）\nune nouvelle amie（新認識的朋友）\n⚠️ nouvel + 母音：mon nouvel ami\n\nneuf/neuve = brand new（從未用過）\nune voiture neuve（全新車）\nune voiture d'occasion（二手車）"},
+      {title:"laisser + COD + à + personne",content:"laisser = 留給某人/讓某人照顧\nElle propose de laisser le chien aux parents.\nLaisse-moi tranquille !（別煩我）\nLaisse tomber.（算了）"},
+    ],
+    exercises:[
+      {type:"選",q:"「我剛買了一台全新的車。」",opts:["J'ai acheté une nouvelle voiture.","J'ai acheté une voiture neuve.","J'ai acheté une voiture nouvelle."],ans:1,exp:"全新未用過 → neuve"},
+      {type:"填",q:"Ça y ___ ? Tu es prête ? / C'est ___, merci !",blanks:["est","noté"],hint:"Ça y est = 好了嗎 / C'est noté = 記下來了"},
+    ],
+    dialogue:[
+      {s:"A",t:"Ça y est ? Tu es prête ?"},{s:"B",t:"Pas encore. J'en ai pour 5 minutes."},
+      {s:"A",t:"On va s'installer à la campagne !"},{s:"B",t:"C'est noté. On quitte Taipei le mois prochain."},
+    ],
+    tip:"Laisse tomber. = 算了/沒關係（非常口語！）\nLaisse-moi tranquille. = 讓我靜一靜/別煩我"
+  },
+  {
+    id:"0604", level:"3", noteLinks:[], date:"06/04", weekday:"四", topic:"交通方式・ça prend・être en retard",
+    tags:["交通","時間","en retard","être en avance"],
+    summary:[
+      {text:"Tu vas au bureau comment ? → Je prends le métro / Je vais en métro."},
+      {text:"Ça prend combien de temps ? → Ça prend 35 minutes. = Je mets 35 minutes."},
+      {text:"en retard = 遲到 / à l'heure = 準時 / en avance = 提早"},
+      {text:"un bouchon = 塞車 / Prends ton temps. = 不用急"},
+      {text:"被動語態入門：cet article a été écrit（這篇文章被寫的）"},
+    ],
+    flashcards:[
+      {word:"ça prend combien de temps ?",meaning:"需要多久時間？",example:"Ça prend 35 minutes."},
+      {word:"je mets...minutes",meaning:"我需要...分鐘",example:"Je mets 20 minutes pour aller au bureau."},
+      {word:"un bouchon",meaning:"塞車",example:"Excuse-moi, il y a des bouchons."},
+      {word:"être en retard",meaning:"遲到",example:"Je vais être en retard !"},
+      {word:"être à l'heure",meaning:"準時",example:"Le train est à l'heure."},
+      {word:"être en avance",meaning:"提早到",example:"Je suis en avance, j'attends."},
+      {word:"Prends ton temps.",meaning:"不用急/慢慢來",example:"Prends ton temps, je t'attends."},
+      {word:"le trajet",meaning:"行程/路程",example:"Le trajet dure 2 heures."},
+      {word:"préférer + conditionnel",meaning:"用來表達婉轉偏好",example:"Je préférais voyager en TGV."},
+    ],
+    grammar:[
+      {title:"交通方式表達",content:"Tu vas au bureau comment ?\n→ Je prends le métro / le bus / le train\n→ Je vais au bureau en métro / en voiture / à vélo / à scooter\n\nÇa prend combien de temps ?\n→ Ça prend 20 minutes. = Je mets 20 minutes.\n\nJ'y vais en métro.（y = à + lieu）"},
+      {title:"en retard / à l'heure / en avance",content:"être en retard = 遲到\nêtre à l'heure = 準時\nêtre en avance = 提早\n\narriver en retard / partir à l'heure\n\n⚠️ 常考搭配：\nLe professeur arrive toujours en avance.\nJe suis en retard, excuse-moi !"},
+    ],
+    exercises:[
+      {type:"選",q:"「我搭捷運上班，需要 30 分鐘。」",opts:["Je vais au bureau avec le métro, ça prend 30 minutes.","Je prends le métro pour aller au bureau, ça prend 30 minutes.","Je vais en métro au bureau, ça met 30 minutes."],ans:1,exp:"prendre le métro + ça prend...minutes"},
+      {type:"填",q:"Excuse-moi, je vais être ___. Il y a des ___.",blanks:["en retard","bouchons"],hint:"遲到 = en retard / 塞車 = bouchons"},
+    ],
+    dialogue:[
+      {s:"A",t:"Excuse-moi, je vais être en retard. Il y a des bouchons."},{s:"B",t:"Prends ton temps. Je lis à la terrasse."},
+      {s:"A",t:"Tu vas au bureau comment ?"},{s:"B",t:"Je prends le métro. Ça prend 35 minutes."},
+    ],
+    tip:"Prends ton temps. = 不用急（很常用！）\nbouchon = 軟木塞 / 塞車（兩個意思）\nêtre coincé dans les bouchons = 被困在車陣中"
+  },
+  {
+    id:"0609", level:"3", noteLinks:[], date:"06/09", weekday:"一", topic:"冠詞總複習 les articles",
+    tags:["冠詞","articles","partitif","nourriture"],
+    summary:[
+      {text:"定冠詞 le/la/l'/les = 特指、泛指（aimer le vin）、唯一的事物（le soleil）"},
+      {text:"不定冠詞 un/une/des = 不特定可數名詞 / 否定後變 de/d'"},
+      {text:"部分冠詞 du/de la/de l' = 不可數的量（食物、飲料、抽象事物）"},
+      {text:"否定後所有冠詞 → de/d'：Je n'ai pas de pain. / Je ne mange pas de viande."},
+      {text:"職業前不加冠詞：Je suis professeur. ✓（但 C'est une bonne professeur. ✓）"},
+    ],
+    flashcards:[
+      {word:"le/la/l'/les",meaning:"定冠詞（特指/泛指）",example:"J'aime le chocolat. C'est la tour Eiffel."},
+      {word:"un/une/des",meaning:"不定冠詞（不特定可數）",example:"J'ai un chat et des livres."},
+      {word:"du/de la/de l'",meaning:"部分冠詞（不可數的量）",example:"Je bois du café et de l'eau."},
+      {word:"de/d'（否定後）",meaning:"否定句後冠詞變 de",example:"Je n'ai pas de pain. Je ne bois pas d'alcool."},
+      {word:"avoir du courage",meaning:"有勇氣（抽象名詞用部分冠詞）",example:"Elle a du courage. Il a de la patience."},
+      {word:"une bouteille de",meaning:"一瓶...",example:"une bouteille de vin / un verre d'eau"},
+    ],
+    grammar:[
+      {title:"三種冠詞比較",table:{headers:["冠詞","用法","例子"],rows:[["le/la/l'/les","特指、泛指、唯一","J'aime le vin. Le soleil brille."],["un/une/des","不特定可數","Il y a une boulangerie. J'ai des amis."],["du/de la/de l'","不可數的量","Je mange du pain. J'écoute de la musique."]]}},
+      {title:"否定後 → de/d'",content:"否定句中，un/une/des/du/de la → de/d'\nJ'ai du pain. → Je n'ai pas de pain.\nJe mange des légumes. → Je ne mange pas de légumes.\nIl boit de l'alcool. → Il ne boit pas d'alcool.\n\n⚠️ 例外：C'est un livre. → Ce n'est pas un livre.（c'est 後面不變）"},
+      {title:"部分冠詞的特殊用法",content:"食物/飲料：manger du riz, boire de la bière\n抽象名詞：avoir du courage / de la patience / de l'énergie\n數量表達：une bouteille de vin / un verre d'eau / une tasse de café"},
+    ],
+    exercises:[
+      {type:"選",q:"「我喜歡音樂。」",opts:["J'aime de la musique.","J'aime une musique.","J'aime la musique."],ans:2,exp:"泛指「音樂」這件事 → 定冠詞 la"},
+      {type:"填",q:"Je bois ___ café le matin. / Je ne mange pas ___ viande.",blanks:["du","de"],hint:"部分冠詞：du café / 否定後：de"},
+    ],
+    dialogue:[
+      {s:"A",t:"Qu'est-ce que tu manges le matin ?"},{s:"B",t:"Je prends du café, des tartines avec du beurre."},
+      {s:"A",t:"Tu ne bois pas de lait ?"},{s:"B",t:"Non, je n'aime pas le lait !"},
+      {s:"A",t:"Et des fruits ?"},{s:"B",t:"Oui, j'ai de la chance, j'adore les fruits !"},
+    ],
+    tip:"記憶法：\nle chocolat = 我喜歡巧克力（泛指這種東西）\ndu chocolat = 我吃了一些巧克力（一部分的量）\nun chocolat = 我吃了一顆巧克力（一個可數單位）"
   }
 ];
 
