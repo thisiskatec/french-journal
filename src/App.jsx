@@ -652,7 +652,7 @@ const CHAPTERS = [
     tip:"savoir vs connaître 記憶法：savoir = KNOW HOW（技能+子句），connaître = KNOW who/where（認識人地）"
   },
   {
-    id:"0310", level:"3", noteLinks:[], date:"03/10", weekday:"二", topic:"aller（問候）・地址・身體狀況",
+    id:"0310", level:"1", noteLinks:[], date:"03/10", weekday:"二", topic:"aller（問候）・地址・身體狀況",
     tags:["comment allez-vous","adresse","aller bien/mal"],
     summary:[
       {text:"aller 除了「去」還可以問候：", fr:"Ça va ? / Comment vas-tu ? / Comment allez-vous ?"},
@@ -1192,7 +1192,20 @@ const CHAPTERS = [
     tip:"最後一課！你已經完成了整個 A1-A2 旅程。\n繼續練習：每天說一句法文，看法文影片，讀法文文章。Continuez ! 😊🇫🇷"
   },
   {
-    id:"0519", level:"3", noteLinks:["g009"], date:"05/19", weekday:"一", topic:"指示形容詞・cher 副詞 vs 形容詞",
+    id:"0519", level:"3", noteLinks:["g009"],
+    vocabItems:[
+      {word:"ce / cet",meaning:"這個（陽性）",example:"ce livre / cet opéra / cet hôtel"},
+      {word:"cette",meaning:"這個（陰性）",example:"cette robe / cette bouteille"},
+      {word:"ces",meaning:"這些（複數）",example:"ces livres / ces amis"},
+      {word:"cher (adj)",meaning:"貴的（配合性別）",example:"Il est cher. / Elle est chère. / Elles sont chères."},
+      {word:"coûter cher (adv)",meaning:"很貴（副詞不變）",example:"Ça coûte cher. / Ils coûtent cher."},
+      {word:"plus fort",meaning:"更大聲（副詞）",example:"Vous pouvez parler plus fort ?"},
+      {word:"je trouve que",meaning:"我覺得...",example:"Je trouve qu'elle est meilleures."},
+      {word:"aussi...que",meaning:"和...一樣",example:"L'hôtel A est aussi cher que l'hôtel B."},
+      {word:"plus...que",meaning:"比...更",example:"Ils ont un plus grand appartement que nous."},
+      {word:"moins...que",meaning:"比...少/不",example:"Je suis moins fatigué que les autres."},
+      {word:"mieux (adv)",meaning:"更好（動詞用）",example:"On mange mieux au restaurant Le Grenier."},
+    ], date:"05/19", weekday:"一", topic:"指示形容詞・cher 副詞 vs 形容詞",
     tags:["ce/cet/cette/ces","cher","比較級"],
     summary:[
       {text:"指示形容詞：ce（陽性）/ cet（陽性母音前）/ cette（陰性）/ ces（複數）"},
@@ -1222,7 +1235,21 @@ const CHAPTERS = [
     tip:"母音前的陽性 → cet（聽起來更順口！）"
   },
   {
-    id:"0521", level:"3", noteLinks:[], date:"05/21", weekday:"三", topic:"旅遊詞彙・apporter vs emporter",
+    id:"0521", level:"3", noteLinks:[],
+    vocabItems:[
+      {word:"apporter",meaning:"帶來（往目的地）",example:"Je vais apporter une bouteille de bon vin."},
+      {word:"emporter",meaning:"帶走（離開）",example:"Je voudrais une pizza à emporter."},
+      {word:"faire sa valise",meaning:"打包行李",example:"Avant de partir, on fait sa valise."},
+      {word:"réserver",meaning:"預訂",example:"J'ai réservé une chambre d'hôtel."},
+      {word:"louer",meaning:"租",example:"Nous allons louer un appartement."},
+      {word:"se renseigner",meaning:"詢問資訊",example:"Je vais me renseigner à l'office de tourisme."},
+      {word:"un séjour",meaning:"一段旅居時光",example:"Un séjour dans un hôtel / dans un club de vacances."},
+      {word:"une station balnéaire",meaning:"海水浴場/海濱度假地",example:"Passer les vacances dans une station balnéaire."},
+      {word:"un vacancier",meaning:"度假者",example:"Les vacanciers aiment la mer."},
+      {word:"prendre des congés",meaning:"放假/休假",example:"En France, on a 5 semaines de congés payés."},
+      {word:"parcourir",meaning:"走遍/到處走",example:"Elle a parcouru toute l'Europe en sac à dos."},
+      {word:"un voyage de noces",meaning:"蜜月旅行",example:"Ils sont partis en voyage de noces à Paris."},
+    ], date:"05/21", weekday:"三", topic:"旅遊詞彙・apporter vs emporter",
     tags:["旅遊","vacances","apporter/emporter"],
     summary:[
       {text:"apporter = 帶來（往說話者方向）"},
@@ -1252,7 +1279,23 @@ const CHAPTERS = [
     tip:"apporter = bring (to)\nemporter = take away"
   },
   {
-    id:"0526", level:"3", noteLinks:[], date:"05/26", weekday:"二", topic:"交通詞彙・機場・ne...jamais/pas encore",
+    id:"0526", level:"3", noteLinks:[],
+    vocabItems:[
+      {word:"composter",meaning:"打票（紙本車票）",example:"N'oubliez pas de composter votre billet !"},
+      {word:"valider",meaning:"感應驗票（電子票）",example:"Validez votre carte de transport."},
+      {word:"embarquer",meaning:"登機/登船",example:"Nous allons embarquer dans 10 minutes."},
+      {word:"enregistrer les bagages",meaning:"托運行李",example:"Vous devez enregistrer vos bagages."},
+      {word:"la carte d'embarquement",meaning:"登機證",example:"Votre carte d'embarquement, s'il vous plaît."},
+      {word:"un douanier",meaning:"海關人員",example:"Un douanier examine vos documents."},
+      {word:"un voyage d'affaires",meaning:"商務出差",example:"Mon patron fait souvent des voyages d'affaires."},
+      {word:"un déplacement",meaning:"出差（同 voyage d'affaires）",example:"C'est un déplacement professionnel."},
+      {word:"le décalage horaire",meaning:"時差",example:"Il y a 7h de décalage horaire entre Taiwan et la France."},
+      {word:"la climatisation",meaning:"冷氣",example:"Une chambre climatisée, s'il vous plaît."},
+      {word:"ne...jamais",meaning:"從不",example:"Je ne fais jamais de camping."},
+      {word:"ne...pas encore",meaning:"還沒",example:"Je n'ai pas encore visité Paris."},
+      {word:"un aller simple",meaning:"單程票",example:"Un aller simple pour Lyon, s'il vous plaît."},
+      {word:"un aller-retour",meaning:"來回票",example:"Un aller-retour Paris-Nice."},
+    ], date:"05/26", weekday:"二", topic:"交通詞彙・機場・ne...jamais/pas encore",
     tags:["交通","機場","ne...jamais","比較級"],
     summary:[
       {text:"composter = 打票（紙本）/ valider = 感應（電子票）"},
@@ -1289,7 +1332,22 @@ const CHAPTERS = [
     tip:"機場流程：acheter un billet → enregistrer les bagages → carte d'embarquement → douane → embarquer\nTrain：composter（papier）/ valider（électronique）"
   },
   {
-    id:"0528", level:"3", noteLinks:["g013"], date:"05/28", weekday:"四", topic:"所有格形容詞・oublier・penser",
+    id:"0528", level:"3", noteLinks:["g013"],
+    vocabItems:[
+      {word:"mon / ma / mes",meaning:"我的",example:"mon ami / ma sœur / mes parents"},
+      {word:"son / sa / ses",meaning:"他的/她的（看名詞性別）",example:"son papa / sa maman / ses amis"},
+      {word:"notre / nos",meaning:"我們的",example:"notre maison / nos enfants"},
+      {word:"votre / vos",meaning:"您的/你們的",example:"votre livre / vos affaires"},
+      {word:"leur / leurs",meaning:"他們的",example:"leur voiture / leurs amis"},
+      {word:"oublier + nom",meaning:"忘記帶（東西）",example:"J'ai oublié mon portable dans ma voiture."},
+      {word:"oublier de + inf.",meaning:"忘記做（某事）",example:"J'ai oublié de prendre mon portable."},
+      {word:"penser à",meaning:"想著...",example:"Je pense à toi. Tu me manques."},
+      {word:"penser de + nom",meaning:"對...的看法",example:"Qu'est-ce que tu penses de ce travail ?"},
+      {word:"ranger",meaning:"整理/收拾",example:"J'ai rangé ma chambre. Elle est bien rangée."},
+      {word:"en ordre / en désordre",meaning:"整齊的/凌亂的",example:"Ma chambre est en ordre. / en désordre."},
+      {word:"la canicule",meaning:"熱浪/酷暑",example:"Il fait très chaud, c'est la canicule."},
+      {word:"être à + pronom",meaning:"屬於某人",example:"C'est à moi. / Ce livre est à lui."},
+    ], date:"05/28", weekday:"四", topic:"所有格形容詞・oublier・penser",
     tags:["所有格","adjectif possessif","oublier"],
     summary:[
       {text:"所有格形容詞：mon/ma/mes, ton/ta/tes, son/sa/ses, notre/nos, votre/vos, leur/leurs"},
@@ -1323,7 +1381,23 @@ const CHAPTERS = [
     tip:"son ami（男友的朋友）vs son amie（女友的朋友）\n— son/sa 看名詞性別，不看主詞性別！"
   },
   {
-    id:"0602", level:"3", noteLinks:[], date:"06/02", weekday:"二", topic:"nouveau/neuf・laisser・s'installer",
+    id:"0602", level:"3", noteLinks:[],
+    vocabItems:[
+      {word:"nouveau / nouvelle",meaning:"新的（剛有的）",example:"un nouveau film / une nouvelle amie"},
+      {word:"nouvel + voyelle",meaning:"新的（陽性+母音前）",example:"un nouvel ami / un nouvel hôtel"},
+      {word:"neuf / neuve",meaning:"全新的（未用過）",example:"une voiture neuve ≠ d'occasion"},
+      {word:"d'occasion",meaning:"二手的",example:"une voiture d'occasion"},
+      {word:"laisser",meaning:"留給/讓...照顧",example:"Elle propose de laisser le chien aux parents."},
+      {word:"Laisse tomber.",meaning:"算了（口語）",example:"Laisse tomber, ce n'est pas grave."},
+      {word:"s'installer",meaning:"定居/安頓",example:"On va s'installer à la campagne."},
+      {word:"emménager",meaning:"搬進去",example:"Nous allons emménager le mois prochain."},
+      {word:"déménager",meaning:"搬出去/搬家",example:"Il a déménagé à Lyon."},
+      {word:"quitter",meaning:"離開（某地）",example:"Elle veut quitter Taipei."},
+      {word:"Ça y est ?",meaning:"好了嗎？準備好了？",example:"Ça y est ? Tu es prête ?"},
+      {word:"C'est noté.",meaning:"記下來了",example:"C'est noté, merci !"},
+      {word:"un changement de train",meaning:"換車/轉乘",example:"Tu as un changement de train à Nancy."},
+      {word:"trop de / assez de / beaucoup de",meaning:"太多/足夠/很多 + 名詞",example:"Il y a trop de bruit. Assez de temps."},
+    ], date:"06/02", weekday:"二", topic:"nouveau/neuf・laisser・s'installer",
     tags:["形容詞","nouveau","laisser","s'installer"],
     summary:[
       {text:"nouveau/nouvelle = 新的（剛有的、最近的）：un nouveau film"},
@@ -1358,7 +1432,22 @@ const CHAPTERS = [
     tip:"Laisse tomber. = 算了/沒關係（非常口語！）\nLaisse-moi tranquille. = 讓我靜一靜/別煩我"
   },
   {
-    id:"0604", level:"3", noteLinks:[], date:"06/04", weekday:"四", topic:"交通方式・ça prend・être en retard",
+    id:"0604", level:"3", noteLinks:[],
+    vocabItems:[
+      {word:"ça prend combien de temps ?",meaning:"需要多久？",example:"Ça prend 35 minutes."},
+      {word:"je mets...minutes",meaning:"我需要...分鐘",example:"Je mets 20 minutes pour aller au bureau."},
+      {word:"un bouchon",meaning:"塞車",example:"Il y a des bouchons sur l'autoroute."},
+      {word:"être en retard",meaning:"遲到",example:"Je vais être en retard, excuse-moi !"},
+      {word:"être à l'heure",meaning:"準時",example:"Le train est à l'heure aujourd'hui."},
+      {word:"être en avance",meaning:"提早到",example:"Je suis en avance, j'attends dehors."},
+      {word:"Prends ton temps.",meaning:"不用急/慢慢來",example:"Prends ton temps, je t'attends."},
+      {word:"le trajet",meaning:"行程/路程",example:"Le trajet dure 2 heures en TGV."},
+      {word:"un aller simple",meaning:"單程票",example:"Un aller simple Paris-Lyon."},
+      {word:"un aller-retour",meaning:"來回票",example:"Un aller-retour, s'il vous plaît."},
+      {word:"côté fenêtre / couloir",meaning:"靠窗/靠走道",example:"Je préfère une place côté fenêtre."},
+      {word:"TGV",meaning:"Train à Grande Vitesse（高速列車）",example:"Le TGV Paris-Lyon prend 2h."},
+      {word:"être coincé dans les bouchons",meaning:"被困在車陣中",example:"Je suis coincée dans les bouchons !"},
+    ], date:"06/04", weekday:"四", topic:"交通方式・ça prend・être en retard",
     tags:["交通","時間","en retard","être en avance"],
     summary:[
       {text:"Tu vas au bureau comment ? → Je prends le métro / Je vais en métro."},
@@ -1393,7 +1482,21 @@ const CHAPTERS = [
     tip:"Prends ton temps. = 不用急（很常用！）\nbouchon = 軟木塞 / 塞車（兩個意思）\nêtre coincé dans les bouchons = 被困在車陣中"
   },
   {
-    id:"0609", level:"3", noteLinks:[], date:"06/09", weekday:"一", topic:"冠詞總複習 les articles",
+    id:"0609", level:"3", noteLinks:[],
+    vocabItems:[
+      {word:"le / la / l' / les",meaning:"定冠詞（特指/泛指）",example:"J'aime le chocolat. C'est la tour Eiffel."},
+      {word:"un / une / des",meaning:"不定冠詞（不特定可數）",example:"Il y a une boulangerie. J'ai des amis."},
+      {word:"du / de la / de l'",meaning:"部分冠詞（不可數的量）",example:"Je bois du café et de l'eau."},
+      {word:"de / d'（否定後）",meaning:"否定句後冠詞變 de",example:"Je n'ai pas de pain. Il ne boit pas d'alcool."},
+      {word:"avoir du courage",meaning:"有勇氣（抽象名詞用部分冠詞）",example:"Elle a du courage. Il a de la patience."},
+      {word:"avoir de l'énergie",meaning:"有精力",example:"J'ai besoin d'avoir de l'énergie."},
+      {word:"une bouteille de",meaning:"一瓶...",example:"une bouteille de vin / un verre d'eau"},
+      {word:"une tasse de",meaning:"一杯...",example:"une tasse de café / une tasse de thé"},
+      {word:"Je suis professeur.",meaning:"職業前不加冠詞",example:"Elle est médecin. Il est ingénieur."},
+      {word:"au petit déjeuner",meaning:"早餐時",example:"Au petit déjeuner, je prends du café."},
+      {word:"des tartines avec du beurre",meaning:"塗奶油的麵包片",example:"Je mange des tartines avec du beurre."},
+      {word:"de la confiture",meaning:"果醬（部分冠詞）",example:"Des tartines avec de la confiture."},
+    ], date:"06/09", weekday:"一", topic:"冠詞總複習 les articles",
     tags:["冠詞","articles","partitif","nourriture"],
     summary:[
       {text:"定冠詞 le/la/l'/les = 特指、泛指（aimer le vin）、唯一的事物（le soleil）"},
@@ -1590,6 +1693,21 @@ function FlashCards({cards}){
   return(<><p className="card-flip-hint">👆 點擊卡片翻面</p><div className="fc-wrap"><div className={`fc ${flipped?'flipped':''}`} onClick={()=>setFlipped(!flipped)}><div className="fc-f">{card.gender&&<span className={`fc-gender ${card.gender}`}>{card.gender==='m'?'陽性':'陰性'}</span>}<div className="fc-word">{card.word}</div><div className="fc-hint">法文 → 點擊看中文</div></div><div className="fc-b"><div className="fc-meaning">{card.meaning}</div><div className="fc-ex">{card.example}</div></div></div></div><div className="card-nav"><button className="cnav-btn" onClick={()=>go(Math.max(0,i-1))} disabled={i===0}>← 上一張</button><span className="card-counter">{i+1} / {cards.length}</span><button className="cnav-btn" onClick={()=>go(Math.min(cards.length-1,i+1))} disabled={i===cards.length-1}>下一張 →</button></div></>);
 }
 
+
+function VocabList({items}){
+  return(
+    <div style={{display:'flex',flexDirection:'column',gap:0}}>
+      {items.map((item,i)=>(
+        <div key={i} style={{display:'grid',gridTemplateColumns:'1fr 1fr 2fr',gap:'8px',padding:'9px 12px',borderBottom:'1px solid #f5ece8',alignItems:'start',background:i%2===0?'white':'#fdf8f5'}}>
+          <div style={{fontStyle:'italic',color:'var(--blue)',fontWeight:600,fontSize:'.85rem'}}>{item.word}</div>
+          <div style={{color:'var(--navy)',fontSize:'.83rem',fontWeight:500}}>{item.meaning}</div>
+          <div style={{color:'var(--muted)',fontSize:'.78rem',fontStyle:'italic'}}>{item.example}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ChapterView({chapter,onGoNote}){
   return(
     <div>
@@ -1599,8 +1717,11 @@ function ChapterView({chapter,onGoNote}){
       <Section icon="📋" title="本課重點" defaultOpen={true}>
         {chapter.summary.map((pt,i)=><div key={i} className="sum-pt"><div className="sum-bullet">{i+1}</div><div className="sum-text">{pt.text}{pt.fr&&<><br/><span className="fr">{pt.fr}</span></>}</div></div>)}
       </Section>
-      <Section icon="🗂️" title="單字卡">
-        <FlashCards cards={chapter.flashcards}/>
+      <Section icon="🗂️" title={chapter.level==="3"?"詞彙":"單字卡"}>
+        {chapter.level==="3" && chapter.vocabItems
+          ? <><div style={{display:'grid',gridTemplateColumns:'1fr 1fr 2fr',gap:'8px',padding:'7px 12px',background:'var(--navy)',borderRadius:'8px 8px 0 0'}}><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>法文</span><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>中文</span><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>例句</span></div><VocabList items={chapter.vocabItems}/></>
+          : <FlashCards cards={chapter.flashcards}/>
+        }
       </Section>
       {chapter.grammar&&chapter.grammar.length>0&&(
         <Section icon="📐" title="文法">
