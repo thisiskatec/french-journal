@@ -1,18 +1,85 @@
 import { useState, useEffect, useRef } from "react";
 
 const style = `
-  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@300;400;500;600;700&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #fdf8f5; --card: #fff; --rose: #c97a8a; --rose-light: #f5e6ea;
-    --rose-mid: #e8b4be; --gold: #c4906a; --green: #7a9e7e; --blue: #7a9ab5;
-    --navy: #3d2b35; --text: #3d2b35; --muted: #9e8a8e; --radius: 14px;
+    --bg: #f8f4ed; --card: #fff; --rose: #e07b4a; --rose-light: #fdeee6;
+    --rose-mid: #f0c4a8; --gold: #c9b890; --green: #4a7c6f; --blue: #5a8fa0;
+    --navy: #2d4a3e; --text: #2a3a34; --muted: #7a9088; --radius: 14px;
+    --dark-bg: #1a2820; --dark-card: #243830; --dark-navy: #1a2820;
+    --dark-text: #e8f0ec; --dark-muted: #7aaa90;
   }
-  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); }
+  body.dark {
+    --bg: #1a2820;
+    --card: #243830;
+    --navy: #2d6a58;
+    --text: #dceee8;
+    --muted: #7aaa90;
+    --rose: #e07b4a;
+    --rose-light: #2a3028;
+    --rose-mid: #4a6a5a;
+    --gold: #c9a870;
+    --green: #5aaa8a;
+    --blue: #7ab5c8;
+    --radius: 14px;
+  }
+  body.dark .note-card,body.dark .stat-card,body.dark .checklist-wrap,body.dark .chapter-card,body.dark .sec-hdr,body.dark .sec-body,body.dark .exo-wrap,body.dark .search-result,body.dark .error-practice,body.dark .error-input { background: #1c2b25 !important; }
+  body.dark .note-card { box-shadow: 0 2px 12px rgba(0,0,0,.5); border-left-color: #3a7a64; }
+  body.dark .grammar.note-card { border-left-color: #5aaa8a; }
+  body.dark .vocab.note-card { border-left-color: #6aaab8; }
+  body.dark .error.note-card { border-left-color: #e07b4a; }
+  body.dark .chapter-card { color: var(--text) !important; }
+  body.dark .chapter-card .cdate { color: #e07b4a !important; }
+  body.dark .chapter-card .ctag { color: var(--muted) !important; }
+  body.dark .chapter-card.active { background: #3a7a64 !important; }
+  body.dark .sec-hdr { border-left-color: #3a7a64; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+  body.dark .exo-wrap { border-color: #2e4a40; }
+  body.dark .opt-btn { background: #253d35 !important; border-color: #3a5048; color: var(--text); }
+  body.dark .form-input { background: #253d35 !important; border-color: #3a5048; color: var(--text); }
+  body.dark .modal { background: #111917 !important; }
+  body.dark .modal-overlay { background: rgba(0,0,0,.7); }
+  body.dark .filter-main-btn { background: #1c2b25 !important; border-color: #3a5048; color: var(--muted); }
+  body.dark .filter-main-btn.active { background: #3a7a64 !important; color: white; border-color: #3a7a64; }
+  body.dark .filter-main-btn.open { background: #2a1a10 !important; color: #e07b4a; border-color: #5a3828; }
+  body.dark .filter-sub-row { background: #1c2b25 !important; }
+  body.dark .filter-sub-btn { background: #111917 !important; border-color: #3a5048; color: var(--text); }
+  body.dark .filter-sub-btn.active { background: #e07b4a !important; color: white; }
+  body.dark .search-input { background: #1c2b25 !important; border-color: #3a5048; color: var(--text); }
+  body.dark .search-result { border-left-color: transparent; }
+  body.dark .search-result:hover { border-left-color: #e07b4a; }
+  body.dark .search-result-title { color: var(--text); }
+  body.dark .vocab-front { background: #1c2b25 !important; border-color: #3a5048; }
+  body.dark .vocab-fr { color: #6aaab8 !important; }
+  body.dark .vocab-back { background: linear-gradient(135deg, #1a3028, #142420) !important; }
+  body.dark .vocab-zh { color: #5aaa8a !important; }
+  body.dark .vocab-hint { color: var(--muted); }
+  body.dark .error-wrong-display { background: #2a1810 !important; }
+  body.dark .error-wrong-text { color: #e07b4a; }
+  body.dark .error-input { border-color: #3a5048; }
+  body.dark .error-reveal { background: #142820 !important; border-color: #2e5a48; }
+  body.dark .error-correct-text { color: #5aaa8a; }
+  body.dark .check-circle { background: #111917 !important; border-color: #3a5048; }
+  body.dark .conj-table th { background: #3a7a64; }
+  body.dark .conj-table td { border-color: #2e4a40; color: var(--text); }
+  body.dark .conj-table tr:nth-child(even) td { background: #16261e !important; }
+  body.dark .highlight { background: rgba(201,168,112,.08) !important; border-left-color: var(--gold); color: var(--text); }
+  body.dark .tip-box { background: linear-gradient(135deg, #1c2b25, #162018) !important; color: var(--text); }
+  body.dark .dl-text,.dl-speaker,.sum-text,.fr,.gram-title { color: inherit; }
+  body.dark .sum-text { color: var(--text); }
+  body.dark .fr { color: #6aaab8 !important; }
+  body.dark .gram-title { color: var(--text) !important; }
+  body.dark .api-box { background: #2a1810 !important; border-color: #5a3828; }
+  body.dark .api-input { background: #1c2b25 !important; border-color: #3a5048; color: var(--text); }
+  body.dark .quote-card { background: #1c2b25 !important; }
+  body.dark .week-label { color: var(--muted); }
+  body.dark .week-label::after { background: #2e4a40; }
+  body.dark .week-label::after { background: #3a5048; }
+  body { font-family: 'Nunito', sans-serif; background: var(--bg); color: var(--text); }
   .app { min-height: 100vh; }
   .header { background: var(--navy); color: white; padding: 16px 20px 12px; position: sticky; top: 0; z-index: 100; }
   .header-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-  .header h1 { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; }
+  .header h1 { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 900; }
   .subtitle { font-size: .68rem; color: rgba(255,255,255,.45); letter-spacing: .09em; text-transform: uppercase; }
   .nav { display: flex; gap: 5px; flex-wrap: wrap; }
   .nav-btn { background: rgba(255,255,255,.08); color: rgba(255,255,255,.65); border: 1px solid rgba(255,255,255,.12); padding: 5px 11px; border-radius: 20px; cursor: pointer; font-family: 'DM Sans',sans-serif; font-size: .76rem; font-weight: 500; transition: all .2s; }
@@ -143,7 +210,7 @@ const style = `
   .section { margin-bottom: 16px; }
   .sec-hdr { display: flex; align-items: center; gap: 10px; background: white; border-radius: var(--radius); padding: 12px 16px; cursor: pointer; box-shadow: 0 2px 8px rgba(201,122,138,.06); border-left: 4px solid var(--navy); transition: all .2s; user-select: none; }
   .sec-icon { font-size: 1.1rem; }
-  .sec-title { font-family: 'Playfair Display', serif; font-size: .95rem; font-weight: 700; flex: 1; }
+  .sec-title { font-family: 'Lora', serif; font-size: .95rem; font-weight: 700; flex: 1; }
   .sec-toggle { color: var(--muted); font-size: .85rem; transition: transform .3s; }
   .sec-toggle.open { transform: rotate(180deg); }
   .sec-body { background: white; border-radius: 0 0 var(--radius) var(--radius); padding: 14px; margin-top: -4px; box-shadow: 0 4px 12px rgba(201,122,138,.06); }
@@ -162,9 +229,9 @@ const style = `
   .fc-f, .fc-b { position: absolute; top: 0; left: 0; right: 0; min-height: 120px; backface-visibility: hidden; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px; text-align: center; }
   .fc-f { background: linear-gradient(135deg, var(--navy), #5d3a47); color: white; }
   .fc-b { background: linear-gradient(135deg, #f0f9f4, #dff2ea); color: var(--text); transform: rotateY(180deg); }
-  .fc-word { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
+  .fc-word { font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; }
   .fc-hint { font-size: .68rem; opacity: .55; letter-spacing: .06em; text-transform: uppercase; }
-  .fc-meaning { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .fc-meaning { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
   .fc-ex { font-size: .8rem; font-style: italic; line-height: 1.5; color: #444; }
   .fc-gender { font-size: .72rem; padding: 2px 7px; border-radius: 20px; margin-bottom: 4px; font-weight: 600; }
   .fc-gender.m { background: rgba(122,154,181,.2); color: var(--blue); }
@@ -233,6 +300,7 @@ const VOCAB_CATEGORIES=[
   {id:'文化',label:'文化',subs:['電影','文學','文化']},
   {id:'學習',label:'學習',subs:['哲學','形容詞','抽象名詞']},
   {id:'旅遊',label:'旅遊',subs:['旅遊','天氣','實用']},
+  {id:'食物',label:'🍴 食物',subs:['食物','nourriture','légumes','fruits']},
 ];
 
 const CHAPTERS = [
@@ -1562,7 +1630,11 @@ const VOCAB=[
   {id:"v004",date:"05/15",type:"vocab",title:"日常實用表達",tags:["日常","表達"],items:[{fr:"j'ai mes règles",zh:"我月經來了",ex:"J'ai mes règles, donc je reste à la maison."},{fr:"tout à l'heure",zh:"等一下/待會",ex:"Je vais dormir tout à l'heure."},{fr:"pendant la journée",zh:"白天",ex:"J'ai travaillé pendant la journée."},{fr:"avoir besoin de",zh:"需要",ex:"J'ai besoin de beaucoup d'argent."}]},
   {id:"v003",date:"05/14",type:"vocab",title:"哲學詞彙入門",tags:["哲學","抽象名詞"],items:[{fr:"la liberté",zh:"自由",ex:"La liberté est essentielle."},{fr:"la conscience",zh:"意識/良知",ex:"Il a une conscience développée."},{fr:"l'existence (f)",zh:"存在",ex:"L'existence précède l'essence."},{fr:"la vérité",zh:"真理",ex:"Quelle est la vérité ?"},{fr:"la raison",zh:"理性",ex:"La raison guide nos actions."}]},
   {id:"v002",date:"05/12",type:"vocab",title:"反身動詞：日常作息",tags:["反身動詞","日常"],items:[{fr:"se lever",zh:"起床",ex:"Je me suis levée à 9h."},{fr:"se coucher",zh:"就寢",ex:"Je me couche tard."},{fr:"s'endormir",zh:"睡著",ex:"Je ne me suis pas endormie hier soir."},{fr:"se maquiller",zh:"化妝",ex:"Je me maquille le matin."},{fr:"se reposer",zh:"休息",ex:"Je me suis reposée à la maison."}]},
-  {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]},
+  {id:"v015",date:"06/09",type:"vocab",title:"🥩 肉類・海鮮",tags:["食物","nourriture"],items:[{fr:"le bœuf",zh:"牛肉",ex:"J'aime le bœuf bourguignon."},{fr:"le porc",zh:"豬肉",ex:"Je mange du porc au dîner."},{fr:"le poulet",zh:"雞肉",ex:"Un poulet rôti, s'il vous plaît."},{fr:"le veau",zh:"小牛肉",ex:"La blanquette de veau est délicieuse."},{fr:"l'agneau (m)",zh:"羔羊肉",ex:"Des côtes d'agneau grillées."},{fr:"le canard",zh:"鴨肉",ex:"Le confit de canard est un plat français."},{fr:"le saumon",zh:"鮭魚",ex:"Je prends du saumon grillé."},{fr:"le thon",zh:"鮪魚",ex:"Une salade niçoise avec du thon."},{fr:"la crevette",zh:"蝦",ex:"Des crevettes à l'ail."},{fr:"le homard",zh:"龍蝦",ex:"Un plateau de fruits de mer avec du homard."},{fr:"la moule",zh:"淡菜",ex:"Des moules frites, c'est délicieux !"},{fr:"l'huître (f)",zh:"生蠔",ex:"Les Français adorent les huîtres."}]},
+  {id:"v016",date:"06/09",type:"vocab",title:"🥦 蔬菜",tags:["食物","nourriture","légumes"],items:[{fr:"la tomate",zh:"番茄",ex:"Une salade de tomates."},{fr:"la carotte",zh:"紅蘿蔔",ex:"Je mange des carottes râpées."},{fr:"le concombre",zh:"黃瓜",ex:"Du concombre dans la salade."},{fr:"l'oignon (m)",zh:"洋蔥",ex:"Je mets des oignons dans la soupe."},{fr:"l'ail (m)",zh:"蒜頭",ex:"De l'ail pour parfumer le plat."},{fr:"le poivron",zh:"彩椒",ex:"Des poivrons rouges et verts."},{fr:"la courgette",zh:"節瓜",ex:"Je fais sauter des courgettes."},{fr:"le champignon",zh:"蘑菇",ex:"Une omelette aux champignons."},{fr:"l'aubergine (f)",zh:"茄子",ex:"De l'aubergine grillée."},{fr:"la pomme de terre",zh:"馬鈴薯",ex:"Des frites ou de la purée ?"},{fr:"la patate douce",zh:"地瓜",ex:"J'adore la patate douce."},{fr:"les épinards (m)",zh:"菠菜",ex:"Je mange des épinards pour la santé."},{fr:"le brocoli",zh:"綠花椰菜",ex:"Du brocoli à la vapeur."}]},
+  {id:"v017",date:"06/09",type:"vocab",title:"🍓 水果・堅果",tags:["食物","nourriture","fruits"],items:[{fr:"la pomme",zh:"蘋果",ex:"Une pomme par jour."},{fr:"la banane",zh:"香蕉",ex:"Je mange une banane le matin."},{fr:"l'orange (f)",zh:"柳橙",ex:"Du jus d'orange frais."},{fr:"la fraise",zh:"草莓",ex:"Des fraises avec de la crème."},{fr:"le raisin",zh:"葡萄",ex:"Du raisin blanc ou rouge ?"},{fr:"la pêche",zh:"水蜜桃",ex:"Une pêche bien mûre."},{fr:"l'ananas (m)",zh:"鳳梨",ex:"De l'ananas dans la salade."},{fr:"la mangue",zh:"芒果",ex:"Un smoothie à la mangue."},{fr:"le kiwi",zh:"奇異果",ex:"Un kiwi riche en vitamine C."},{fr:"la pastèque",zh:"西瓜",ex:"De la pastèque en été, c'est parfait."},{fr:"le litchi",zh:"荔枝",ex:"Des litchis du Taiwan."},{fr:"la noix",zh:"核桃",ex:"Des noix dans le gâteau."},{fr:"la cacahouète",zh:"花生",ex:"Du beurre de cacahouètes."}]},
+  {id:"v018",date:"06/09",type:"vocab",title:"🍞 基本食材",tags:["食物","nourriture"],items:[{fr:"le pain",zh:"麵包",ex:"Je mange du pain au petit déjeuner."},{fr:"le beurre",zh:"奶油",ex:"Des tartines avec du beurre."},{fr:"la confiture",zh:"果醬",ex:"De la confiture de fraises."},{fr:"le fromage",zh:"起司",ex:"Un plateau de fromages français."},{fr:"les pâtes (f)",zh:"義大利麵",ex:"Je prépare des pâtes ce soir."},{fr:"le riz",zh:"米",ex:"Du riz blanc ou du riz complet ?"},{fr:"la farine",zh:"麵粉",ex:"Il faut de la farine pour faire un gâteau."},{fr:"le sucre",zh:"糖",ex:"Pas trop de sucre !"},{fr:"l'huile d'olive (f)",zh:"橄欖油",ex:"Je mets de l'huile d'olive dans la salade."},{fr:"le lait",zh:"牛奶",ex:"Un café au lait."},{fr:"l'œuf (m)",zh:"蛋",ex:"Des œufs pour faire une omelette."},{fr:"la viande",zh:"肉（泛稱）",ex:"Je ne mange pas beaucoup de viande."}]},
+    {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]},
 ];
 
 const ERRORS_INIT=[
@@ -1787,6 +1859,8 @@ function AddModal({type,onClose,onSave}){
 
 export default function App(){
   const[tab,setTab]=useState('today');
+  const[darkMode,setDarkMode]=useState(false);
+  useEffect(()=>{document.body.className=darkMode?'dark':'';},[ darkMode]);
   const[grammar,setGrammar]=useState(GRAMMAR);
   const[vocab,setVocab]=useState(VOCAB);
   const[errors,setErrors]=useState(ERRORS_INIT);
@@ -1862,7 +1936,7 @@ export default function App(){
       <style>{style}</style>
       {showConfetti&&<Confetti onDone={()=>setShowConfetti(false)}/>}
       <div className="header">
-        <div className="header-top"><span style={{fontSize:'1.4rem'}}>🌹</span><div><h1>Mon Journal d'Apprentissage</h1><div className="subtitle">課程 · 筆記 · 詞彙 · 錯誤日記</div></div></div>
+        <div className="header-top"><span style={{fontSize:'1.4rem'}}>🌿</span><div style={{flex:1}}><h1>Mon Journal d'Apprentissage</h1><div className="subtitle">課程 · 筆記 · 詞彙 · 錯誤日記</div></div><button onClick={()=>{setDarkMode(d=>!d);}} style={{background:'rgba(255,255,255,.12)',border:'1px solid rgba(255,255,255,.2)',borderRadius:20,padding:'5px 12px',cursor:'pointer',color:'white',fontSize:'.78rem',fontFamily:"'Nunito',sans-serif"}}>{darkMode?'☀️ 日間':'🌙 夜間'}</button></div>
         <div className="nav">
           {[{id:'today',l:"📅 Aujourd'hui"},{id:'course',l:'📚 課程'},{id:'notes',l:'📗 筆記'},{id:'vocab',l:'📘 詞彙'},{id:'errors',l:'❌ 錯誤日記'},{id:'search',l:'🔍 搜尋'}].map(t=>(
             <button key={t.id} className={`nav-btn ${tab===t.id?'active':''}`} onClick={()=>{setTab(t.id);if(t.id!=='course')setSelectedChapter(null);}}>{t.l}</button>
