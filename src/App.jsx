@@ -205,6 +205,7 @@ const style = `
   .chapter-card .clevel.lv1 { background: #e8f2e8; color: var(--green); }
   .chapter-card .clevel.lv2 { background: #e5eef5; color: var(--blue); }
   .chapter-card .clevel.lv3 { background: var(--rose-light); color: var(--rose); }
+  .chapter-card .clevel.lv4 { background: #f0e8f8; color: #8a5ab8; }
   .chapter-card.active .clevel { background: rgba(255,255,255,.15); color: rgba(255,255,255,.8); }
 
   .section { margin-bottom: 16px; }
@@ -1596,11 +1597,381 @@ const CHAPTERS = [
       {s:"A",t:"Et des fruits ?"},{s:"B",t:"Oui, j'ai de la chance, j'adore les fruits !"},
     ],
     tip:"記憶法：\nle chocolat = 我喜歡巧克力（泛指這種東西）\ndu chocolat = 我吃了一些巧克力（一部分的量）\nun chocolat = 我吃了一顆巧克力（一個可數單位）"
+  },
+  {
+    id:"0611", level:"3", noteLinks:[], date:"06/11", weekday:"三", topic:"餐廳點餐・régime・fromage",
+    tags:["餐廳","nourriture","régime"],
+    summary:[
+      {text:"diner au resto：prendre un menu（套餐）vs diner à la carte（單點）"},
+      {text:"faire un régime = 節食減重 / maigrir ↔ grossir"},
+      {text:"salade au poulet / au jambon / au fromage / au saumon fumé"},
+      {text:"fromage de vache / de brebis / de chèvre（牛/羊/山羊奶起司）"},
+      {text:"faire un défi = 挑戰自己 / végétarien(ne) / végane（素食/純素）"},
+    ],
+    vocabItems:[
+      {word:"prendre un menu",meaning:"點套餐",example:"Je prends un menu à 20 euros."},
+      {word:"diner à la carte",meaning:"單點",example:"J'ai très faim, je dine à la carte."},
+      {word:"faire un régime",meaning:"節食",example:"Je fais un régime pour maigrir."},
+      {word:"maigrir ↔ grossir",meaning:"瘦↔胖",example:"Je fais du sport pour maigrir."},
+      {word:"une salade au poulet",meaning:"雞肉沙拉",example:"Une salade au saumon fumé, s'il vous plaît."},
+      {word:"fromage de vache",meaning:"牛奶起司",example:"Le camembert est un fromage de vache."},
+      {word:"fromage de brebis",meaning:"羊奶起司",example:"Le roquefort est un fromage de brebis."},
+      {word:"fromage de chèvre",meaning:"山羊奶起司",example:"J'adore le fromage de chèvre."},
+      {word:"râper",meaning:"刨絲",example:"Je râpe la carotte pour la salade."},
+      {word:"une assiette de crudités",meaning:"生菜拼盤",example:"Une assiette de crudités en entrée."},
+      {word:"faire un défi",meaning:"挑戰",example:"Je fais un défi : pas de viande pendant un an."},
+      {word:"végétarien(ne) / végane",meaning:"素食者/純素者",example:"Elle est végétarienne depuis 5 ans."},
+      {word:"des fruits de mer",meaning:"海鮮",example:"J'adore les fruits de mer."},
+      {word:"les animaux de compagnie",meaning:"寵物",example:"Mon chat est mon animal de compagnie."},
+    ],
+    grammar:[
+      {title:"salade au/à la/aux + ingrédient",content:"une salade au poulet（雞肉沙拉）\nune salade au jambon（火腿沙拉）\nune salade au fromage（起司沙拉）\nune salade au saumon fumé（煙燻鮭魚沙拉）\n\n→ au/à la/aux = avec du/de la/des"},
+    ],
+    exercises:[
+      {type:"選",q:"「我要點套餐。」",opts:["Je prends à la carte.","Je prends un menu.","Je prends une carte."],ans:1,exp:"套餐 = un menu / 單點 = à la carte"},
+      {type:"填",q:"Elle ne mange pas de viande. Elle est ___. / Je fais un ___ pour maigrir.",blanks:["végétarienne","régime"],hint:"素食者 = végétarien(ne) / 節食 = régime"},
+    ],
+    dialogue:[
+      {s:"A",t:"Vous désirez un menu ou vous dinez à la carte ?"},{s:"B",t:"Un menu à 20 euros, s'il vous plaît."},
+      {s:"A",t:"Et comme entrée ?"},{s:"B",t:"Une assiette de crudités. Je fais un régime !"},
+      {s:"A",t:"Et comme plat ?"},{s:"B",t:"Une salade au saumon fumé."},
+    ],
+    tip:"maigrir = 變瘦（動詞）/ mince = 苗條（形容詞）\ngrossir = 變胖 / gros(se) = 胖的"
+  },
+  {
+    id:"0616", level:"3", noteLinks:[], date:"06/16", weekday:"二", topic:"疑問句三種語序・En route",
+    tags:["疑問句","語序","inversion"],
+    summary:[
+      {text:"疑問句三種語序：口語（Tu fais quoi ?）/ 標準（Qu'est-ce que tu fais ?）/ 正式（Que fais-tu ?）"},
+      {text:"正式語序：動詞-主詞倒裝（inversion）"},
+      {text:"動詞 recevoir：je reçois / tu reçois / il reçoit / nous recevons / vous recevez / ils reçoivent"},
+      {text:"partir de + 出發地 / partir à/pour + 目的地"},
+      {text:"se tromper de = 弄錯（se tromper de route = 走錯路）"},
+    ],
+    vocabItems:[
+      {word:"三種語序（疑問句）",meaning:"口語/標準/正式",example:"Tu vas où ? / Où est-ce que tu vas ? / Où vas-tu ?"},
+      {word:"l'inversion sujet-verbe",meaning:"主詞動詞倒裝",example:"Où allez-vous ? / As-tu faim ?"},
+      {word:"recevoir",meaning:"收到",example:"Fanny et Bertrand reçoivent un message."},
+      {word:"se tromper de",meaning:"弄錯",example:"À Dijon, ils se trompent d'hôtel."},
+      {word:"une mésaventure",meaning:"不如意的事",example:"Il leur arrive quelques mésaventures."},
+      {word:"rectifier",meaning:"更正",example:"Ils doivent faire rectifier une erreur."},
+      {word:"une erreur",meaning:"錯誤",example:"Il y a une erreur sur l'addition."},
+      {word:"traverser",meaning:"穿越/橫越",example:"Ils traversent la France en 3 jours."},
+      {word:"une vallée",meaning:"河谷",example:"La vallée du Rhône est magnifique."},
+      {word:"décider de + inf.",meaning:"決定做某事",example:"Ils ont décidé de partir en vacances."},
+    ],
+    grammar:[
+      {title:"疑問句三種語序比較",table:{headers:["","口語","標準","正式"],rows:[["現在式","Tu fais quoi ?","Qu'est-ce que tu fais ?","Que fais-tu ?"],["PC","Tu es allé où ?","Où est-ce que tu es allé ?","Où es-tu allé ?"],["近未來","Tu vas faire quoi ?","Qu'est-ce que tu vas faire ?","Que vas-tu faire ?"]]}},
+      {title:"動詞 recevoir（收到）",table:{headers:["主詞","recevoir"],rows:[["je","reçois"],["tu","reçois"],["il/elle","reçoit"],["nous","recevons"],["vous","recevez"],["ils/elles","reçoivent"]]}},
+    ],
+    exercises:[
+      {type:"選",q:"「你昨天去哪裡了？」（正式語序）",opts:["Tu es allé où hier ?","Où est-ce que tu es allé hier ?","Où es-tu allé hier ?"],ans:2,exp:"正式語序：疑問詞 + 動詞-主詞倒裝"},
+      {type:"填",q:"Vous ___ (recevoir) beaucoup de messages ? / Ils se ___ d'hôtel à Dijon.",blanks:["recevez","trompent"],hint:"recevoir: vous recevez / se tromper de"},
+    ],
+    dialogue:[
+      {s:"A",t:"Où es-tu allée ce week-end ?"},{s:"B",t:"Je suis allée à Dijon."},
+      {s:"A",t:"Comment es-tu partie ?"},{s:"B",t:"En train. J'ai reçu un bon prix !"},
+    ],
+    tip:"口語最常用，正式語序考試常考！\nAimes-tu le jazz ? = Est-ce que tu aimes le jazz ?"
+  },
+  {
+    id:"0618", level:"3", noteLinks:[], date:"06/18", weekday:"四", topic:"La Bretagne・partir de/pour・avoir l'air",
+    tags:["旅遊","Bretagne","avoir l'air"],
+    summary:[
+      {text:"partir de + 出發地 / partir à/pour + 目的地"},
+      {text:"avoir l'air + adj = 看起來...（Tu as l'air fatigué !）"},
+      {text:"poser un lapin à quelqu'un = 放人鴿子"},
+      {text:"La Bretagne：crêpes / cidre / menhirs / bord de mer"},
+      {text:"allergique à = 對...過敏"},
+    ],
+    vocabItems:[
+      {word:"partir de + lieu",meaning:"從...出發",example:"Ils partent de Strasbourg."},
+      {word:"partir à/pour + lieu",meaning:"前往...",example:"Ils partent pour les Pyrénées."},
+      {word:"avoir l'air + adj",meaning:"看起來...",example:"Tu as l'air fatiguée ! Tu n'as pas bien dormi ?"},
+      {word:"poser un lapin à qqn",meaning:"放人鴿子",example:"Il m'a posé un lapin ! Il n'est pas venu."},
+      {word:"être allergique à",meaning:"對...過敏",example:"Elle est allergique aux abricots."},
+      {word:"la Bretagne",meaning:"布列塔尼（法國西北部）",example:"La Bretagne est célèbre pour ses crêpes."},
+      {word:"un Breton / une Bretonne",meaning:"布列塔尼人",example:"Les Bretons mangent des crêpes et boivent du cidre."},
+      {word:"le cidre",meaning:"蘋果酒",example:"En Bretagne, on boit du cidre avec les crêpes."},
+      {word:"moche",meaning:"醜的（口語）",example:"Cette lampe est moche !"},
+      {word:"un abricotier",meaning:"杏桃樹",example:"Ils ont des abricotiers dans le jardin."},
+      {word:"faire un régime",meaning:"節食",example:"Je fais un régime. Je calcule les calories."},
+    ],
+    grammar:[
+      {title:"partir de vs partir pour",content:"partir de + lieu = 從某地出發\nIls partent de Strasbourg à 8h.\n\npartir à/pour + lieu = 前往某地\nIls partent pour les Pyrénées.\nElle est partie au Vietnam en février.\n\n⚠️ 對比：\nJe suis allée au Vietnam.（去了）\nJe suis partie au Vietnam.（出發前往）"},
+      {title:"avoir l'air + adjectif",content:"avoir l'air = 看起來、感覺像\nTu as l'air fatigué(e) !\nIl a l'air content.\nElle a l'air triste.\n\n⚠️ 形容詞通常配合主詞性別"},
+    ],
+    exercises:[
+      {type:"選",q:"「她看起來很開心。」",opts:["Elle est l'air contente.","Elle a l'air contente.","Elle avoir l'air contente."],ans:1,exp:"avoir l'air + adj：elle a l'air contente"},
+      {type:"填",q:"Ils ___ de Paris à 6h. / Tu as l'air ___! Tu n'as pas bien dormi ?",blanks:["partent","fatigué"],hint:"partir de + lieu / avoir l'air + adj"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu as l'air fatiguée aujourd'hui !"},{s:"B",t:"Oui, j'ai mal dormi."},
+      {s:"A",t:"Tu pars en vacances bientôt ?"},{s:"B",t:"Oui, je pars de Taipei vendredi pour la Bretagne !"},
+      {s:"A",t:"La Bretagne ! Tu vas manger des crêpes ?"},{s:"B",t:"Oui, et boire du cidre !"},
+    ],
+    tip:"poser un lapin à quelqu'un = 放鴿子（很常用的口語！）\nLa Bretagne 著名：crêpes / galettes / cidre / fruits de mer"
+  },
+  {
+    id:"0622", level:"3", noteLinks:[], date:"06/22", weekday:"二", topic:"動詞 boire・Les Belges",
+    tags:["動詞變化","boire","文化"],
+    summary:[
+      {text:"boire 變化：je bois / tu bois / il boit / nous buvons / vous buvez / ils boivent"},
+      {text:"Les Belges sont accueillants = 比利時人很熱情好客"},
+      {text:"les boissons：vin / bière / eau / cidre / kir / champagne"},
+    ],
+    vocabItems:[
+      {word:"boire",meaning:"喝",example:"Je bois du café le matin."},
+      {word:"je bois / tu bois",meaning:"我喝/你喝",example:"Tu bois du vin tous les jours ?"},
+      {word:"nous buvons / vous buvez",meaning:"我們喝/你們喝",example:"Nous buvons du cidre en Bretagne."},
+      {word:"ils boivent",meaning:"他們喝",example:"Les Français boivent du vin à table."},
+      {word:"accueillant(e)",meaning:"熱情好客的",example:"Les Belges sont très accueillants."},
+      {word:"une boisson",meaning:"飲料",example:"Qu'est-ce que vous prenez comme boisson ?"},
+      {word:"le champagne",meaning:"香檳",example:"On boit du champagne pour fêter ça !"},
+      {word:"la bière",meaning:"啤酒",example:"Une bière belge, s'il vous plaît."},
+    ],
+    grammar:[
+      {title:"動詞 boire（喝）完整變化",table:{headers:["主詞","boire"],rows:[["je","bois"],["tu","bois"],["il/elle","boit"],["nous","buvons"],["vous","buvez"],["ils/elles","boivent"]]}},
+    ],
+    exercises:[
+      {type:"選",q:"「你們喝什麼？」",opts:["Vous buvez quoi ?","Vous boivez quoi ?","Vous boit quoi ?"],ans:0,exp:"vous buvez（不是 boivez）"},
+      {type:"填",q:"Je ___ du café. / Ils ___ du vin à table.",blanks:["bois","boivent"],hint:"boire: je bois / ils boivent"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu bois du vin ?"},{s:"B",t:"Non, je ne bois pas d'alcool. Je bois de l'eau."},
+      {s:"A",t:"Et vous, vous buvez quoi ?"},{s:"C",t:"Nous buvons de la bière belge !"},
+    ],
+    tip:"boire PP = bu → j'ai bu / tu as bu / elle a bu\nJe n'ai pas bu d'alcool hier soir."
+  },
+  {
+    id:"0623", level:"3", noteLinks:[], date:"06/23", weekday:"四", topic:"prendre un verre・各種杯子",
+    tags:["餐廳","boissons","表達"],
+    summary:[
+      {text:"prendre un verre / un pot = 去喝一杯（口語）"},
+      {text:"各種杯子：un verre à vin / une tasse à café / une flûte à champagne"},
+      {text:"de + contenu：une tasse de café / un verre de vin / une bouteille d'eau"},
+      {text:"dedans = à l'intérieur / dehors = à l'extérieur / à la terrasse"},
+    ],
+    vocabItems:[
+      {word:"prendre un verre / un pot",meaning:"去喝一杯",example:"On prend un verre après le cours ?"},
+      {word:"un verre à vin",meaning:"葡萄酒杯",example:"Un verre à vin blanc ou à vin rouge ?"},
+      {word:"une tasse à café",meaning:"咖啡杯",example:"Une tasse à café en porcelaine."},
+      {word:"une flûte / une coupe à champagne",meaning:"香檳杯",example:"On lève nos flûtes à champagne !"},
+      {word:"une tasse de café",meaning:"一杯咖啡（內容物）",example:"Je voudrais une tasse de café."},
+      {word:"un verre de vin",meaning:"一杯葡萄酒",example:"Un verre de vin rouge, s'il vous plaît."},
+      {word:"une bouteille de",meaning:"一瓶...",example:"Une bouteille d'eau, s'il vous plaît."},
+      {word:"dedans = à l'intérieur",meaning:"裡面",example:"Vous déjeunez dedans ou dehors ?"},
+      {word:"dehors = à l'extérieur",meaning:"外面",example:"Il fait beau, on mange dehors ?"},
+      {word:"le kir",meaning:"法式調酒（黑醋栗+白酒）",example:"Un kir, c'est de la crème de cassis et du vin blanc."},
+      {word:"le kir breton",meaning:"布列塔尼調酒（黑醋栗+蘋果酒）",example:"En Bretagne, on prend un kir breton."},
+      {word:"le kir royal",meaning:"皇家基爾（黑醋栗+香檳）",example:"Pour les grandes occasions, un kir royal !"},
+    ],
+    grammar:[
+      {title:"杯子名稱 vs 內容物",content:"杯子種類（空杯）→ à：\nun verre À vin / une tasse À café / une flûte À champagne\n\n內容物（裝了什麼）→ de：\nune tasse DE café / un verre DE vin / une bouteille D'eau\n\n口語點餐：\nUn café = une tasse de café\nUn vin = un verre de vin"},
+    ],
+    exercises:[
+      {type:"選",q:"「一杯咖啡」（內容物）",opts:["une tasse à café","une tasse de café","un café de tasse"],ans:1,exp:"內容物用 de：une tasse DE café"},
+      {type:"填",q:"On prend un ___ après le cours ? / Vous mangez dedans ou ___ ?",blanks:["verre","dehors"],hint:"prendre un verre = 喝一杯 / dehors = 外面"},
+    ],
+    dialogue:[
+      {s:"A",t:"On prend un verre après le cours ?"},{s:"B",t:"Bonne idée ! On va où ?"},
+      {s:"A",t:"Il fait beau, on mange dehors ?"},{s:"B",t:"Oui ! Et je voudrais un kir royal."},
+      {s:"A",t:"Une flûte à champagne alors !"},{s:"B",t:"Exactement !"},
+    ],
+    tip:"prendre un verre = prendre un pot（口語，都是「去喝一杯」）\nkir = crème de cassis + vin blanc（法國最經典的開胃酒）"
+  },
+  {
+    id:"0625", level:"3", noteLinks:[], date:"06/25", weekday:"四", topic:"否定冠詞・faire + 家事/休閒・chacun son tour",
+    tags:["冠詞","否定","faire","日常"],
+    summary:[
+      {text:"否定句：un/une/des/du/de la → de/d'（不是 c'est 的情況）"},
+      {text:"⚠️ 例外：C'est un plat français. → Ce n'est pas un plat français.（c'est 後不變）"},
+      {text:"faire + le/la/les + 家事：faire le ménage / la cuisine / les courses / la vaisselle"},
+      {text:"faire + du/de la/de l' + 休閒：faire du sport / de la natation / de l'alto"},
+      {text:"chacun son tour / chacun ses goûts / chacun sa vie"},
+    ],
+    vocabItems:[
+      {word:"de/d'（否定後）",meaning:"否定句後冠詞變 de",example:"J'ai du pain. → Je n'ai pas de pain."},
+      {word:"Je n'ai pas d'argent.",meaning:"我沒有錢",example:"Je suis fauché(e) ! Je n'ai pas d'argent."},
+      {word:"chacun son tour",meaning:"輪流/各自輪到",example:"Pour le ménage, chacun son tour !"},
+      {word:"chacun ses goûts",meaning:"各有所好",example:"Chacun ses goûts, moi j'aime le jazz."},
+      {word:"faire le ménage",meaning:"做家事",example:"Je fais le ménage le samedi matin."},
+      {word:"faire la cuisine",meaning:"做飯",example:"C'est lui qui fait la cuisine ce soir."},
+      {word:"faire les courses",meaning:"買東西/購物",example:"Je fais les courses au supermarché."},
+      {word:"faire la vaisselle",meaning:"洗碗",example:"Après le diner, je fais la vaisselle."},
+      {word:"faire du sport",meaning:"運動",example:"Il faut faire du sport tous les jours."},
+      {word:"il est assis / elle est assise",meaning:"他/她坐著",example:"Il est assis à côté de moi."},
+      {word:"il est debout",meaning:"他站著",example:"Il est debout depuis 8h."},
+      {word:"le kir breton",meaning:"布列塔尼調酒",example:"Le kir breton : crème de cassis + cidre."},
+      {word:"une femme de ménage",meaning:"清潔人員",example:"Elle travaille comme femme de ménage."},
+    ],
+    grammar:[
+      {title:"否定後冠詞變 de/d'",content:"肯定 → 否定\nJ'ai du pain. → Je n'ai pas de pain.\nJe bois de la bière. → Je ne bois pas de bière.\nJ'ai des amis. → Je n'ai pas d'amis.\nJ'ai un chat. → Je n'ai pas de chat.\n\n⚠️ 例外：c'est 後面不變！\nC'est un plat français. → Ce n'est pas un plat français.\nC'est du café. → Ce n'est pas du café."},
+      {title:"faire + 家事 vs 休閒",content:"家事 → faire + le/la/les :\nfaire le ménage / le lit / le marché\nfaire la cuisine / la vaisselle / la lessive\nfaire les courses / les magasins\n\n休閒/運動 → faire + du/de la/de l' :\nfaire du sport / du yoga / du pilates\nfaire de la natation / de la randonnée\nfaire de l'alto / de l'accordéon"},
+    ],
+    exercises:[
+      {type:"選",q:"「我沒有貓。」",opts:["Je n'ai pas un chat.","Je n'ai pas de chat.","Je n'ai pas du chat."],ans:1,exp:"否定後 un → de：pas de chat"},
+      {type:"填",q:"Je bois du lait. → Je ne bois pas ___ lait. / C'est un film français. → Ce n'est pas ___ film français.",blanks:["de","un"],hint:"一般否定→de / c'est後例外→保留un"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu as du temps ce soir ?"},{s:"B",t:"Non, je n'ai pas de temps. Je fais le ménage."},
+      {s:"A",t:"Tu fais tout toi-même ?"},{s:"B",t:"On habite ensemble. Chacun son tour !"},
+    ],
+    tip:"chacun son tour / chacun ses goûts / chacun sa vie\n— 三個非常口語實用的表達！"
+  },
+  {
+    id:"0630", level:"3", noteLinks:[], date:"06/30", weekday:"二", topic:"最高級 superlatif・voir la vie en rose",
+    tags:["superlatif","比較級","形容詞"],
+    summary:[
+      {text:"superlatif = le/la/les + plus/moins + adj + de + groupe"},
+      {text:"meilleur(e) = plus bon(ne)（最好的）"},
+      {text:"⚠️ de + groupe（不用 dans）：le plus beau garçon DU monde"},
+      {text:"voir la vie en rose = 樂觀 / voir la vie en noir = 悲觀"},
+      {text:"passer un examen（參加考試）/ réussir（通過）/ rater（不及格）"},
+    ],
+    vocabItems:[
+      {word:"le/la plus + adj + de",meaning:"最...的",example:"Quelle est la plus belle ville du monde ?"},
+      {word:"le/la moins + adj + de",meaning:"最不...的",example:"C'est le restaurant le moins cher de la ville."},
+      {word:"le/la meilleur(e)",meaning:"最好的",example:"Le meilleur plat taïwanais, c'est le hot pot !"},
+      {word:"voir la vie en rose",meaning:"樂觀看世界",example:"Il est optimiste, il voit la vie en rose."},
+      {word:"voir la vie en noir",meaning:"悲觀看世界",example:"Elle est pessimiste, elle voit la vie en noir."},
+      {word:"passer un examen",meaning:"參加考試",example:"Je passe un examen demain."},
+      {word:"réussir un examen",meaning:"通過考試",example:"J'ai réussi mon examen ! 10/20 et plus."},
+      {word:"rater un examen",meaning:"考試不及格",example:"J'ai raté mon examen. 9/20..."},
+      {word:"J'ai l'habitude de",meaning:"我習慣於...",example:"J'ai l'habitude de me lever tôt."},
+      {word:"il y en a beaucoup",meaning:"有很多（用 en 代替）",example:"Il y a beaucoup de plats. Il y en a beaucoup."},
+    ],
+    grammar:[
+      {title:"最高級 superlatif",content:"一般形容詞（放名詞後）：\nnom + le/la/les + plus/moins + adj\nle sport le plus dangereux\nle film le plus intéressant\n\n短形容詞（放名詞前）：\nle/la + plus/moins + adj + nom\nle plus petit pays du monde\nla plus belle ville\n\n⚠️ 用 de，不用 dans：\nle meilleur restaurant DE la ville ✓\nle meilleur restaurant DANS la ville ✗\n\n不規則：bon → meilleur / bien → mieux"},
+    ],
+    exercises:[
+      {type:"選",q:"「世界上最好的料理。」",opts:["la meilleure cuisine dans le monde","la meilleure cuisine du monde","la plus bonne cuisine du monde"],ans:1,exp:"用 de（du monde），且 bon→meilleur（不說 plus bon）"},
+      {type:"填",q:"Quelle est la ___ haute montagne de Taiwan ? / Il est optimiste, il voit la vie en ___.",blanks:["plus","rose"],hint:"最高級：la plus haute / voir la vie en rose"},
+    ],
+    dialogue:[
+      {s:"A",t:"Quelle est la plus belle ville du monde pour toi ?"},{s:"B",t:"Pour moi, c'est Paris !"},
+      {s:"A",t:"Et le meilleur plat taïwanais ?"},{s:"B",t:"Le hot pot épicé, sans hésitation !"},
+      {s:"A",t:"Tu as réussi ton examen ?"},{s:"B",t:"Oui ! Je vois la vie en rose aujourd'hui !"},
+    ],
+    tip:"meilleur = plus bon（不說 plus bon！）\nmieux = plus bien（用於動詞：je vais mieux）\nle meilleur / la meilleure / les meilleurs / les meilleures"
+  },
+  {
+    id:"0702", level:"3", noteLinks:[], date:"07/02", weekday:"三", topic:"foie gras・il faut・J'ai l'habitude de",
+    tags:["nourriture","il faut","表達"],
+    summary:[
+      {text:"foie gras de canard / d'oie（鴨肝/鵝肝）"},
+      {text:"les crustacés = 甲殼類海鮮（homard / crevette / crabe）"},
+      {text:"il faut manger de tout / manger équilibré"},
+      {text:"J'ai l'habitude de + inf. = 我習慣於..."},
+      {text:"poser un lapin à quelqu'un = 放鴿子"},
+    ],
+    vocabItems:[
+      {word:"le foie gras",meaning:"鵝/鴨肝（法式珍饈）",example:"Les Français adorent le foie gras de canard."},
+      {word:"foie gras de canard / d'oie",meaning:"鴨肝/鵝肝",example:"Le foie gras d'oie est le plus raffiné."},
+      {word:"les crustacés",meaning:"甲殼類海鮮",example:"Les Français aiment les crustacés rares."},
+      {word:"un consommateur",meaning:"消費者",example:"Les Français sont de grands consommateurs de foie gras."},
+      {word:"consommer",meaning:"消費/食用",example:"Ils consomment du foie gras aux fêtes."},
+      {word:"en matière de",meaning:"在...方面",example:"En matière de viande, ils apprécient la dinde."},
+      {word:"apprécier",meaning:"欣賞/喜愛",example:"J'apprécie beaucoup ce vin."},
+      {word:"il faut manger de tout",meaning:"什麼都要吃（均衡飲食）",example:"Il faut manger de tout pour être en forme."},
+      {word:"manger équilibré",meaning:"均衡飲食",example:"Il faut manger équilibré et faire du sport."},
+      {word:"J'ai l'habitude de + inf.",meaning:"我習慣於...",example:"J'ai l'habitude de manger tôt le soir."},
+      {word:"poser un lapin à qqn",meaning:"放鴿子",example:"Il m'a encore posé un lapin ! Je l'attends depuis une heure."},
+    ],
+    grammar:[
+      {title:"il faut + infinitif",content:"il faut + inf. = 必須/應該...\nIl faut manger de tout.\nIl faut faire du sport.\nIl ne faut pas manger trop de sucre.\n\nil faut + nom = 需要...\nIl faut du temps. / Il faut quels ingrédients ?\n\n= on doit + inf.\nOn doit manger équilibré."},
+    ],
+    exercises:[
+      {type:"選",q:"「我習慣早睡。」",opts:["J'ai l'habitude de me coucher tôt.","J'ai habitude à me coucher tôt.","Je suis habitude de me coucher tôt."],ans:0,exp:"avoir l'habitude DE + infinitif"},
+      {type:"填",q:"___ manger de tout pour être en bonne santé. / J'___ l'habitude de faire du sport le matin.",blanks:["Il faut","ai"],hint:"il faut + inf. / avoir l'habitude de"},
+    ],
+    dialogue:[
+      {s:"A",t:"Tu as l'habitude de manger du foie gras ?"},{s:"B",t:"Non, c'est trop cher ! Mais j'adore ça."},
+      {s:"A",t:"Il faut manger de tout, non ?"},{s:"B",t:"Oui, il faut manger équilibré !"},
+    ],
+    tip:"foie gras = 法國最具代表性的食材之一\n主要在聖誕節和新年享用\nla dinde（火雞）= 另一個節慶必備食材"
+  },
+  {
+    id:"0707", level:"4", noteLinks:[], date:"07/07", weekday:"二", topic:"命令式 Impératif",
+    tags:["impératif","命令式","反身動詞"],
+    summary:[
+      {text:"Impératif：只有 tu / nous / vous 三個人稱，不加主詞"},
+      {text:"-er 動詞的 tu 命令式去掉 s：Parle ! / Mange ! / Va !"},
+      {text:"avoir 和 être 用虛擬式變化：Aie confiance ! / Sois gentil !"},
+      {text:"反身動詞命令式：動詞 + - + 重音代名詞：Lève-toi ! / Asseyez-vous !"},
+      {text:"否定命令式：ne + 反身代名詞 + 動詞 + pas：Ne te lève pas !"},
+    ],
+    vocabItems:[
+      {word:"Parle ! / Parlez !",meaning:"說！（-er 動詞）",example:"Parlez plus fort, s'il vous plaît !"},
+      {word:"Fais ! / Faites !",meaning:"做！（faire 不規則）",example:"Faites attention !"},
+      {word:"Va ! / Allez !",meaning:"去！（aller）",example:"Va dormir ! Allez travailler !"},
+      {word:"Viens ! / Venez !",meaning:"來！（venir）",example:"Viens ici ! Venez avec moi !"},
+      {word:"Prends ! / Prenez !",meaning:"拿/搭！（prendre）",example:"Prends le métro ! Prenez un parapluie."},
+      {word:"Aie confiance !",meaning:"要有信心！（avoir）",example:"Aie confiance, ça va marcher !"},
+      {word:"Sois gentil(le) !",meaning:"要溫柔/乖！（être）",example:"Sois à l'heure ! Soyez courageux !"},
+      {word:"Lève-toi !",meaning:"起床！（反身）",example:"Lève-toi, il est déjà 10h !"},
+      {word:"Assieds-toi ! / Asseyez-vous !",meaning:"坐下！",example:"Asseyez-vous, s'il vous plaît."},
+      {word:"Ne t'inquiète pas !",meaning:"別擔心！",example:"Ne t'inquiète pas, ça va aller !"},
+      {word:"Dépêche-toi !",meaning:"快點！",example:"Dépêche-toi, on est en retard !"},
+    ],
+    grammar:[
+      {title:"命令式變化規則",table:{headers:["動詞","tu","nous","vous"],rows:[["parler（-er）","Parle !","Parlons !","Parlez !"],["finir","Finis !","Finissons !","Finissez !"],["prendre","Prends !","Prenons !","Prenez !"],["faire","Fais !","Faisons !","Faites !"],["aller","Va !","Allons !","Allez !"],["venir","Viens !","Venons !","Venez !"],["avoir","Aie !","Ayons !","Ayez !"],["être","Sois !","Soyons !","Soyez !"]]}},
+      {title:"反身動詞命令式",content:"肯定：動詞 + - + toi/nous/vous\nLève-toi ! / Levons-nous ! / Levez-vous !\nCouche-toi ! / Asseyez-vous ! / Dépêche-toi !\n\n否定：ne + te/nous/vous + 動詞 + pas\nNe te lève pas ! / Ne vous couchez pas tard !\nNe t'inquiète pas ! / Ne nous énervons pas !"},
+    ],
+    exercises:[
+      {type:"選",q:"「（tu）起床！」",opts:["Te lève !","Lève-toi !","Lèves-toi !"],ans:1,exp:"反身動詞命令式：Lève-toi !（tu：-er去s，toi放後面）"},
+      {type:"填",q:"___ attention ! （faire, vous） / Ne ___ pas peur ! （avoir, tu）",blanks:["Faites","aie"],hint:"faire → Faites / avoir → Aie（虛擬式）"},
+    ],
+    dialogue:[
+      {s:"A",t:"Lève-toi ! Il est déjà 9h !"},{s:"B",t:"Laisse-moi dormir encore 5 minutes !"},
+      {s:"A",t:"Non ! Dépêche-toi ! On va être en retard."},{s:"B",t:"D'accord, d'accord. Ne t'énerve pas !"},
+      {s:"A",t:"Allez, viens !"},{s:"B",t:"J'arrive !"},
+    ],
+    tip:"-er 動詞 tu 命令式去掉 s：\nTu parles → Parle ! / Tu vas → Va !\n⚠️ 例外：Vas-y !（加上 y 時要加 s）"
+  },
+  {
+    id:"0709", level:"4", noteLinks:[], date:"07/09", weekday:"四", topic:"颱風・命令式複習",
+    tags:["impératif","天氣","日常"],
+    summary:[
+      {text:"颱風用命令式叮嚀：Ne sortez pas. / Restez à la maison."},
+      {text:"C'est dangereux. / Soyez prudents."},
+      {text:"un typhon = 颱風 / solide = 強烈的（口語）"},
+    ],
+    vocabItems:[
+      {word:"un typhon",meaning:"颱風",example:"Il va avoir un gros typhon demain."},
+      {word:"solide",meaning:"強烈的/結實的（口語）",example:"Un typhon solide s'approche de Taiwan."},
+      {word:"Ne sortez pas.",meaning:"不要出門！（命令式）",example:"Il y a un typhon. Ne sortez pas !"},
+      {word:"Restez à la maison.",meaning:"待在家裡！",example:"C'est dangereux. Restez à la maison."},
+      {word:"C'est dangereux.",meaning:"很危險。",example:"Ne sortez pas, c'est dangereux !"},
+      {word:"Soyez prudents.",meaning:"要小心！",example:"Soyez prudents sur la route."},
+      {word:"s'approcher de",meaning:"靠近",example:"Le typhon s'approche de Taiwan."},
+    ],
+    grammar:[
+      {title:"命令式實際應用",content:"颱風叮嚀（vous）：\nNe sortez pas !\nRestez à la maison !\nSoyez prudents !\nFermez les fenêtres !\n\n朋友叮嚀（tu）：\nNe sors pas !\nReste à la maison !\nSois prudent(e) !\nFerme les fenêtres !"},
+    ],
+    exercises:[
+      {type:"選",q:"「（vous）不要出去！」",opts:["Ne sortez pas !","Ne sorter pas !","Pas sortez !"],ans:0,exp:"否定命令式：ne + 動詞 + pas"},
+      {type:"填",q:"Il y a un typhon. ___ à la maison ! / C'est ___!",blanks:["Restez","dangereux"],hint:"Rester → Restez / dangereux = 危險的"},
+    ],
+    dialogue:[
+      {s:"Prof",t:"Il va avoir un gros typhon solide demain !"},{s:"Étudiant",t:"Vraiment ? C'est grave ?"},
+      {s:"Prof",t:"Oui ! Ne sortez pas. Restez à la maison. C'est dangereux."},{s:"Étudiant",t:"D'accord ! On reste chez nous."},
+      {s:"Prof",t:"Soyez prudents ! À la prochaine fois."},{s:"Étudiant",t:"Merci professeur !"},
+    ],
+    tip:"un typhon solide = 強烈颱風（solide 口語用法）\nJour de congé typhon = 颱風假"
   }
 ];
 
 const GRAMMAR=[
-  {id:"g014",date:"06/07",type:"grammar",title:"que 前置受詞 → PP 配合性別/數",tags:["複合過去式","關係代名詞","avoir"],rules:["avoir 的 PP 通常不變，但有一個例外！","直接受詞在動詞前面時，PP 要配合受詞的性別/數","que 作關係代名詞時，受詞前置 → PP 配合","⚠️ J'ai mangé une pizza.（受詞在後→不變）","⚠️ La pizza que j'ai mangée.（受詞在前→加e）"],myExamples:["des trucs que j'ai mangés en Europe（陽性複數→s）","la pizza que j'ai mangée（陰性單數→e）","les films que j'ai vus（陽性複數→s）","les filles que j'ai rencontrées（陰性複數→es）"],mySentences:[]},
+  {id:"g022",date:"07/09",type:"grammar",title:"ne...que = seulement（只有）",tags:["否定","副詞","限制"],rules:["ne...que 不是真正的否定，而是「限制」","Je ne me prépare que 30 minutes. = Je me prépare seulement 30 minutes.","que 放在被限制的詞之前","⚠️ 否定是 ne...pas，限制是 ne...que"],myExamples:["Je ne bois que de l'eau.（我只喝水）","Il ne parle que le français.（他只說法文）","Je n'ai que 5 minutes.（我只有5分鐘）"],mySentences:[]},
+  {id:"g021",date:"07/09",type:"grammar",title:"s'occuper de + nom（照顧/負責）",tags:["反身動詞","介係詞","動詞搭配"],rules:["s'occuper de + nom = 照顧/負責某事","日常：Je m'occupe de mon chat.","職場：Je m'occupe de la comptabilité.","⚠️ 跟 participer à / discuter de 一樣，動詞後面固定接介係詞"],myExamples:["Je dois m'occuper de mon chat ce week-end.","Elle s'occupe de la communication dans son entreprise.","Qui s'occupe des enfants quand tu travailles ?"],mySentences:[]},
+  {id:"g020",date:"07/07",type:"grammar",title:"arrêter de + infinitif（停止做某事）",tags:["動詞搭配","infinitif"],rules:["arrêter de + inf. = 停止做某事","J'ai arrêté de fumer. / Tu as arrêté de travailler ?","類似結構：décider de / essayer de / oublier de / continuer de","⚠️ 注意：ne...plus = 不再（狀態）/ arrêter de = 停止（動作）"],myExamples:["J'ai arrêté de fumer depuis un mois.","Il a décidé d'arrêter de boire de l'alcool.","Elle essaie d'arrêter de manger du sucre."],mySentences:[]},
+  {id:"g019",date:"07/07",type:"grammar",title:"adjectif → adverbe（形容詞變副詞）",tags:["副詞","形容詞"],rules:["規則：形容詞陰性形 + ment","doux → douce → doucement（輕輕地）","lent → lente → lentement（慢慢地）","facile → facile → facilement（容易地）","⚠️ 例外：bon → bien / mauvais → mal"],table:{headers:["形容詞（陽性）","形容詞（陰性）","副詞"],rows:[["doux","douce","doucement"],["lent","lente","lentement"],["facile","facile","facilement"],["sérieux","sérieuse","sérieusement"],["actif","active","activement"]]},myExamples:["Parle doucement, le bébé dort !","Il conduit lentement parce qu'il pleut.","Elle réussit facilement ses examens."],mySentences:[]},
+  {id:"g018",date:"07/02",type:"grammar",title:"préférer A à B（比起B更喜歡A）",tags:["比較","動詞搭配"],rules:["préférer A à B = 比起B，更喜歡A","Je préfère le bœuf au porc.（au = à + le）","Je préfère la lecture à la télévision.","Je préfère les chats aux chiens.（aux = à + les）","⚠️ 跟 aimer mieux 意思一樣，但 préférer A à B 更正式"],myExamples:["Je préfère le café au thé.","Elle préfère la ville à la campagne.","Il préfère les films d'action aux films romantiques."],mySentences:[]},
+  {id:"g017",date:"06/25",type:"grammar",title:"à partir de（從...開始）",tags:["介係詞","時間"],rules:["à partir de + moment = 從某時間點開始","À partir de lundi, je fais du sport.","À partir du 1er juillet, les cours reprennent.","À partir de maintenant, je parle français !","⚠️ à partir de 強調「起點」，pendant 強調「持續時間」"],myExamples:["À partir de maintenant, je ne fume plus.","À partir du mois prochain, j'habite à Lyon.","Le magasin est ouvert à partir de 9h."],mySentences:[]},
+  {id:"g016",date:"06/18",type:"grammar",title:"en vs pendant（時間用法）",tags:["介係詞","時間"],rules:["en + durée = 花了多長時間完成（強調結果）","pendant + durée = 持續了多長時間（強調過程）","J'ai lu ce livre en 3h.（3小時讀完了）","J'ai lu ce livre pendant 3h.（讀了3小時，不一定讀完）"],myExamples:["J'ai fait mes devoirs en 30 minutes.（30分鐘做完了）","J'ai travaillé pendant 10h aujourd'hui.（工作了10小時）","Elle a appris le français en 2 ans.（2年學會了）"],mySentences:[]},
+  {id:"g015",date:"06/18",type:"grammar",title:"le même / la même / les mêmes（同一個）",tags:["形容詞","指示"],rules:["le même + nom m：On n'a pas le même âge.","la même + nom f：On habite dans la même ville.","les mêmes + nom pl：On a les mêmes goûts.","⚠️ même 配合名詞的性別和數"],myExamples:["On pratique le même sport, la natation.","Peggy et moi, on n'habite pas dans la même ville.","Ils ont les mêmes goûts pour le cinéma."],mySentences:[]},
+    {id:"g014",date:"06/07",type:"grammar",title:"que 前置受詞 → PP 配合性別/數",tags:["複合過去式","關係代名詞","avoir"],rules:["avoir 的 PP 通常不變，但有一個例外！","直接受詞在動詞前面時，PP 要配合受詞的性別/數","que 作關係代名詞時，受詞前置 → PP 配合","⚠️ J'ai mangé une pizza.（受詞在後→不變）","⚠️ La pizza que j'ai mangée.（受詞在前→加e）"],myExamples:["des trucs que j'ai mangés en Europe（陽性複數→s）","la pizza que j'ai mangée（陰性單數→e）","les films que j'ai vus（陽性複數→s）","les filles que j'ai rencontrées（陰性複數→es）"],mySentences:[]},
     {id:"g013",date:"05/28",type:"grammar",title:"所有格形容詞 mon/ma/mes...",tags:["所有格","冠詞","名詞"],rules:["mon/ton/son + 陽性單數名詞","ma/ta/sa + 陰性單數名詞","mes/tes/ses + 複數名詞","⚠️ 陰性但母音開頭 → 用 mon/ton/son：mon amie ✓","notre/votre/leur + 單數，nos/vos/leurs + 複數"],table:{headers:["","陽性單數","陰性單數","複數"],rows:[["我的","mon","ma (mon+母音)","mes"],["你的","ton","ta (ton+母音)","tes"],["他/她的","son","sa (son+母音)","ses"],["我們的","notre","notre","nos"],["你們的","votre","votre","vos"],["他們的","leur","leur","leurs"]]},myExamples:["mon ami / mon amie（母音前用 mon）","ma famille / mes parents","son chat / sa voiture / ses livres"],mySentences:[]},
     {id:"g012",date:"05/26",type:"grammar",title:"ne...jamais / ne...pas encore",tags:["否定","副詞","時態"],rules:["ne...jamais = 從不（never）","ne...pas encore = 還沒（not yet）","PC：ne + avoir/être + jamais/pas encore + PP","⚠️ jamais 不需要 pas：Je n'ai JAMAIS（不說 pas jamais）"],myExamples:["Je ne fais jamais de camping.","Je n'ai pas encore visité Paris.","Elle n'est pas encore arrivée."],mySentences:[]},
     {id:"g011",date:"05/22",type:"grammar",title:"si + 現在式（條件句）",tags:["條件句","si","時態"],rules:["si 子句永遠用現在式，不用未來式！","Si + présent → 主句用近未來式或未來式","⚠️ Si je vais voyager ✗ → Si je voyage ✓"],myExamples:["Si je voyage, je vais prendre une chambre d'hôtel.","Si il fait beau, on va sortir."],mySentences:[]},
@@ -1630,7 +2001,50 @@ const VOCAB=[
   {id:"v004",date:"05/15",type:"vocab",title:"日常實用表達",tags:["日常","表達"],items:[{fr:"j'ai mes règles",zh:"我月經來了",ex:"J'ai mes règles, donc je reste à la maison."},{fr:"tout à l'heure",zh:"等一下/待會",ex:"Je vais dormir tout à l'heure."},{fr:"pendant la journée",zh:"白天",ex:"J'ai travaillé pendant la journée."},{fr:"avoir besoin de",zh:"需要",ex:"J'ai besoin de beaucoup d'argent."}]},
   {id:"v003",date:"05/14",type:"vocab",title:"哲學詞彙入門",tags:["哲學","抽象名詞"],items:[{fr:"la liberté",zh:"自由",ex:"La liberté est essentielle."},{fr:"la conscience",zh:"意識/良知",ex:"Il a une conscience développée."},{fr:"l'existence (f)",zh:"存在",ex:"L'existence précède l'essence."},{fr:"la vérité",zh:"真理",ex:"Quelle est la vérité ?"},{fr:"la raison",zh:"理性",ex:"La raison guide nos actions."}]},
   {id:"v002",date:"05/12",type:"vocab",title:"反身動詞：日常作息",tags:["反身動詞","日常"],items:[{fr:"se lever",zh:"起床",ex:"Je me suis levée à 9h."},{fr:"se coucher",zh:"就寢",ex:"Je me couche tard."},{fr:"s'endormir",zh:"睡著",ex:"Je ne me suis pas endormie hier soir."},{fr:"se maquiller",zh:"化妝",ex:"Je me maquille le matin."},{fr:"se reposer",zh:"休息",ex:"Je me suis reposée à la maison."}]},
-  {id:"v015",date:"06/09",type:"vocab",title:"🥩 肉類・家禽",tags:["食物","nourriture"],items:[
+  {id:"v021",date:"07/09",type:"vocab",title:"習慣・反身・日常動作",tags:["日常","反身動詞","表達"],items:[
+    {fr:"J'ai l'habitude de + inf.",zh:"我習慣於...",ex:"J'ai l'habitude de me lever tôt."},
+    {fr:"le télétravail",zh:"遠距工作",ex:"Je fais du télétravail depuis deux ans."},
+    {fr:"travailler à distance",zh:"遠距工作",ex:"Je travaille à distance, je suis chez moi."},
+    {fr:"quelquefois",zh:"有時候",ex:"Je vais quelquefois au restaurant le midi."},
+    {fr:"s'occuper de",zh:"照顧/負責",ex:"Je m'occupe de mon chat quand je suis en vacances."},
+    {fr:"se parfumer",zh:"噴香水",ex:"Je me parfume avant de sortir."},
+    {fr:"se déshabiller",zh:"脫衣服",ex:"Il se déshabille avant de se coucher."},
+    {fr:"dormir profondément",zh:"睡得很沉",ex:"Je dors profondément quand je suis fatigué."},
+    {fr:"ne...que = seulement",zh:"只有/只是",ex:"Je ne me prépare que 30 minutes."},
+    {fr:"le gaspillage",zh:"浪費",ex:"Le gaspillage alimentaire est un problème grave."},
+    {fr:"un échantillon",zh:"試用品/樣本",ex:"J'ai reçu des échantillons de parfum."},
+    {fr:"un embouteillage",zh:"塞車（正式）",ex:"Il y a des embouteillages sur l'autoroute."},
+  ]},
+  {id:"v020",date:"06/22",type:"vocab",title:"飲食・餐廳・社交",tags:["日常","餐廳","表達"],items:[
+    {fr:"accueillant(e)",zh:"熱情好客的",ex:"Les Belges sont très accueillants."},
+    {fr:"se raviser",zh:"改變心意",ex:"Patricia se ravise et prend un cocktail."},
+    {fr:"changer d'avis",zh:"改變主意",ex:"J'ai changé d'avis, je prends le menu."},
+    {fr:"un apéritif",zh:"開胃酒/餐前酒",ex:"Vous prenez un apéritif avant le repas ?"},
+    {fr:"avec plaisir",zh:"很樂意",ex:"Tu veux un café ? Avec plaisir !"},
+    {fr:"être libre",zh:"有空",ex:"Je suis libre ce soir. On sort ?"},
+    {fr:"être occupé(e)",zh:"忙碌/沒空",ex:"Je suis occupée, j'ai une réunion."},
+    {fr:"fumer",zh:"抽菸",ex:"Tu fumes ? Non, j'ai arrêté de fumer."},
+    {fr:"arrêter de + inf.",zh:"停止做某事",ex:"J'ai arrêté de fumer depuis un mois."},
+    {fr:"doucement",zh:"輕輕地/慢慢地",ex:"Parle doucement, le bébé dort !"},
+    {fr:"préférer A à B",zh:"比起B更喜歡A",ex:"Je préfère le café au thé."},
+    {fr:"un gros mot",zh:"髒話",ex:"Ne dis pas de gros mots !"},
+  ]},
+  {id:"v019",date:"06/11",type:"vocab",title:"餐廳・婚姻・時間",tags:["日常","餐廳","表達"],items:[
+    {fr:"mon mari / ma femme",zh:"我丈夫/我太太",ex:"Mon mari est dentiste."},
+    {fr:"mon époux / mon épouse",zh:"我配偶（正式）",ex:"Mon épouse s'appelle Catherine."},
+    {fr:"mon compagnon / ma compagne",zh:"我的伴侶（未婚）",ex:"Mon compagnon et moi habitons ensemble."},
+    {fr:"se marier avec / épouser",zh:"和...結婚",ex:"Elle s'est mariée avec un Français."},
+    {fr:"salé(e)",zh:"鹹的",ex:"Je préfère les plats salés aux plats sucrés."},
+    {fr:"sucré(e)",zh:"甜的",ex:"Une crêpe sucrée avec du chocolat."},
+    {fr:"une crêperie",zh:"可麗餅餐廳",ex:"On mange dans une crêperie bretonne."},
+    {fr:"se tromper de",zh:"弄錯",ex:"Je me suis trompé de route !"},
+    {fr:"le même / la même",zh:"同一個",ex:"On habite dans la même ville."},
+    {fr:"en + durée",zh:"花了...時間完成",ex:"J'ai lu ce livre en 3 heures."},
+    {fr:"pendant + durée",zh:"持續了...時間",ex:"J'ai attendu pendant 2 heures."},
+    {fr:"à partir de",zh:"從...開始",ex:"À partir de maintenant, je parle français !"},
+    {fr:"des travaux",zh:"工程/施工",ex:"Il y a des travaux dans la rue."},
+  ]},
+    {id:"v015",date:"06/09",type:"vocab",title:"🥩 肉類・家禽",tags:["食物","nourriture"],items:[
     {fr:"le bœuf",zh:"牛肉 (m)",ex:"Du bœuf bourguignon, s'il vous plaît."},
     {fr:"le porc",zh:"豬肉 (m)",ex:"Je mange du porc au dîner."},
     {fr:"le poulet",zh:"雞肉 (m)",ex:"Un poulet rôti pour dimanche !"},
@@ -2000,7 +2414,7 @@ function SearchView({onGoChapter,onGoNote}){
   const results=[];
   CHAPTERS.forEach(ch=>{
     const hit=[ch.topic,...ch.tags,...ch.summary.map(s=>s.text+' '+(s.fr||'')),...(ch.flashcards||[]).map(f=>f.word+' '+f.meaning),...(ch.grammar||[]).map(g=>g.title+' '+(g.content||''))].join(' ').toLowerCase().includes(kw);
-    if(hit)results.push({type:'course',id:ch.id,title:`${ch.date} ${ch.topic}`,meta:`課程 · ${ch.level==='3'?'三級':ch.level==='2'?'二級':'一級'}`,snippet:ch.tags.join(' / '),onClick:()=>onGoChapter(ch.id)});
+    if(hit)results.push({type:'course',id:ch.id,title:`${ch.date} ${ch.topic}`,meta:`課程 · ${ch.level==='4'?'四級':ch.level==='3'?'三級':ch.level==='2'?'二級':'一級'}`,snippet:ch.tags.join(' / '),onClick:()=>onGoChapter(ch.id)});
   });
   GRAMMAR.forEach(g=>{
     const hit=[g.title,...(g.rules||[]),...(g.myExamples||[])].join(' ').toLowerCase().includes(kw);
@@ -2143,7 +2557,7 @@ export default function App(){
                 <div style={{fontSize:'.79rem',color:'var(--muted)'}}>{CHAPTERS.length} cours</div>
               </div>
               <div style={{display:'flex',gap:5,flexWrap:'wrap',marginBottom:12}}>
-                {[{id:'all',l:'全部'},{id:'1',l:'一級'},{id:'2',l:'二級'},{id:'3',l:'三級 🆕'}].map(f=>(
+                {[{id:'all',l:'全部'},{id:'1',l:'一級'},{id:'2',l:'二級'},{id:'3',l:'三級'},{id:'4',l:'四級 🆕'}].map(f=>(
                   <button key={f.id} className={`filter-main-btn ${levelFilter===f.id?'active':''}`} onClick={()=>setLevelFilter(f.id)}>{f.l}</button>
                 ))}
               </div>
@@ -2153,7 +2567,7 @@ export default function App(){
                   <div className="chapter-grid">
                     {chs.map(ch=>(
                       <div key={ch.id} className={`chapter-card ${selectedChapter===ch.id?'active':''}`} onClick={()=>setSelectedChapter(ch.id)}>
-                        <div className={`clevel ${ch.level==='3'?'lv3':ch.level==='2'?'lv2':'lv1'}`}>{ch.level==='3'?'三級':ch.level==='2'?'二級':'一級'}</div>
+                        <div className={`clevel ${ch.level==='4'?'lv4':ch.level==='3'?'lv3':ch.level==='2'?'lv2':'lv1'}`}>{ch.level==='4'?'四級':ch.level==='3'?'三級':ch.level==='2'?'二級':'一級'}</div>
                         <div className="cdate">{ch.date} {ch.weekday}</div>
                         <div className="ctopic">{ch.topic}</div>
                         <div className="ctag">{ch.tags[0]}</div>
