@@ -1988,19 +1988,6 @@ const GRAMMAR=[
 ];
 
 const VOCAB=[
-  {id:"v014",date:"06/07",type:"vocab",title:"音樂與感受",tags:["音樂","表達","文化"],items:[{fr:"nostalgique",zh:"懷舊的/令人懷念的",ex:"Cette chanson est très nostalgique."},{fr:"mélancolique",zh:"憂鬱感傷的",ex:"Une chanson mélancolique et belle."},{fr:"rétro",zh:"復古的（風格）",ex:"J'aime le style rétro de Vidéoclub."},{fr:"donner envie de",zh:"讓人想要...",ex:"Ça me donne envie de voyager."},{fr:"une chanson",zh:"一首歌",ex:"J'adore cette chanson !"},{fr:"Qui es-tu ?",zh:"你是誰？",ex:"Qui es-tu ? Où es-tu ?"},{fr:"Où es-tu ?",zh:"你在哪裡？",ex:"Où es-tu maintenant ?"}]},
-  {id:"v013",date:"06/04",type:"vocab",title:"日常表達補充",tags:["日常","表達"],items:[{fr:"commander une livraison",zh:"點外送",ex:"J'ai commandé une livraison ce soir."},{fr:"décontracté(e)",zh:"悠閒的/放鬆的",ex:"C'était très décontracté !"},{fr:"bavarder",zh:"聊天/閒聊",ex:"J'aime bavarder avec mes amis."},{fr:"se concentrer sur",zh:"專注在...上",ex:"Je ne peux pas me concentrer sur la nourriture."},{fr:"il pleuvait",zh:"那時候在下雨",ex:"Il pleuvait encore aujourd'hui."},{fr:"il a plu",zh:"下了雨",ex:"Il a beaucoup plu ce week-end."},{fr:"réconfortant(e)",zh:"撫慰人心的",ex:"Un burger chaud, c'est réconfortant par temps de pluie."}]},
-    {id:"v012",date:"05/31",type:"vocab",title:"電影與娛樂",tags:["電影","文化","表達"],items:[{fr:"passionnant(e)",zh:"精彩的/引人入勝的",ex:"C'est un film très passionnant !"},{fr:"palpitant(e)",zh:"扣人心弦的",ex:"Un film palpitant !"},{fr:"captivant(e)",zh:"引人入勝的",ex:"Ce livre est très captivant."},{fr:"plein de rebondissements",zh:"充滿轉折",ex:"C'est un film plein de rebondissements."},{fr:"plusieurs fois",zh:"好幾次",ex:"J'ai vu ce film plusieurs fois."},{fr:"qui s'appelle",zh:"叫做（介紹片名）",ex:"C'est un film qui s'appelle Cold War."},{fr:"je l'adore toujours",zh:"我還是很愛它",ex:"Je l'adore toujours après plusieurs visionnages."}]},
-  {id:"v011",date:"05/28",type:"vocab",title:"電玩與休閒",tags:["休閒","日常"],items:[{fr:"jouer à un jeu vidéo",zh:"打電動",ex:"On va jouer à un jeu vidéo ce soir."},{fr:"une console de jeux",zh:"遊戲主機",ex:"J'ai une nouvelle console de jeux."},{fr:"un joueur / une joueuse",zh:"玩家",ex:"Je suis une bonne joueuse !"},{fr:"gagner / perdre",zh:"贏/輸",ex:"J'ai gagné ! Tu as perdu !"},{fr:"un niveau",zh:"關卡/等級",ex:"Je suis au niveau 50."},{fr:"relaxant(e)",zh:"放鬆的",ex:"Animal Crossing est très relaxant."},{fr:"à son rythme",zh:"按自己的節奏",ex:"On peut jouer à son rythme."}]},
-    {id:"v010",date:"05/27",type:"vocab",title:"運動與身體",tags:["運動","身體","日常"],items:[{fr:"avoir des courbatures",zh:"肌肉痠痛",ex:"J'ai des courbatures partout après le gym !"},{fr:"les cuisses",zh:"大腿",ex:"J'ai des courbatures dans les cuisses."},{fr:"les fessiers",zh:"臀部/屁股",ex:"Mes fessiers sont douloureux."},{fr:"se concentrer",zh:"專注",ex:"J'ai besoin de me concentrer."},{fr:"être distraite",zh:"分心（女）",ex:"Quand je suis avec des amis, je suis distraite."},{fr:"se détendre",zh:"放鬆",ex:"Mon corps s'est détendu après le Pilates."},{fr:"être en forme",zh:"精神好/狀態好",ex:"Je voudrais être en forme."},{fr:"avoir de l'énergie",zh:"有精神/有活力",ex:"J'ai besoin d'avoir de l'énergie."},{fr:"avoir la pêche",zh:"精力充沛（口語）",ex:"Aujourd'hui j'ai la pêche !"},{fr:"la silhouette",zh:"身材線條",ex:"Je voudrais avoir une meilleure silhouette."},{fr:"c'est pour ça que",zh:"這就是為什麼",ex:"C'est pour ça que je vais au gym !"},{fr:"trois fois par mois",zh:"每個月三次",ex:"Je fais du Pilates trois fois par mois."}]},
-  {id:"v009",date:"05/26",type:"vocab",title:"交通・機場詞彙",tags:["旅遊","交通","實用"],items:[{fr:"composter",zh:"打票（紙本）",ex:"N'oubliez pas de composter votre billet !"},{fr:"valider",meaning:"感應/驗票",zh:"感應驗票（電子）",ex:"Validez votre carte !"},{fr:"embarquer",zh:"登機/登船",ex:"Nous allons embarquer dans 10 minutes."},{fr:"enregistrer les bagages",zh:"托運行李",ex:"J'ai enregistré mes bagages."},{fr:"la carte d'embarquement",zh:"登機證",ex:"Votre carte d'embarquement !"},{fr:"passer à la douane",zh:"過海關",ex:"Un douanier examine vos documents."},{fr:"le décalage horaire",zh:"時差",ex:"Il y a 7h de décalage horaire."},{fr:"un voyage d'affaires",zh:"商務旅行",ex:"Il fait souvent des voyages d'affaires."},{fr:"ne...jamais",zh:"從不",ex:"Je ne fais jamais de camping."},{fr:"ne...pas encore",zh:"還沒",ex:"Je n'ai pas encore visité Paris."}]},
-    {id:"v008",date:"05/22",type:"vocab",title:"讀書與文學",tags:["文學","文化"],items:[{fr:"un club de lecture",zh:"讀書會",ex:"Je participe à un club de lecture."},{fr:"un roman",zh:"小說",ex:"C'est facile à lire parce que c'est un roman."},{fr:"la littérature",zh:"文學",ex:"J'adore la littérature française."},{fr:"discuter de",zh:"討論",ex:"On a discuté de nos opinions."},{fr:"à l'époque",zh:"當時/那個年代",ex:"Ce n'était pas possible à l'époque."},{fr:"avoir de la chance",zh:"很幸運",ex:"Il a beaucoup de chance."}]},
-  {id:"v007",date:"05/20",type:"vocab",title:"旅遊詞彙",tags:["旅遊","實用"],items:[{fr:"une valise",zh:"行李箱",ex:"Je fais ma valise pour le voyage."},{fr:"un passeport",zh:"護照",ex:"N'oublie pas ton passeport !"},{fr:"un billet",zh:"票（火車/飛機）",ex:"J'ai réservé un billet d'avion."},{fr:"réserver",zh:"預訂",ex:"J'ai réservé une chambre d'hôtel."},{fr:"une chambre d'hôtes",zh:"民宿",ex:"C'est plus authentique."},{fr:"faire sa valise",zh:"打包行李",ex:"Je dois faire ma valise ce soir."},{fr:"découvrir",zh:"探索/發現",ex:"Je voudrais découvrir d'autres villes."}]},
-  {id:"v006",date:"05/19",type:"vocab",title:"天氣與感覺",tags:["天氣","日常"],items:[{fr:"il fait chaud",zh:"天氣熱",ex:"Il fait trop chaud aujourd'hui !"},{fr:"transpirer",zh:"流汗",ex:"J'ai beaucoup transpiré."},{fr:"dehors",zh:"外面",ex:"Il fait trop chaud dehors."},{fr:"la chaleur",zh:"熱度/酷熱",ex:"La chaleur est insupportable !"}]},
-  {id:"v005",date:"05/18",type:"vocab",title:"電影相關",tags:["電影","文化"],items:[{fr:"un film hongkongais",zh:"香港電影",ex:"J'ai vu un film hongkongais."},{fr:"un film policier",zh:"犯罪片",ex:"C'est un film policier."},{fr:"un film d'action",zh:"動作片",ex:"J'aime les films d'action."},{fr:"un agent infiltré",zh:"臥底",ex:"Le film parle d'un agent infiltré."},{fr:"ce genre de films",zh:"這種類型的電影",ex:"J'aime bien ce genre de films."}]},
-  {id:"v004",date:"05/15",type:"vocab",title:"日常實用表達",tags:["日常","表達"],items:[{fr:"j'ai mes règles",zh:"我月經來了",ex:"J'ai mes règles, donc je reste à la maison."},{fr:"tout à l'heure",zh:"等一下/待會",ex:"Je vais dormir tout à l'heure."},{fr:"pendant la journée",zh:"白天",ex:"J'ai travaillé pendant la journée."},{fr:"avoir besoin de",zh:"需要",ex:"J'ai besoin de beaucoup d'argent."}]},
-  {id:"v003",date:"05/14",type:"vocab",title:"哲學詞彙入門",tags:["哲學","抽象名詞"],items:[{fr:"la liberté",zh:"自由",ex:"La liberté est essentielle."},{fr:"la conscience",zh:"意識/良知",ex:"Il a une conscience développée."},{fr:"l'existence (f)",zh:"存在",ex:"L'existence précède l'essence."},{fr:"la vérité",zh:"真理",ex:"Quelle est la vérité ?"},{fr:"la raison",zh:"理性",ex:"La raison guide nos actions."}]},
-  {id:"v002",date:"05/12",type:"vocab",title:"反身動詞：日常作息",tags:["反身動詞","日常"],items:[{fr:"se lever",zh:"起床",ex:"Je me suis levée à 9h."},{fr:"se coucher",zh:"就寢",ex:"Je me couche tard."},{fr:"s'endormir",zh:"睡著",ex:"Je ne me suis pas endormie hier soir."},{fr:"se maquiller",zh:"化妝",ex:"Je me maquille le matin."},{fr:"se reposer",zh:"休息",ex:"Je me suis reposée à la maison."}]},
   {id:"v021",date:"07/09",type:"vocab",title:"習慣・反身・日常動作",tags:["日常","反身動詞","表達"],items:[
     {fr:"J'ai l'habitude de + inf.",zh:"我習慣於...",ex:"J'ai l'habitude de me lever tôt."},
     {fr:"le télétravail",zh:"遠距工作",ex:"Je fais du télétravail depuis deux ans."},
@@ -2015,6 +2002,53 @@ const VOCAB=[
     {fr:"un échantillon",zh:"試用品/樣本",ex:"J'ai reçu des échantillons de parfum."},
     {fr:"un embouteillage",zh:"塞車（正式）",ex:"Il y a des embouteillages sur l'autoroute."},
   ]},
+  {id:"v026",date:"07/02",type:"vocab",title:"法式飲食文化",tags:["文化","nourriture","表達"],items:[
+    {fr:"le foie gras de canard / d'oie",zh:"鴨/鵝肝",ex:"Les Français adorent le foie gras à Noël."},
+    {fr:"les crustacés",zh:"甲殼類海鮮",ex:"Ils aiment les crustacés rares comme le homard."},
+    {fr:"un consommateur",zh:"消費者",ex:"Les Français sont de grands consommateurs de fromage."},
+    {fr:"consommer",zh:"消費/食用",ex:"On consomme beaucoup de foie gras en décembre."},
+    {fr:"en matière de",zh:"在...方面",ex:"En matière de cuisine, la France est célèbre."},
+    {fr:"apprécier",zh:"欣賞/喜愛",ex:"J'apprécie beaucoup ce vin rouge."},
+    {fr:"il faut manger de tout",zh:"什麼都要吃",ex:"Il faut manger de tout pour être en bonne santé."},
+    {fr:"manger équilibré",zh:"均衡飲食",ex:"Il faut manger équilibré et faire du sport."},
+    {fr:"poser un lapin à qqn",zh:"放鴿子",ex:"Il m'a posé un lapin ! Je l'ai attendu une heure."},
+  ]},
+  {id:"v025",date:"06/30",type:"vocab",title:"比較・最高級・情緒",tags:["表達","比較級","日常"],items:[
+    {fr:"voir la vie en rose",zh:"樂觀看世界",ex:"Il est optimiste, il voit la vie en rose."},
+    {fr:"voir la vie en noir",zh:"悲觀看世界",ex:"Elle est pessimiste, elle voit la vie en noir."},
+    {fr:"optimiste ↔ pessimiste",zh:"樂觀↔悲觀",ex:"Sois optimiste ! Ça va aller."},
+    {fr:"content(e) ↔ mécontent(e)",zh:"滿意↔不滿意",ex:"Il est toujours mécontent de tout."},
+    {fr:"passer un examen",zh:"參加考試",ex:"Je passe un examen demain matin."},
+    {fr:"réussir un examen",zh:"通過考試",ex:"J'ai réussi ! J'ai eu 15/20."},
+    {fr:"rater un examen",zh:"考試不及格",ex:"J'ai raté... 9/20. Je dois repasser."},
+    {fr:"le meilleur / la meilleure",zh:"最好的",ex:"C'est le meilleur restaurant de la ville."},
+    {fr:"une pomme empoisonnée",zh:"毒蘋果",ex:"La sorcière donne une pomme empoisonnée à Blanche Neige."},
+  ]},
+  {id:"v024",date:"06/25",type:"vocab",title:"家事・生活・表達",tags:["日常","表達"],items:[
+    {fr:"faire le lit",zh:"鋪床",ex:"Je fais le lit chaque matin."},
+    {fr:"faire la vaisselle",zh:"洗碗",ex:"Après le diner, je fais la vaisselle."},
+    {fr:"faire la lessive",zh:"洗衣服",ex:"Je fais la lessive le samedi."},
+    {fr:"faire le ménage",zh:"做家事（整體）",ex:"Je fais le ménage le week-end."},
+    {fr:"une femme de ménage",zh:"清潔人員",ex:"Elle travaille comme femme de ménage."},
+    {fr:"chacun son tour",zh:"輪流/各自輪到",ex:"Pour le ménage, chacun son tour !"},
+    {fr:"chacun ses goûts",zh:"各有所好",ex:"Chacun ses goûts — moi j'adore le jazz."},
+    {fr:"être assis(e)",zh:"坐著",ex:"Il est assis à côté de moi."},
+    {fr:"être debout",zh:"站著",ex:"Je suis debout depuis 8h du matin !"},
+    {fr:"ne...plus / arrêter de fumer",zh:"不再抽菸",ex:"Je ne fume plus. J'ai arrêté depuis un mois."},
+    {fr:"Bon appétit ! / Bonne dégustation !",zh:"用餐愉快！",ex:"Bon appétit ! — Merci, vous aussi !"},
+  ]},
+  {id:"v023",date:"06/23",type:"vocab",title:"喝一杯・各種杯子",tags:["日常","餐廳","表達"],items:[
+    {fr:"prendre un verre / un pot",zh:"去喝一杯",ex:"On prend un pot après le cours ?"},
+    {fr:"un apéritif",zh:"開胃酒",ex:"Vous prenez un apéritif avant le repas ?"},
+    {fr:"un verre à vin",zh:"葡萄酒杯（空杯）",ex:"Un verre à vin blanc ou à vin rouge ?"},
+    {fr:"une tasse à café",zh:"咖啡杯（空杯）",ex:"Une belle tasse à café en porcelaine."},
+    {fr:"une flûte à champagne",zh:"香檳杯",ex:"On lève nos flûtes à champagne !"},
+    {fr:"une tasse de café",zh:"一杯咖啡（有內容物）",ex:"Je voudrais une tasse de café, s'il vous plaît."},
+    {fr:"un verre de vin",zh:"一杯葡萄酒",ex:"Un verre de vin rouge pour moi."},
+    {fr:"se raviser",zh:"改變心意",ex:"Patricia se ravise et prend un cocktail de fruits."},
+    {fr:"changer d'avis",zh:"改變主意",ex:"J'ai changé d'avis, je ne prends pas de dessert."},
+    {fr:"avec plaisir",zh:"很樂意",ex:"Tu veux un café ? Avec plaisir !"},
+  ]},
   {id:"v020",date:"06/22",type:"vocab",title:"飲食・餐廳・社交",tags:["日常","餐廳","表達"],items:[
     {fr:"accueillant(e)",zh:"熱情好客的",ex:"Les Belges sont très accueillants."},
     {fr:"se raviser",zh:"改變心意",ex:"Patricia se ravise et prend un cocktail."},
@@ -2028,6 +2062,29 @@ const VOCAB=[
     {fr:"doucement",zh:"輕輕地/慢慢地",ex:"Parle doucement, le bébé dort !"},
     {fr:"préférer A à B",zh:"比起B更喜歡A",ex:"Je préfère le café au thé."},
     {fr:"un gros mot",zh:"髒話",ex:"Ne dis pas de gros mots !"},
+  ]},
+  {id:"v022",date:"06/18",type:"vocab",title:"La Bretagne・旅途・日常",tags:["旅遊","文化","日常"],items:[
+    {fr:"la Bretagne / breton(ne)",zh:"布列塔尼/布列塔尼人",ex:"La Bretagne est célèbre pour ses crêpes et ses menhirs."},
+    {fr:"une crêpe salée / sucrée",zh:"鹹/甜可麗餅",ex:"On commence par une crêpe salée, puis une sucrée."},
+    {fr:"une crêperie",zh:"可麗餅餐廳",ex:"Il y a une bonne crêperie près de chez moi."},
+    {fr:"salé(e) ↔ sucré(e)",zh:"鹹的↔甜的",ex:"Je préfère les plats salés aux desserts sucrés."},
+    {fr:"se tromper de",zh:"弄錯",ex:"On s'est trompés d'hôtel à Dijon !"},
+    {fr:"moche",zh:"醜的（口語）",ex:"Cette lampe est vraiment moche."},
+    {fr:"le même / la même / les mêmes",zh:"同一個",ex:"On n'a pas le même âge mais on a les mêmes goûts."},
+    {fr:"en + durée",zh:"花了...時間完成",ex:"J'ai lu ce livre en 3 heures."},
+    {fr:"pendant + durée",zh:"持續了...時間",ex:"J'ai attendu pendant 2 heures sous la pluie."},
+    {fr:"à partir de",zh:"從...開始",ex:"À partir de maintenant, je parle uniquement français !"},
+    {fr:"des travaux",zh:"工程/施工",ex:"Il y a des travaux dans la rue, c'est bruyant."},
+  ]},
+  {id:"v022b",date:"06/16",type:"vocab",title:"疑問・旅途詞彙",tags:["表達","旅遊","日常"],items:[
+    {fr:"l'inversion sujet-verbe",zh:"主詞動詞倒裝（正式疑問）",ex:"Où allez-vous ? / As-tu faim ?"},
+    {fr:"traverser",zh:"穿越/橫越",ex:"Ils traversent la France en voiture."},
+    {fr:"une vallée",zh:"河谷",ex:"La vallée du Rhône est magnifique."},
+    {fr:"une mésaventure",zh:"不如意的事",ex:"Il leur arrive quelques mésaventures en route."},
+    {fr:"rectifier",zh:"更正",ex:"Il faut faire rectifier l'addition."},
+    {fr:"décider de + inf.",zh:"決定做某事",ex:"Ils ont décidé de partir en vacances chez des amis."},
+    {fr:"accueillant(e)",zh:"熱情好客的",ex:"Les Belges sont très accueillants."},
+    {fr:"recevoir (reçu)",zh:"收到",ex:"J'ai reçu un message de mes amis."},
   ]},
   {id:"v019",date:"06/11",type:"vocab",title:"餐廳・婚姻・時間",tags:["日常","餐廳","表達"],items:[
     {fr:"mon mari / ma femme",zh:"我丈夫/我太太",ex:"Mon mari est dentiste."},
@@ -2044,7 +2101,7 @@ const VOCAB=[
     {fr:"à partir de",zh:"從...開始",ex:"À partir de maintenant, je parle français !"},
     {fr:"des travaux",zh:"工程/施工",ex:"Il y a des travaux dans la rue."},
   ]},
-    {id:"v015",date:"06/09",type:"vocab",title:"🥩 肉類・家禽",tags:["食物","nourriture"],items:[
+  {id:"v015",date:"06/09",type:"vocab",title:"🥩 肉類・家禽",tags:["食物","nourriture"],items:[
     {fr:"le bœuf",zh:"牛肉 (m)",ex:"Du bœuf bourguignon, s'il vous plaît."},
     {fr:"le porc",zh:"豬肉 (m)",ex:"Je mange du porc au dîner."},
     {fr:"le poulet",zh:"雞肉 (m)",ex:"Un poulet rôti pour dimanche !"},
@@ -2216,9 +2273,21 @@ const VOCAB=[
     {fr:"les frites (f)",zh:"薯條",ex:"Un steak frites, s'il vous plaît."},
     {fr:"les crêpes (f)",zh:"可麗餅",ex:"Des crêpes bretonnes au beurre."},
     {fr:"le gâteau",zh:"蛋糕 (m)",ex:"Un gâteau au chocolat pour l'anniversaire."}]},
-    {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]},
-];
-
+  {id:"v014",date:"06/07",type:"vocab",title:"音樂與感受",tags:["音樂","表達","文化"],items:[{fr:"nostalgique",zh:"懷舊的/令人懷念的",ex:"Cette chanson est très nostalgique."},{fr:"mélancolique",zh:"憂鬱感傷的",ex:"Une chanson mélancolique et belle."},{fr:"rétro",zh:"復古的（風格）",ex:"J'aime le style rétro de Vidéoclub."},{fr:"donner envie de",zh:"讓人想要...",ex:"Ça me donne envie de voyager."},{fr:"une chanson",zh:"一首歌",ex:"J'adore cette chanson !"},{fr:"Qui es-tu ?",zh:"你是誰？",ex:"Qui es-tu ? Où es-tu ?"},{fr:"Où es-tu ?",zh:"你在哪裡？",ex:"Où es-tu maintenant ?"}]},
+  {id:"v013",date:"06/04",type:"vocab",title:"日常表達補充",tags:["日常","表達"],items:[{fr:"commander une livraison",zh:"點外送",ex:"J'ai commandé une livraison ce soir."},{fr:"décontracté(e)",zh:"悠閒的/放鬆的",ex:"C'était très décontracté !"},{fr:"bavarder",zh:"聊天/閒聊",ex:"J'aime bavarder avec mes amis."},{fr:"se concentrer sur",zh:"專注在...上",ex:"Je ne peux pas me concentrer sur la nourriture."},{fr:"il pleuvait",zh:"那時候在下雨",ex:"Il pleuvait encore aujourd'hui."},{fr:"il a plu",zh:"下了雨",ex:"Il a beaucoup plu ce week-end."},{fr:"réconfortant(e)",zh:"撫慰人心的",ex:"Un burger chaud, c'est réconfortant par temps de pluie."}]},
+  {id:"v012",date:"05/31",type:"vocab",title:"電影與娛樂",tags:["電影","文化","表達"],items:[{fr:"passionnant(e)",zh:"精彩的/引人入勝的",ex:"C'est un film très passionnant !"},{fr:"palpitant(e)",zh:"扣人心弦的",ex:"Un film palpitant !"},{fr:"captivant(e)",zh:"引人入勝的",ex:"Ce livre est très captivant."},{fr:"plein de rebondissements",zh:"充滿轉折",ex:"C'est un film plein de rebondissements."},{fr:"plusieurs fois",zh:"好幾次",ex:"J'ai vu ce film plusieurs fois."},{fr:"qui s'appelle",zh:"叫做（介紹片名）",ex:"C'est un film qui s'appelle Cold War."},{fr:"je l'adore toujours",zh:"我還是很愛它",ex:"Je l'adore toujours après plusieurs visionnages."}]},
+  {id:"v011",date:"05/28",type:"vocab",title:"電玩與休閒",tags:["休閒","日常"],items:[{fr:"jouer à un jeu vidéo",zh:"打電動",ex:"On va jouer à un jeu vidéo ce soir."},{fr:"une console de jeux",zh:"遊戲主機",ex:"J'ai une nouvelle console de jeux."},{fr:"un joueur / une joueuse",zh:"玩家",ex:"Je suis une bonne joueuse !"},{fr:"gagner / perdre",zh:"贏/輸",ex:"J'ai gagné ! Tu as perdu !"},{fr:"un niveau",zh:"關卡/等級",ex:"Je suis au niveau 50."},{fr:"relaxant(e)",zh:"放鬆的",ex:"Animal Crossing est très relaxant."},{fr:"à son rythme",zh:"按自己的節奏",ex:"On peut jouer à son rythme."}]},
+  {id:"v010",date:"05/27",type:"vocab",title:"運動與身體",tags:["運動","身體","日常"],items:[{fr:"avoir des courbatures",zh:"肌肉痠痛",ex:"J'ai des courbatures partout après le gym !"},{fr:"les cuisses",zh:"大腿",ex:"J'ai des courbatures dans les cuisses."},{fr:"les fessiers",zh:"臀部/屁股",ex:"Mes fessiers sont douloureux."},{fr:"se concentrer",zh:"專注",ex:"J'ai besoin de me concentrer."},{fr:"être distraite",zh:"分心（女）",ex:"Quand je suis avec des amis, je suis distraite."},{fr:"se détendre",zh:"放鬆",ex:"Mon corps s'est détendu après le Pilates."},{fr:"être en forme",zh:"精神好/狀態好",ex:"Je voudrais être en forme."},{fr:"avoir de l'énergie",zh:"有精神/有活力",ex:"J'ai besoin d'avoir de l'énergie."},{fr:"avoir la pêche",zh:"精力充沛（口語）",ex:"Aujourd'hui j'ai la pêche !"},{fr:"la silhouette",zh:"身材線條",ex:"Je voudrais avoir une meilleure silhouette."},{fr:"c'est pour ça que",zh:"這就是為什麼",ex:"C'est pour ça que je vais au gym !"},{fr:"trois fois par mois",zh:"每個月三次",ex:"Je fais du Pilates trois fois par mois."}]},
+  {id:"v009",date:"05/26",type:"vocab",title:"交通・機場詞彙",tags:["旅遊","交通","實用"],items:[{fr:"composter",zh:"打票（紙本）",ex:"N'oubliez pas de composter votre billet !"},{fr:"valider",meaning:"感應/驗票",zh:"感應驗票（電子）",ex:"Validez votre carte !"},{fr:"embarquer",zh:"登機/登船",ex:"Nous allons embarquer dans 10 minutes."},{fr:"enregistrer les bagages",zh:"托運行李",ex:"J'ai enregistré mes bagages."},{fr:"la carte d'embarquement",zh:"登機證",ex:"Votre carte d'embarquement !"},{fr:"passer à la douane",zh:"過海關",ex:"Un douanier examine vos documents."},{fr:"le décalage horaire",zh:"時差",ex:"Il y a 7h de décalage horaire."},{fr:"un voyage d'affaires",zh:"商務旅行",ex:"Il fait souvent des voyages d'affaires."},{fr:"ne...jamais",zh:"從不",ex:"Je ne fais jamais de camping."},{fr:"ne...pas encore",zh:"還沒",ex:"Je n'ai pas encore visité Paris."}]},
+  {id:"v008",date:"05/22",type:"vocab",title:"讀書與文學",tags:["文學","文化"],items:[{fr:"un club de lecture",zh:"讀書會",ex:"Je participe à un club de lecture."},{fr:"un roman",zh:"小說",ex:"C'est facile à lire parce que c'est un roman."},{fr:"la littérature",zh:"文學",ex:"J'adore la littérature française."},{fr:"discuter de",zh:"討論",ex:"On a discuté de nos opinions."},{fr:"à l'époque",zh:"當時/那個年代",ex:"Ce n'était pas possible à l'époque."},{fr:"avoir de la chance",zh:"很幸運",ex:"Il a beaucoup de chance."}]},
+  {id:"v007",date:"05/20",type:"vocab",title:"旅遊詞彙",tags:["旅遊","實用"],items:[{fr:"une valise",zh:"行李箱",ex:"Je fais ma valise pour le voyage."},{fr:"un passeport",zh:"護照",ex:"N'oublie pas ton passeport !"},{fr:"un billet",zh:"票（火車/飛機）",ex:"J'ai réservé un billet d'avion."},{fr:"réserver",zh:"預訂",ex:"J'ai réservé une chambre d'hôtel."},{fr:"une chambre d'hôtes",zh:"民宿",ex:"C'est plus authentique."},{fr:"faire sa valise",zh:"打包行李",ex:"Je dois faire ma valise ce soir."},{fr:"découvrir",zh:"探索/發現",ex:"Je voudrais découvrir d'autres villes."}]},
+  {id:"v006",date:"05/19",type:"vocab",title:"天氣與感覺",tags:["天氣","日常"],items:[{fr:"il fait chaud",zh:"天氣熱",ex:"Il fait trop chaud aujourd'hui !"},{fr:"transpirer",zh:"流汗",ex:"J'ai beaucoup transpiré."},{fr:"dehors",zh:"外面",ex:"Il fait trop chaud dehors."},{fr:"la chaleur",zh:"熱度/酷熱",ex:"La chaleur est insupportable !"}]},
+  {id:"v005",date:"05/18",type:"vocab",title:"電影相關",tags:["電影","文化"],items:[{fr:"un film hongkongais",zh:"香港電影",ex:"J'ai vu un film hongkongais."},{fr:"un film policier",zh:"犯罪片",ex:"C'est un film policier."},{fr:"un film d'action",zh:"動作片",ex:"J'aime les films d'action."},{fr:"un agent infiltré",zh:"臥底",ex:"Le film parle d'un agent infiltré."},{fr:"ce genre de films",zh:"這種類型的電影",ex:"J'aime bien ce genre de films."}]},
+  {id:"v004",date:"05/15",type:"vocab",title:"日常實用表達",tags:["日常","表達"],items:[{fr:"j'ai mes règles",zh:"我月經來了",ex:"J'ai mes règles, donc je reste à la maison."},{fr:"tout à l'heure",zh:"等一下/待會",ex:"Je vais dormir tout à l'heure."},{fr:"pendant la journée",zh:"白天",ex:"J'ai travaillé pendant la journée."},{fr:"avoir besoin de",zh:"需要",ex:"J'ai besoin de beaucoup d'argent."}]},
+  {id:"v003",date:"05/14",type:"vocab",title:"哲學詞彙入門",tags:["哲學","抽象名詞"],items:[{fr:"la liberté",zh:"自由",ex:"La liberté est essentielle."},{fr:"la conscience",zh:"意識/良知",ex:"Il a une conscience développée."},{fr:"l'existence (f)",zh:"存在",ex:"L'existence précède l'essence."},{fr:"la vérité",zh:"真理",ex:"Quelle est la vérité ?"},{fr:"la raison",zh:"理性",ex:"La raison guide nos actions."}]},
+  {id:"v002",date:"05/12",type:"vocab",title:"反身動詞：日常作息",tags:["反身動詞","日常"],items:[{fr:"se lever",zh:"起床",ex:"Je me suis levée à 9h."},{fr:"se coucher",zh:"就寢",ex:"Je me couche tard."},{fr:"s'endormir",zh:"睡著",ex:"Je ne me suis pas endormie hier soir."},{fr:"se maquiller",zh:"化妝",ex:"Je me maquille le matin."},{fr:"se reposer",zh:"休息",ex:"Je me suis reposée à la maison."}]},
+  {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]}
+]
 const ERRORS_INIT=[
   {id:"e036",date:"06/07",category:"副詞位置",wrong:"Il encore pleuvait",correct:"Il pleuvait encore",reason:"副詞放在動詞後面：il pleuvait encore / il a encore plu",myNote:"現在式/imparfait → 動詞後 / PC → 助動詞和PP中間",attempts:0,mastered:false},
   {id:"e035",date:"06/04",category:"反身動詞",wrong:"J'ai me suis relaxée",correct:"Je me suis relaxée",reason:"反身動詞只用 être，不用 avoir",myNote:"反身動詞永遠用 être！",attempts:0,mastered:false},
@@ -2291,6 +2360,26 @@ function Confetti({onDone}){
   const pieces=Array.from({length:40},(_,i)=>({id:i,x:Math.random()*100,color:['#c97a8a','#c4906a','#7a9e7e','#7a9ab5','#f5e6ea','#e8f2e8'][i%6],delay:Math.random()*.5,duration:1.2+Math.random()*.8,size:6+Math.random()*6}));
   useEffect(()=>{const t=setTimeout(onDone,2000);return()=>clearTimeout(t);},[]);
   return(<div className="confetti-wrap">{pieces.map(p=><div key={p.id} className="confetti-piece" style={{left:`${p.x}%`,background:p.color,width:p.size,height:p.size,animationDelay:`${p.delay}s`,animationDuration:`${p.duration}s`}}/>)}</div>);
+}
+
+function VocabGroup({group}){
+  const[open,setOpen]=useState(false);
+  return(
+    <div className="note-card vocab" style={{marginBottom:10}}>
+      <div onClick={()=>setOpen(o=>!o)} style={{cursor:'pointer',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
+        <div>
+          <div className="note-date">{group.date}</div>
+          <div className="note-title">{group.title}</div>
+          <div style={{marginTop:4}}>{group.tags.map(t=><span key={t} className="tag tag-vocab">{t}</span>)}</div>
+        </div>
+        <div style={{display:'flex',alignItems:'center',gap:8,flexShrink:0}}>
+          <span style={{fontSize:'.72rem',color:'var(--muted)'}}>{group.items.length} mots</span>
+          <span style={{color:'var(--muted)',fontSize:'.85rem',transition:'transform .3s',display:'inline-block',transform:open?'rotate(180deg)':'none'}}>▼</span>
+        </div>
+      </div>
+      {open&&<><div style={{fontSize:'.72rem',color:'var(--muted)',margin:'10px 0 6px'}}>👆 點擊卡片翻面看中文</div><div className="vocab-grid">{group.items.map((item,i)=><VocabCard key={i} item={item}/>)}</div></>}
+    </div>
+  );
 }
 
 function VocabCard({item}){
@@ -2508,7 +2597,7 @@ export default function App(){
   const filteredChapters=levelFilter==='all'?CHAPTERS:CHAPTERS.filter(c=>c.level===levelFilter);
   const filteredGrouped=filteredChapters.reduce((acc,ch)=>{
     const m=ch.date.slice(0,2);
-    const key=m==='01'?'一月':m==='02'?'二月':m==='03'?'三月':m==='04'?'四月':m==='05'?'五月（三級）':'其他';
+    const key=m==='01'?'一月':m==='02'?'二月':m==='03'?'三月':m==='04'?'四月':m==='05'?'五月（三級）':m==='06'?'六月（三級）':m==='07'?'七月（四級）':'其他';
     if(!acc[key])acc[key]=[];acc[key].push(ch);return acc;
   },{});
   const currentChapter=CHAPTERS.find(c=>c.id===selectedChapter);
@@ -2628,15 +2717,7 @@ export default function App(){
             <button className="add-btn" onClick={()=>setModal('vocab')}>+ Ajouter</button>
           </div>
           <CategoryFilter categories={VOCAB_CATEGORIES} activeMain={vocabMainFilter} activeSub={vocabSubFilter} onSelectMain={setVocabMainFilter} onSelectSub={setVocabSubFilter}/>
-          {fVocab.map(group=>(
-            <div key={group.id} className="note-card vocab">
-              <div className="note-date">{group.date}</div>
-              <div className="note-title">{group.title}</div>
-              <div style={{marginBottom:7}}>{group.tags.map(t=><span key={t} className="tag tag-vocab">{t}</span>)}</div>
-              <div style={{fontSize:'.72rem',color:'var(--muted)',marginBottom:8}}>👆 點擊卡片翻面看中文</div>
-              <div className="vocab-grid">{group.items.map((item,i)=><VocabCard key={i} item={item}/>)}</div>
-            </div>
-          ))}
+          {fVocab.map(group=><VocabGroup key={group.id} group={group}/>)}
         </div>}
 
         {tab==='errors'&&<div>
