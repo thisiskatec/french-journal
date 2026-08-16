@@ -2893,7 +2893,7 @@ function ErrorPracticeCard({err,onUpdate}){
         <div style={{fontSize:'.78rem',color:'var(--navy)',fontWeight:600,marginBottom:6}}>✏️ 正確版本是？</div>
         <div className="error-input-row"><input className={`error-input ${result==='correct'?'correct':result==='wrong'?'wrong':''}`} value={input} onChange={e=>{setInput(e.target.value);setResult(null);}} placeholder="輸入正確的句子..." onKeyDown={e=>e.key==='Enter'&&check()} disabled={result==='correct'}/>{result!=='correct'&&<button className="error-submit-btn" onClick={check}>確認</button>}</div>
         {result==='wrong'&&<div style={{display:'flex',gap:8,marginTop:4}}><button onClick={()=>{setInput('');setResult(null);}} style={{background:'none',border:'1px solid var(--rose)',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--rose)',fontFamily:"'DM Sans',sans-serif"}}>再試</button><button onClick={()=>setRevealed(true)} style={{background:'none',border:'1px solid #ddd',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.78rem',color:'var(--muted)',fontFamily:"'DM Sans',sans-serif"}}>看答案</button></div>}
-      </>):(<div className="error-reveal"><div className="error-correct-label">✓ 正確</div><div className="error-correct-text">{err.correct}</div><div className="error-reason-text">💡 {err.reason}</div>{err.myNote&&<div className="error-note-text">📝 {err.myNote}</div>}</div>)}
+      </>):(<div className="error-reveal"><div className="error-correct-label">✓ 正確</div><div style={{display:'flex',alignItems:'center',gap:4}}><div className="error-correct-text" style={{marginBottom:0}}>{err.correct}</div><SpeakBtn text={err.correct} size={15}/></div><div className="error-reason-text">💡 {err.reason}</div>{err.myNote&&<div className="error-note-text">📝 {err.myNote}</div>}</div>)}
     </div>
   );
 }
@@ -2922,17 +2922,34 @@ function Section({icon,title,children,defaultOpen=false}){
 function FlashCards({cards}){
   const[i,setI]=useState(0);const[flipped,setFlipped]=useState(false);
   const go=(n)=>{setFlipped(false);setTimeout(()=>setI(n),150);};
+  if(!cards||cards.length===0)return<p style={{color:'var(--muted)',fontSize:'.85rem',textAlign:'center',padding:'20px 0'}}>此課無單字卡</p>;
   const card=cards[i];
+  if(!card)return null;
   return(<><p className="card-flip-hint">👆 點擊卡片翻面</p><div className="fc-wrap"><div className={`fc ${flipped?'flipped':''}`} onClick={()=>setFlipped(!flipped)}><div className="fc-f">{card.gender&&<span className={`fc-gender ${card.gender}`}>{card.gender==='m'?'陽性':'陰性'}</span>}<div className="fc-word">{card.word}</div><div className="fc-hint">法文 → 點擊看中文</div></div><div className="fc-b"><div className="fc-meaning">{card.meaning}</div><div className="fc-ex">{card.example}</div></div></div></div><div className="card-nav"><button className="cnav-btn" onClick={()=>go(Math.max(0,i-1))} disabled={i===0}>← 上一張</button><span className="card-counter">{i+1} / {cards.length}</span><button className="cnav-btn" onClick={()=>go(Math.min(cards.length-1,i+1))} disabled={i===cards.length-1}>下一張 →</button></div></>);
 }
 
+
+function speak(text){
+  if(!('speechSynthesis' in window))return;
+  window.speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang='fr-FR';u.rate=0.9;
+  const voices=window.speechSynthesis.getVoices();
+  const frVoice=voices.find(v=>v.lang.startsWith('fr'));
+  if(frVoice)u.voice=frVoice;
+  window.speechSynthesis.speak(u);
+}
+
+function SpeakBtn({text,size=15}){
+  return <button onClick={(e)=>{e.stopPropagation();speak(text);}} style={{background:'none',border:'none',cursor:'pointer',padding:'2px 4px',fontSize:size,lineHeight:1,color:'var(--green)',flexShrink:0}} title="唸出來">🔊</button>;
+}
 
 function VocabList({items}){
   return(
     <div style={{display:'flex',flexDirection:'column',gap:0}}>
       {items.map((item,i)=>(
         <div key={i} style={{display:'grid',gridTemplateColumns:'1fr 1fr 2fr',gap:'8px',padding:'9px 12px',borderBottom:'1px solid #f5ece8',alignItems:'start',background:i%2===0?'white':'#fdf8f5'}}>
-          <div style={{fontStyle:'italic',color:'var(--blue)',fontWeight:600,fontSize:'.85rem'}}>{item.word}</div>
+          <div style={{fontStyle:'italic',color:'var(--blue)',fontWeight:600,fontSize:'.85rem',display:'flex',alignItems:'center',gap:2}}><span>{item.word}</span><SpeakBtn text={item.word} size={13}/></div>
           <div style={{color:'var(--navy)',fontSize:'.83rem',fontWeight:500}}>{item.meaning}</div>
           <div style={{color:'var(--muted)',fontSize:'.78rem',fontStyle:'italic'}}>{item.example}</div>
         </div>
@@ -2950,8 +2967,8 @@ function ChapterView({chapter,onGoNote}){
       <Section icon="📋" title="本課重點" defaultOpen={true}>
         {chapter.summary.map((pt,i)=><div key={i} className="sum-pt"><div className="sum-bullet">{i+1}</div><div className="sum-text">{pt.text}{pt.fr&&<><br/><span className="fr">{pt.fr}</span></>}</div></div>)}
       </Section>
-      <Section icon="🗂️" title={chapter.level==="3"?"詞彙":"單字卡"}>
-        {chapter.level==="3" && chapter.vocabItems
+      <Section icon="🗂️" title={chapter.vocabItems?"詞彙":"單字卡"}>
+        {chapter.vocabItems
           ? <><div style={{display:'grid',gridTemplateColumns:'1fr 1fr 2fr',gap:'8px',padding:'7px 12px',background:'var(--navy)',borderRadius:'8px 8px 0 0'}}><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>法文</span><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>中文</span><span style={{color:'white',fontSize:'.72rem',fontWeight:700}}>例句</span></div><VocabList items={chapter.vocabItems}/></>
           : <FlashCards cards={chapter.flashcards}/>
         }
@@ -2977,7 +2994,7 @@ function ChapterView({chapter,onGoNote}){
       )}
       {chapter.dialogue&&chapter.dialogue.length>0&&(
         <Section icon="💬" title="對話">
-          {chapter.dialogue.map((line,i)=><div key={i} className="dialogue-line"><span className="dl-speaker">{line.s}</span><span className="dl-text">{line.t}</span></div>)}
+          {chapter.dialogue.map((line,i)=><div key={i} className="dialogue-line"><span className="dl-speaker">{line.s}</span><span className="dl-text">{line.t}</span><SpeakBtn text={line.t} size={14}/></div>)}
         </Section>
       )}
       {chapter.tip&&<div className="tip-box">💡 {chapter.tip}</div>}
@@ -3016,6 +3033,55 @@ function AddModal({type,onClose,onSave}){
     {type==='grammar'&&<><div className="modal-title">📗 Nouvelle note</div><label className="form-label">標題</label><input className="form-input" onChange={e=>set('title',e.target.value)}/><label className="form-label">規則（每行一條）</label><textarea className="form-input" rows={4} onChange={e=>set('rules',e.target.value)} style={{resize:'vertical'}}/><label className="form-label">標籤（逗號分隔）</label><input className="form-input" onChange={e=>set('tags',e.target.value)}/><button className="big-btn" onClick={()=>{if(!form.title)return;onSave({id:`g${Date.now()}`,date:today,type:'grammar',title:form.title,tags:(form.tags||'').split(',').map(t=>t.trim()).filter(Boolean),rules:(form.rules||'').split('\n').filter(Boolean),myExamples:[],mySentences:[]});onClose();}}>儲存</button></>}
     {type==='vocab'&&<><div className="modal-title">📘 Nouveau vocabulaire</div><label className="form-label">標題</label><input className="form-input" onChange={e=>set('title',e.target.value)}/><label className="form-label">標籤</label><input className="form-input" onChange={e=>set('tags',e.target.value)}/><label className="form-label">詞彙（每行：法文|中文|例句）</label><textarea className="form-input" rows={5} placeholder="la liberté|自由|La liberté est essentielle." onChange={e=>set('items',e.target.value)} style={{resize:'vertical'}}/><button className="big-btn" onClick={()=>{if(!form.title)return;const items=(form.items||'').split('\n').filter(Boolean).map(l=>{const[fr,zh,ex]=l.split('|');return{fr:fr?.trim(),zh:zh?.trim(),ex:ex?.trim()};}).filter(i=>i.fr&&i.zh);onSave({id:`v${Date.now()}`,date:today,type:'vocab',title:form.title,tags:(form.tags||'').split(',').map(t=>t.trim()).filter(Boolean),items});onClose();}}>儲存</button></>}
   </div></div>);
+}
+
+function RandomReview({vocab,grammar}){
+  const pool=[];
+  vocab.forEach(g=>g.items.forEach(it=>pool.push({type:'vocab',fr:it.fr||it.word,zh:it.zh||it.meaning,ex:it.ex||it.example})));
+  grammar.forEach(g=>{if(g.myExamples&&g.myExamples.length)pool.push({type:'grammar',title:g.title,ex:g.myExamples[0],rules:g.rules});});
+  const[current,setCurrent]=useState(()=>pool[Math.floor(Math.random()*pool.length)]);
+  const[show,setShow]=useState(false);
+  const next=()=>{setShow(false);setCurrent(pool[Math.floor(Math.random()*pool.length)]);};
+  if(!current)return null;
+  return(
+    <div style={{background:'var(--card)',borderRadius:'var(--radius)',padding:'14px 16px',boxShadow:'0 2px 10px rgba(74,124,111,.1)',borderLeft:'4px solid var(--green)',marginBottom:14}}>
+      <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:10}}>
+        <div style={{fontSize:'.7rem',fontWeight:700,color:'var(--green)',letterSpacing:'.05em',textTransform:'uppercase'}}>🎲 隨機複習</div>
+        <button onClick={next} style={{background:'none',border:'1px solid var(--green)',borderRadius:8,padding:'3px 10px',cursor:'pointer',fontSize:'.72rem',color:'var(--green)',fontFamily:"'Nunito',sans-serif",fontWeight:600}}>換一個 →</button>
+      </div>
+      {current.type==='vocab'?(
+        <div>
+          <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:6}}>
+            <span style={{fontSize:'1.05rem',fontStyle:'italic',color:'var(--blue)',fontWeight:700}}>{current.fr}</span>
+            <SpeakBtn text={current.fr} size={16}/>
+          </div>
+          {!show?(
+            <button onClick={()=>setShow(true)} style={{background:'var(--rose-light)',color:'var(--rose)',border:'none',borderRadius:8,padding:'6px 14px',cursor:'pointer',fontSize:'.8rem',fontFamily:"'Nunito',sans-serif",fontWeight:600}}>看答案</button>
+          ):(
+            <div>
+              <div style={{fontSize:'.95rem',color:'var(--green)',fontWeight:700,marginBottom:4}}>{current.zh}</div>
+              {current.ex&&<div style={{fontSize:'.8rem',fontStyle:'italic',color:'var(--muted)'}}>{current.ex}</div>}
+            </div>
+          )}
+        </div>
+      ):(
+        <div>
+          <div style={{fontSize:'.9rem',fontWeight:700,color:'var(--navy)',marginBottom:6}}>{current.title}</div>
+          {!show?(
+            <button onClick={()=>setShow(true)} style={{background:'var(--rose-light)',color:'var(--rose)',border:'none',borderRadius:8,padding:'6px 14px',cursor:'pointer',fontSize:'.8rem',fontFamily:"'Nunito',sans-serif",fontWeight:600}}>看例句</button>
+          ):(
+            <div>
+              <div style={{display:'flex',alignItems:'center',gap:6,marginBottom:4}}>
+                <span style={{fontSize:'.85rem',fontStyle:'italic',color:'var(--blue)'}}>{current.ex}</span>
+                <SpeakBtn text={current.ex} size={14}/>
+              </div>
+              {current.rules&&current.rules[0]&&<div style={{fontSize:'.78rem',color:'var(--muted)',marginTop:4}}>▸ {current.rules[0]}</div>}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function App(){
@@ -3114,6 +3180,7 @@ export default function App(){
             <div className="quote-zh">{quote.zh}</div>
             <div className="quote-source">— {quote.source}</div>
           </div>
+          <RandomReview vocab={vocab} grammar={grammar}/>
           <div style={{background:'var(--card)',borderRadius:'var(--radius)',padding:'14px 16px',boxShadow:'0 2px 10px rgba(201,122,138,.08)',marginBottom:14}}>
             <div style={{fontSize:'.7rem',fontWeight:700,color:'var(--navy)',marginBottom:10,letterSpacing:'.05em',textTransform:'uppercase'}}>📊 Statistiques</div>
             <div className="stat-grid">
