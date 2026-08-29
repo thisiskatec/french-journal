@@ -2367,7 +2367,12 @@ const CHAPTERS = [
 ];
 
 const GRAMMAR=[
-  {id:"g027",date:"08/11",type:"grammar",title:"habiter à + 帶冠詞的城市",tags:["介係詞","地方"],rules:["habiter 可加 à 或不加：J'habite Paris = J'habite à Paris","⚠️ 帶冠詞的城市名要縮寫！","Le Havre → J'habite au Havre","Le Mans → J'habite au Mans","Le Caire → J'habite au Caire（le + à = au）"],myExamples:["J'habite à Taipei.","Il habite au Havre.","Elle habite au Caire, en Égypte."],mySentences:[]},
+  {id:"g032",date:"08/23",type:"grammar",title:"des → de（不定冠詞 vs de+les）",tags:["冠詞","易混淆"],rules:["兩種 des 長得一樣，要分清楚！","① 不定冠詞 des（一些）+ 形容詞 → 變 de","il y a de nouveaux membres（一些新成員）","② de+les 的縮寫 des（其中的/那些的）→ 不變","l'un des grands prix（大獎之一 = de+les）","判斷法：問「是『一些』還是『其中的』？」"],myExamples:["Je mange de bons croissants.（一些→de）","l'un des meilleurs restaurants（de+les→des）","le moment des bonnes résolutions（de+les→des）"],mySentences:[]},
+  {id:"g031",date:"08/23",type:"grammar",title:"si... que...（如此...以致於）",tags:["句型","結果"],rules:["si + 形容詞 + que + 結果 = 如此...以致於","Ce phénomène est si courant qu'il a un nom.","= tellement + 形容詞 + que（可互換）","⚠️ que + il → qu'il（母音縮寫）"],myExamples:["Il est si fatigué qu'il dort debout.","Elle parle si vite que je ne comprends rien.","Il fait si chaud qu'on ne peut pas sortir."],mySentences:[]},
+  {id:"g030",date:"08/23",type:"grammar",title:"c'est vs il est（+形容詞/名詞）",tags:["être","c'est","易混淆"],rules:["il/elle est + 形容詞 或 職業（無冠詞）","Il est gentil. / Elle est vendeuse.","c'est + 冠詞 + 名詞（有 un/une/mon...）","C'est un acteur. / C'est ma mère.","⚠️ 形容詞時：il est（指人）/ c'est（指事），兩者文法都對","判斷：有冠詞→c'est / 形容詞或職業→il est"],table:{headers:["後面接","用法","例子"],rows:[["形容詞","il/elle est","Il est gentil"],["職業/國籍（無冠詞）","il/elle est","Elle est anglaise"],["冠詞+名詞","c'est","C'est un ami"]]},myExamples:["Il est acteur. = C'est un acteur.","Elle est drôle.（指人）/ C'est drôle.（指事）","C'est ma fille."],mySentences:[]},
+  {id:"g029",date:"08/23",type:"grammar",title:"imparfait 未完成過去式",tags:["imparfait","時態"],rules:["用於過去的：① 狀態 ② 習慣 ③ 背景","變化：nous 現在式去 -ons + -ais/-ais/-ait/-ions/-iez/-aient","唯一例外：être → j'étais","對比：imparfait=背景/狀態 / passé composé=發生的事件","Je dormais quand le téléphone a sonné."],table:{headers:["情境","例子"],rows:[["狀態","Quand j'étais petite, j'habitais à Taipei"],["習慣","Avant, on prenait un bain le dimanche"],["背景","Il pleuvait quand je suis sortie"]]},myExamples:["J'étais très fatiguée hier.","Avant, je faisais du sport tous les jours.","Il faisait beau ce matin."],mySentences:[]},
+  {id:"g028",date:"08/23",type:"grammar",title:"faire 家族發音（faisais 唸 [fə]）",tags:["發音","動詞"],rules:["fais- 後接 -ons/-ais/-ait/-ant → ai 弱化成 [ə]（ㄜ）","nous faisons → [fə.zɔ̃]（ㄈㄜ）","je faisais → [fə.zɛ]（ㄈㄜ-zè）","en faisant → [fə.zɑ̃]（ㄈㄜ）","⚠️ 對比現在式單數：je fais → [fɛ]（ㄈㄟ）"],myExamples:["nous faisons [fə.zɔ̃]","je faisais [fə.zɛ]","en faisant [fə.zɑ̃]"],mySentences:[]},
+    {id:"g027",date:"08/11",type:"grammar",title:"habiter à + 帶冠詞的城市",tags:["介係詞","地方"],rules:["habiter 可加 à 或不加：J'habite Paris = J'habite à Paris","⚠️ 帶冠詞的城市名要縮寫！","Le Havre → J'habite au Havre","Le Mans → J'habite au Mans","Le Caire → J'habite au Caire（le + à = au）"],myExamples:["J'habite à Taipei.","Il habite au Havre.","Elle habite au Caire, en Égypte."],mySentences:[]},
   {id:"g026",date:"08/04",type:"grammar",title:"代名詞 y 和 en",tags:["代名詞","介係詞"],rules:["y = 代替「除了 de 以外的介係詞 + 名詞/地方」","en = 代替「de + 名詞」","Tu vas à Paris ? → Oui, j'y vais.","Tu as des livres ? → Oui, j'en ai.","⚠️ y 和 en 都放在動詞前面"],table:{headers:["原句","代名詞","結果"],rows:[["Je vais à Paris","à+地方→y","J'y vais"],["Je pense à mon voyage","à+事→y","J'y pense"],["J'ai des livres","de/des→en","J'en ai"],["Je bois du café","du→en","J'en bois"]]},myExamples:["Tu vas au marché ? Oui, j'y vais.","Il n'y a pas de bus. Il n'y en a pas.","Tu veux du café ? Oui, j'en veux."],mySentences:[]},
   {id:"g025",date:"07/30",type:"grammar",title:"prêter vs emprunter（借出/借入）",tags:["動詞搭配","易混淆"],rules:["prêter = 借出（give）：prêter qqch À qqn","emprunter = 借入（receive）：emprunter qqch À qqn","⚠️ 兩個都用 à，但方向相反！","Paul PRÊTE un livre à Marie.（Paul 借出）","Marie EMPRUNTE un livre à Paul.（Marie 借入）"],myExamples:["Je prête ma voiture à mon ami.（我借車給朋友）","J'emprunte de l'argent à la banque.（我向銀行借錢）","Tu peux me prêter ton stylo ?（你可以借我筆嗎？）"],mySentences:[]},
   {id:"g024",date:"07/16",type:"grammar",title:"quelqu'un / quelque chose / ne...rien",tags:["代名詞","否定"],rules:["quelqu'un = 某人 ↔ ne...personne = 沒有人","quelque chose = 某物 ↔ ne...rien = 沒有東西","Quelqu'un est venu ? → Non, personne.","Tu veux quelque chose ? → Non, rien.","⚠️ rien 和 personne 都可當主詞或受詞"],myExamples:["Il y a quelqu'un à la porte.","Je veux quelque chose de sucré.","Je n'ai rien mangé. / Je n'ai vu personne."],mySentences:[]},
@@ -2397,7 +2402,25 @@ const GRAMMAR=[
 ];
 
 const VOCAB=[
-  {id:"v034",date:"08/11",type:"vocab",title:"搬家・鄉村生活",tags:["日常","住宅","表達"],items:[
+  {id:"v035",date:"08/23",type:"vocab",title:"Bien-dire：la rentrée 閱讀",tags:["文化","表達","學習"],items:[
+    {fr:"le coup d'envoi",zh:"開端/揭幕（原足球術語）",ex:"Le coup d'envoi de la campagne est donné."},
+    {fr:"un effet d'annonce",zh:"宣示性效果/作秀",ex:"Les politiques font de grands effets d'annonce."},
+    {fr:"le mercato",zh:"人事大調動（原足球轉會）",ex:"C'est la période du mercato médiatique."},
+    {fr:"prendre un bon départ",zh:"開個好頭",ex:"Septembre, c'est le moment de prendre un bon départ."},
+    {fr:"plein de",zh:"充滿...的",ex:"Un été plein d'excès."},
+    {fr:"proposer",zh:"推出/提供（服務語境）",ex:"Les théâtres proposent leurs nouvelles programmations."},
+    {fr:"un rendez-vous",zh:"盛會/年度活動（引申）",ex:"C'est un rendez-vous très populaire."},
+    {fr:"une saison",zh:"演出季（藝文場所）",ex:"Une saison qui se terminera en juin."},
+    {fr:"les Journées du patrimoine",zh:"文化遺產日",ex:"Les Journées européennes du patrimoine sont en septembre."},
+    {fr:"le patrimoine",zh:"文化遺產/資產",ex:"Le château de Versailles fait partie du patrimoine français."},
+    {fr:"ressentir",zh:"感受到",ex:"Beaucoup de Français ressentent un vrai blues."},
+    {fr:"peser sur le moral",zh:"影響心情/使人消沉",ex:"La reprise du rythme peut peser sur le moral."},
+    {fr:"un embouteillage",zh:"塞車",ex:"Réveil tôt, embouteillages... la rentrée !"},
+    {fr:"courant(e)",zh:"普遍的/常見的",ex:"Ce phénomène est si courant."},
+    {fr:"la maison d'édition",zh:"出版社",ex:"Les maisons d'édition publient des romans en septembre."},
+    {fr:"en ce qui concerne",zh:"關於/就...而言",ex:"En ce qui concerne la maternelle, c'est émouvant."},
+  ]},
+    {id:"v034",date:"08/11",type:"vocab",title:"搬家・鄉村生活",tags:["日常","住宅","表達"],items:[
     {fr:"déménager",zh:"搬家",ex:"Elle a déménagé le mois dernier."},
     {fr:"s'installer",zh:"定居/安頓",ex:"Elle s'est installée dans une nouvelle ville."},
     {fr:"emménager",zh:"搬入",ex:"Nous allons emménager la semaine prochaine."},
@@ -2779,7 +2802,12 @@ const VOCAB=[
   {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]}
 ]
 const ERRORS_INIT=[
-  {id:"e036",date:"06/07",category:"副詞位置",wrong:"Il encore pleuvait",correct:"Il pleuvait encore",reason:"副詞放在動詞後面：il pleuvait encore / il a encore plu",myNote:"現在式/imparfait → 動詞後 / PC → 助動詞和PP中間",attempts:0,mastered:false},
+  {id:"e041",date:"08/23",category:"關係代名詞",wrong:"un resto qu'on l'aime",correct:"un resto qu'on aime",reason:"que 已當受詞，不能再加 l' 重複",myNote:"que=受詞，不重複 l'！C'est le resto que j'aime.",attempts:0,mastered:false},
+  {id:"e040",date:"08/23",category:"動詞搭配",wrong:"j'ai visité le resto",correct:"je suis allée au resto",reason:"visiter 用於參觀景點/城市，餐廳用 aller",myNote:"aller au resto / visiter un musée",attempts:0,mastered:false},
+  {id:"e039",date:"08/23",category:"所有格",wrong:"des plats de ma origine",correct:"des plats de mes origines",reason:"origines 常用複數，ma→mes",myNote:"mes origines（複數）",attempts:0,mastered:false},
+  {id:"e038",date:"08/23",category:"表達",wrong:"contente qu'il a des plats",correct:"contente qu'il y a des plats",reason:"「有東西」用 il y a，不是 il a",myNote:"il y a = 有（存在）/ il a = 他有",attempts:0,mastered:false},
+  {id:"e037",date:"08/23",category:"介係詞",wrong:"en l'Anglais",correct:"en Angleterre",reason:"國家用 en 不加冠詞；且 Angleterre(國家)≠anglais(語言)",myNote:"en Angleterre / en France（en+國家不加冠詞）",attempts:0,mastered:false},
+    {id:"e036",date:"06/07",category:"副詞位置",wrong:"Il encore pleuvait",correct:"Il pleuvait encore",reason:"副詞放在動詞後面：il pleuvait encore / il a encore plu",myNote:"現在式/imparfait → 動詞後 / PC → 助動詞和PP中間",attempts:0,mastered:false},
   {id:"e035",date:"06/04",category:"反身動詞",wrong:"J'ai me suis relaxée",correct:"Je me suis relaxée",reason:"反身動詞只用 être，不用 avoir",myNote:"反身動詞永遠用 être！",attempts:0,mastered:false},
   {id:"e034",date:"06/04",category:"縮寫",wrong:"parce que il（又犯了）",correct:"parce qu'il",reason:"parce que + 母音 → parce qu'，這個要變成直覺！",myNote:"⚠️ 高頻錯誤！que → qu' 在母音前",attempts:0,mastered:false},
   {id:"e033",date:"06/04",category:"複合過去式",wrong:"j'ai dîner",correct:"j'ai dîné",reason:"-er 動詞 PP 要加 accent：dîner → dîné",myNote:"PC：j'ai + dîné（不是 dîner）",attempts:0,mastered:false},
