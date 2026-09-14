@@ -2367,6 +2367,8 @@ const CHAPTERS = [
 ];
 
 const GRAMMAR=[
+  {id:"g034",date:"09/14",type:"grammar",title:"la première fois que + 句子／avoir peur de + 原形",tags:["句型","口說"],rules:["「第一次做某事」＝ la première fois QUE + 主詞+動詞（不是 de+原形）","C'est la première fois que je participe à un club.（我第一次參加讀書會）","同理：la dernière fois que...（最後一次）／la prochaine fois que...（下次）","「害怕做某事」＝ avoir peur DE + 原形（害怕的人＝主詞時，最自然）","J'ai peur de ne pas comprendre.（我怕聽不懂）","注意否定：ne pas 一起放在原形前面 → de NE PAS être","進階：avoir peur QUE + 別的主詞 + 虛擬式（B1 再深入，A2 知道即可）"],myExamples:["C'est la première fois que je participe à un club en ligne.","J'ai peur de ne pas être assez intelligente.","J'ai peur de ne pas être au niveau.（我怕跟不上）"],mySentences:[]},
+  {id:"g033",date:"09/14",type:"grammar",title:"關係代名詞 qui vs que",tags:["關係代名詞","易混淆","重點"],rules:["qui 跟 que 都連接子句，差別在後面缺什麼","★ qui ＝ 後面缺「主詞」→ 直接接動詞","des gens QUI partagent mes idées（那些「分享想法」的人 → qui 當主詞）","★ que ＝ 後面缺「受詞」→ 接「主詞＋動詞」","le livre QUE je vais lire（我「要讀」的那本書 → que 當受詞）","訣竅：qui 後面直接動詞；que 後面主詞+動詞","que 遇母音要縮寫成 qu'：le livre qu'on aime"],myExamples:["C'est le club qui a choisi le livre.（是讀書會選了書 → qui+動詞）","C'est le livre que je vais lire.（這是我要讀的書 → que+我+動詞）","J'espère rencontrer des gens qui ont les mêmes idées que moi."],mySentences:[]},
   {id:"g032",date:"08/23",type:"grammar",title:"des → de（不定冠詞 vs de+les）",tags:["冠詞","易混淆"],rules:["兩種 des 長得一樣，要分清楚！","① 不定冠詞 des（一些）+ 形容詞 → 變 de","il y a de nouveaux membres（一些新成員）","② de+les 的縮寫 des（其中的/那些的）→ 不變","l'un des grands prix（大獎之一 = de+les）","判斷法：問「是『一些』還是『其中的』？」"],myExamples:["Je mange de bons croissants.（一些→de）","l'un des meilleurs restaurants（de+les→des）","le moment des bonnes résolutions（de+les→des）"],mySentences:[]},
   {id:"g031",date:"08/23",type:"grammar",title:"si... que...（如此...以致於）",tags:["句型","結果"],rules:["si + 形容詞 + que + 結果 = 如此...以致於","Ce phénomène est si courant qu'il a un nom.","= tellement + 形容詞 + que（可互換）","⚠️ que + il → qu'il（母音縮寫）"],myExamples:["Il est si fatigué qu'il dort debout.","Elle parle si vite que je ne comprends rien.","Il fait si chaud qu'on ne peut pas sortir."],mySentences:[]},
   {id:"g030",date:"08/23",type:"grammar",title:"c'est vs il est（+形容詞/名詞）",tags:["être","c'est","易混淆"],rules:["il/elle est + 形容詞 或 職業（無冠詞）","Il est gentil. / Elle est vendeuse.","c'est + 冠詞 + 名詞（有 un/une/mon...）","C'est un acteur. / C'est ma mère.","⚠️ 形容詞時：il est（指人）/ c'est（指事），兩者文法都對","判斷：有冠詞→c'est / 形容詞或職業→il est"],table:{headers:["後面接","用法","例子"],rows:[["形容詞","il/elle est","Il est gentil"],["職業/國籍（無冠詞）","il/elle est","Elle est anglaise"],["冠詞+名詞","c'est","C'est un ami"]]},myExamples:["Il est acteur. = C'est un acteur.","Elle est drôle.（指人）/ C'est drôle.（指事）","C'est ma fille."],mySentences:[]},
@@ -2402,6 +2404,28 @@ const GRAMMAR=[
 ];
 
 const VOCAB=[
+  {id:"v036",date:"09/14",type:"vocab",title:"讀書會・表達想法・個性",tags:["口說","表達","日常"],items:[
+    {fr:"un club de lecture",zh:"讀書會",ex:"Je participe à un club de lecture ce mois-ci."},
+    {fr:"en ligne ↔ en présentiel",zh:"線上 ↔ 實體/面對面",ex:"La réunion sera en ligne, pas en présentiel."},
+    {fr:"partager ses idées",zh:"分享/共有想法（=想法一致）",ex:"J'aime partager mes idées sur le féminisme."},
+    {fr:"échanger nos idées",zh:"交流想法（文雅）",ex:"On va échanger nos idées sur le livre."},
+    {fr:"discuter de qch",zh:"討論某事（de+le→du）",ex:"On va discuter du livre ensemble."},
+    {fr:"avoir l'air + 形容詞",zh:"看起來...",ex:"Les gens ont l'air intelligents."},
+    {fr:"être au niveau",zh:"達到水準/跟得上",ex:"J'ai peur de ne pas être au niveau."},
+    {fr:"les mêmes idées que moi",zh:"跟我一樣的想法",ex:"Je cherche des gens qui ont les mêmes idées que moi."},
+    {fr:"le point de vue",zh:"觀點（陽性）",ex:"J'aimerais entendre ton point de vue."},
+    {fr:"en fait",zh:"其實（口頭禪連接詞）",ex:"En fait, c'est ma première fois."},
+    {fr:"plutôt",zh:"比較偏/算是（緩和語氣）",ex:"Je suis plutôt bavarde."},
+    {fr:"bavard(e)",zh:"多話的/健談的",ex:"Je suis plutôt bavarde."},
+    {fr:"réservé(e)",zh:"內斂的/含蓄的",ex:"Mon frère est plutôt réservé."},
+    {fr:"réfléchir sur qch",zh:"針對...深入思考（學術）",ex:"J'adore réfléchir sur beaucoup de sujets."},
+    {fr:"se poser des questions",zh:"提出疑問/自問",ex:"J'aime me poser des questions sur le sens de la vie."},
+    {fr:"faire un master en...",zh:"讀...碩士",ex:"Mon rêve, c'est de faire un master en philosophie."},
+    {fr:"à la Sorbonne",zh:"在索邦大學",ex:"Je voudrais étudier à la Sorbonne."},
+    {fr:"durer",zh:"持續",ex:"Le club dure 5 semaines au total."},
+    {fr:"au total",zh:"總共",ex:"Il y a cinq chapitres au total."},
+    {fr:"par (semaine/mois)",zh:"每（週/月）",ex:"On lit un chapitre par semaine."},
+  ]},
   {id:"v035",date:"08/23",type:"vocab",title:"Bien-dire：la rentrée 閱讀",tags:["文化","表達","學習"],items:[
     {fr:"le coup d'envoi",zh:"開端/揭幕（原足球術語）",ex:"Le coup d'envoi de la campagne est donné."},
     {fr:"un effet d'annonce",zh:"宣示性效果/作秀",ex:"Les politiques font de grands effets d'annonce."},
@@ -2802,6 +2826,9 @@ const VOCAB=[
   {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]}
 ]
 const ERRORS_INIT=[
+  {id:"e044",date:"09/14",category:"句型",wrong:"ma première fois de participer",correct:"la première fois que je participe",reason:"「第一次做某事」用 la première fois QUE + 句子，不是 de+原形",myNote:"première fois QUE + 主詞+動詞！C'est la première fois que je participe.",attempts:0,mastered:false},
+  {id:"e043",date:"09/14",category:"冠詞縮寫",wrong:"le choix de le club",correct:"le choix du club",reason:"de + le 一定縮寫成 du，不能分開寫",myNote:"de+le=du！（de+les=des）le choix du club.",attempts:0,mastered:false},
+  {id:"e042",date:"09/14",category:"介係詞/陰陽性",wrong:"un livre de la féminisme",correct:"un livre sur le féminisme",reason:"「關於某主題」用 sur；féminisme 是陽性(-isme 結尾多陽性)",myNote:"關於主題→sur！féminisme 陽性→le。un livre sur le féminisme.",attempts:0,mastered:false},
   {id:"e041",date:"08/23",category:"關係代名詞",wrong:"un resto qu'on l'aime",correct:"un resto qu'on aime",reason:"que 已當受詞，不能再加 l' 重複",myNote:"que=受詞，不重複 l'！C'est le resto que j'aime.",attempts:0,mastered:false},
   {id:"e040",date:"08/23",category:"動詞搭配",wrong:"j'ai visité le resto",correct:"je suis allée au resto",reason:"visiter 用於參觀景點/城市，餐廳用 aller",myNote:"aller au resto / visiter un musée",attempts:0,mastered:false},
   {id:"e039",date:"08/23",category:"所有格",wrong:"des plats de ma origine",correct:"des plats de mes origines",reason:"origines 常用複數，ma→mes",myNote:"mes origines（複數）",attempts:0,mastered:false},
