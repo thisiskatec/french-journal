@@ -2826,6 +2826,15 @@ const VOCAB=[
   {id:"v001",date:"05/12",type:"vocab",title:"個性形容詞",tags:["個性","形容詞"],items:[{fr:"timide",zh:"害羞",ex:"Avant, j'étais timide."},{fr:"ouvert(e)",zh:"開朗",ex:"Je suis plus ouverte."},{fr:"patient(e)",zh:"有耐心",ex:"Je suis plus patiente."},{fr:"anxieux/anxieuse",zh:"焦慮",ex:"J'étais anxieuse hier soir."},{fr:"occupé(e)",zh:"忙碌",ex:"Il est très occupé."}]}
 ]
 const ERRORS_INIT=[
+  {id:"e053",date:"09/16",category:"縮寫",wrong:"jouer de instrument",correct:"jouer d'instrument",reason:"de + 母音開頭名詞要縮寫成 d'",myNote:"de+母音字 → d'！jouer d'un instrument.",attempts:0,mastered:false},
+  {id:"e052",date:"09/16",category:"動詞搭配",wrong:"j'aime de jouer",correct:"j'aime jouer",reason:"aimer/adorer/détester + 原形動詞，不加 de",myNote:"aimer/adorer/détester + 原形（不加de）！J'aime jouer du violon.",attempts:0,mastered:false},
+  {id:"e051",date:"09/16",category:"動詞結構",wrong:"après m'entraîne",correct:"après m'être entraînée",reason:"après + 動詞（同主詞）要用複合不定式：après avoir/être + 過去分詞",myNote:"après + avoir/être + PP！Après m'être entraînée tous les jours...",attempts:0,mastered:false},
+  {id:"e050",date:"09/16",category:"介係詞",wrong:"jouer à violon",correct:"jouer du violon",reason:"樂器用 jouer de，球類/遊戲用 jouer à",myNote:"樂器→jouer DE / 球類遊戲→jouer À！jouer du violon / jouer au tennis.",attempts:0,mastered:false},
+  {id:"e049",date:"09/16",category:"介係詞",wrong:"je suis allée un concert",correct:"je suis allée à un concert",reason:"aller 後接地點/活動要加介係詞 à",myNote:"aller À + 地點/活動！je suis allée à un concert.",attempts:0,mastered:false},
+  {id:"e048",date:"09/16",category:"陰陽性",wrong:"violoniste était excellent",correct:"violoniste était excellente",reason:"la violoniste是陰性，形容詞要跟著陰性變化",myNote:"陰性名詞→陰性形容詞！la violoniste excellente.",attempts:0,mastered:false},
+  {id:"e047",date:"09/16",category:"陰陽性",wrong:"le déco",correct:"la déco",reason:"déco（décoration的縮寫）是陰性名詞",myNote:"déco是陰性→la déco！（不是le déco）",attempts:0,mastered:false},
+  {id:"e046",date:"09/16",category:"時態",wrong:"mon plat arrivait",correct:"mon plat est arrivé",reason:"一次性完成的動作用passé composé，不是imparfait（背景/持續狀態才用imparfait）",myNote:"一次性完成動作→PC！mon plat est arrivé（不是arrivait）",attempts:0,mastered:false},
+  {id:"e045",date:"09/16",category:"代名詞位置",wrong:"j'ai lui demandé",correct:"je lui ai demandé",reason:"複合過去式中，受詞代名詞放在助動詞avoir/être前面，不是過去分詞前",myNote:"代名詞放在avoir/être前面！je LUI ai demandé（不是j'ai lui demandé）",attempts:0,mastered:false},
   {id:"e044",date:"09/14",category:"句型",wrong:"ma première fois de participer",correct:"la première fois que je participe",reason:"「第一次做某事」用 la première fois QUE + 句子，不是 de+原形",myNote:"première fois QUE + 主詞+動詞！C'est la première fois que je participe.",attempts:0,mastered:false},
   {id:"e043",date:"09/14",category:"冠詞縮寫",wrong:"le choix de le club",correct:"le choix du club",reason:"de + le 一定縮寫成 du，不能分開寫",myNote:"de+le=du！（de+les=des）le choix du club.",attempts:0,mastered:false},
   {id:"e042",date:"09/14",category:"介係詞/陰陽性",wrong:"un livre de la féminisme",correct:"un livre sur le féminisme",reason:"「關於某主題」用 sur；féminisme 是陽性(-isme 結尾多陽性)",myNote:"關於主題→sur！féminisme 陽性→le。un livre sur le féminisme.",attempts:0,mastered:false},
