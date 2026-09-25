@@ -56,7 +56,8 @@ const style = `
   body.dark .vocab-hint { color: var(--muted); }
   body.dark .error-wrong-display { background: #2a1810 !important; }
   body.dark .error-wrong-text { color: #e07b4a; }
-  body.dark .error-input { border-color: #3a5048; }
+  body.dark .error-input { border-color: #3a5048; color: var(--text); }
+  body.dark .fill-input { background: #1c2b25 !important; border-color: #3a5048; color: var(--text); }
   body.dark .error-reveal { background: #142820 !important; border-color: #2e5a48; }
   body.dark .error-correct-text { color: #5aaa8a; }
   body.dark .check-circle { background: #111917 !important; border-color: #3a5048; }
@@ -2967,7 +2968,7 @@ function MySentenceInput({onSave}){
   const[toast,setToast]=useState(false);
   const submit=()=>{if(!val.trim())return;onSave(val);setVal('');};
   const copy=()=>{if(!val.trim())return;navigator.clipboard.writeText(val).then(()=>{setToast(true);setTimeout(()=>setToast(false),2500);});};
-  return(<div><div style={{display:'flex',gap:6,marginTop:4}}><input value={val} onChange={e=>setVal(e.target.value)} onKeyDown={e=>e.key==='Enter'&&submit()} placeholder="Écris une phrase avec cette règle..." style={{flex:1,border:'1.5px solid #e8d8d4',borderRadius:8,padding:'6px 10px',fontSize:'.82rem',fontFamily:"'DM Sans',sans-serif",outline:'none',background:'white'}}/><button onClick={submit} style={{background:'var(--rose)',color:'white',border:'none',borderRadius:8,padding:'6px 12px',cursor:'pointer',fontSize:'.78rem',fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>+</button></div>{val.trim()&&<button onClick={copy} style={{marginTop:5,background:'none',border:'1px dashed var(--rose-mid)',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.75rem',color:'var(--rose)',fontFamily:"'DM Sans',sans-serif",width:'100%'}}>📤 複製句子，貼給 Claude 批改</button>}{toast&&<div className="copy-toast">✓ 已複製！貼到 Claude 對話 😊</div>}</div>);
+  return(<div><div style={{display:'flex',gap:6,marginTop:4}}><input value={val} onChange={e=>setVal(e.target.value)} onKeyDown={e=>e.key==='Enter'&&submit()} placeholder="Écris une phrase avec cette règle..." style={{flex:1,border:'1.5px solid #e8d8d4',borderRadius:8,padding:'6px 10px',fontSize:'.82rem',fontFamily:"'DM Sans',sans-serif",outline:'none',background:'white',color:'#2a3a34'}}/><button onClick={submit} style={{background:'var(--rose)',color:'white',border:'none',borderRadius:8,padding:'6px 12px',cursor:'pointer',fontSize:'.78rem',fontFamily:"'DM Sans',sans-serif",fontWeight:600}}>+</button></div>{val.trim()&&<button onClick={copy} style={{marginTop:5,background:'none',border:'1px dashed var(--rose-mid)',borderRadius:8,padding:'5px 12px',cursor:'pointer',fontSize:'.75rem',color:'var(--rose)',fontFamily:"'DM Sans',sans-serif",width:'100%'}}>📤 複製句子，貼給 Claude 批改</button>}{toast&&<div className="copy-toast">✓ 已複製！貼到 Claude 對話 😊</div>}</div>);
 }
 
 function MCQ({ex}){const[sel,setSel]=useState(null);return(<div className="exo-wrap"><div className="exo-type">選擇題</div><div className="exo-q">{ex.q}</div>{ex.opts.map((o,n)=><button key={n} disabled={sel!==null} className={`opt-btn ${sel===null?'':n===ex.ans?'correct':sel===n?'wrong':''}`} onClick={()=>setSel(n)}>{String.fromCharCode(65+n)}. {o}</button>)}{sel!==null&&<div className={`feedback ${sel===ex.ans?'correct':'wrong'}`}>{sel===ex.ans?'✓ 正確！':'✗ 再想想！'} {ex.exp}</div>}</div>);}
