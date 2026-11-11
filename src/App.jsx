@@ -3120,7 +3120,7 @@ async function speak(text){
 
 function SpeakBtn({text,size=15}){
   const[st,setSt]=useState('');
-  return <span style={{display:'inline-flex',alignItems:'center',flexShrink:0}}><button onClick={async(e)=>{e.stopPropagation();setSt('…');const r=await speak(text);setSt(r);setTimeout(()=>setSt(''),2500);}} style={{background:'none',border:'none',cursor:'pointer',padding:'2px 4px',fontSize:size,lineHeight:1,color:'var(--green)',flexShrink:0}} title="唸出來（單字優先播放 Wiktionnaire 真人發音）">🔊</button>{st&&<span style={{fontSize:'.62rem',color:st==='真人'?'var(--green)':'var(--rose)',whiteSpace:'nowrap'}}>{st}</span>}</span>;
+  return <span style={{display:'inline-flex',alignItems:'center',flexShrink:0}}><button onClick={async(e)=>{e.stopPropagation();setSt('…');const r=await speak(text);setSt(r?r+' ·v4':'');setTimeout(()=>setSt(''),2500);}} style={{background:'none',border:'none',cursor:'pointer',padding:'2px 4px',fontSize:size,lineHeight:1,color:'var(--green)',flexShrink:0}} title="唸出來（單字優先播放 Wiktionnaire 真人發音）">🔊</button>{st&&<span style={{fontSize:'.62rem',color:st.startsWith('真人')?'var(--green)':'var(--rose)',whiteSpace:'nowrap'}}>{st}</span>}</span>;
 }
 
 function VocabList({items}){
