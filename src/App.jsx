@@ -3030,10 +3030,13 @@ function FlashCards({cards}){
 // ── 發音：單字優先播放 Wiktionnaire 真人錄音，找不到再用瀏覽器語音合成 ──
 const WIKI_AUDIO_CACHE=new Map();
 let CURRENT_AUDIO=null;
+function cleanSeg(text){
+  return text.replace(/\([^)]*\)/g,'').replace(/\bqqn\b|\bqqch\b|\.\.\.|…|\+\s*inf\.?/gi,'').replace(/\s+/g,' ').trim();
+}
 function wikiLookupWord(text){
-  let t=text.split(/[\/／（(]/)[0].trim().toLowerCase().replace(/[…!?.,;:]+$/,'');
-  t=t.replace(/^(un|une|le|la|l'|l’|les|des)\s*/,'').replace(/\s*\+\s*.*$/,'').trim();
-  if(!t||/\s/.test(t)||t.length>30)return null;
+  let t=cleanSeg(text).toLowerCase().replace(/[!?.,;:]+$/,'');
+  t=t.replace(/^(un|une|le|la|l'|l’|les|des)\s*/,'').trim();
+  if(!t||/[!?;:,]/.test(t)||t.split(' ').length>4||t.length>40)return null;
   return t;
 }
 async function findWikiAudio(word){
@@ -3068,28 +3071,51 @@ async function findWikiAudio(word){
   return {url,err:null};
 }
 function speakTTS(text){
-  if(!('speechSynthesis' in window))return;
-  window.speechSynthesis.cancel();
-  const u=new SpeechSynthesisUtterance(text);
-  u.lang='fr-FR';u.rate=0.9;
-  const voices=window.speechSynthesis.getVoices();
-  const frVoice=voices.find(v=>v.lang==='fr-FR')||voices.find(v=>v.lang.startsWith('fr'));
-  if(frVoice)u.voice=frVoice;
-  window.speechSynthesis.speak(u);
+  return new Promise(resolve=>{
+    if(!('speechSynthesis' in window)){resolve();return;}
+    const u=new SpeechSynthesisUtterance(text);
+    u.lang='fr-FR';u.rate=0.9;
+    const voices=window.speechSynthesis.getVoices();
+    const frVoice=voices.find(v=>v.lang==='fr-FR')||voices.find(v=>v.lang.startsWith('fr'));
+    if(frVoice)u.voice=frVoice;
+    const done=()=>resolve();
+    u.onend=done;u.onerror=done;
+    setTimeout(done,9000);
+    window.speechSynthesis.speak(u);
+  });
 }
-// 回傳播放來源：'真人' 或 '合成（原因）'
-async function speak(text){
-  try{if(CURRENT_AUDIO){CURRENT_AUDIO.pause();CURRENT_AUDIO=null;}}catch(e){}
-  try{if('speechSynthesis' in window)window.speechSynthesis.cancel();}catch(e){}
-  const w=wikiLookupWord(text);
-  if(!w){speakTTS(text);return '合成（句子）';}
+let SPEAK_TOKEN=0;
+// 播放一小段：優先真人錄音，否則合成。回傳 '真人' 或 '合成（原因）'
+async function playSegment(seg,token){
+  const w=wikiLookupWord(seg);
+  const plain=cleanSeg(seg)||seg;
+  if(!w){await speakTTS(plain);return '合成（句子）';}
   const {url,err}=await findWikiAudio(w);
-  if(!url){speakTTS(text);return err?(err==='timeout'?'合成（連線逾時）':err==='blocked'?'合成（連線被擋）':'合成（連線失敗 '+err+'）'):'合成（查無錄音）';}
+  if(token!==SPEAK_TOKEN)return '';
+  if(!url){await speakTTS(plain);return err?(err==='timeout'?'合成（連線逾時）':err==='blocked'?'合成（連線被擋）':'合成（連線失敗 '+err+'）'):'合成（查無錄音）';}
   try{
     const a=new Audio(url);CURRENT_AUDIO=a;
-    await new Promise((res,rej)=>{a.onerror=()=>rej(new Error('audio'));a.onplaying=res;a.play().catch(rej);});
+    await new Promise((res,rej)=>{a.onended=res;a.onerror=()=>rej(new Error('audio'));a.play().catch(rej);});
     return '真人';
-  }catch(e){CURRENT_AUDIO=null;speakTTS(text);return '合成（錄音無法播放）';}
+  }catch(e){CURRENT_AUDIO=null;await speakTTS(plain);return '合成（錄音無法播放）';}
+}
+// 一個欄位若有多個詞（用 / ／ ≠ 分隔），依序逐個唸
+async function speak(text){
+  const token=++SPEAK_TOKEN;
+  try{if(CURRENT_AUDIO){CURRENT_AUDIO.pause();CURRENT_AUDIO=null;}}catch(e){}
+  try{if('speechSynthesis' in window)window.speechSynthesis.cancel();}catch(e){}
+  const segs=text.split(/\s*[\/／≠]\s*/).map(x=>x.trim()).filter(Boolean);
+  const results=[];
+  for(let i=0;i<segs.length;i++){
+    if(token!==SPEAK_TOKEN)return '';
+    const r=await playSegment(segs[i],token);
+    if(r)results.push(r);
+    if(i<segs.length-1&&token===SPEAK_TOKEN)await new Promise(r=>setTimeout(r,350));
+  }
+  const real=results.filter(r=>r==='真人').length;
+  if(real===results.length)return '真人';
+  if(real>0)return '真人＋合成';
+  return results[0]||'';
 }
 
 function SpeakBtn({text,size=15}){
